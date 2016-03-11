@@ -1,1 +1,40 @@
-h1 | "Welcome to hug"
+.home
+    .intro
+        > div.koala
+        .main-text
+            > h1#slogan
+            > p#introduction
+    .simple
+        .main-text
+            > h1#example_header
+            > div.example
+    .performance
+        .main-text
+            > h1#performance_header
+            > p#performance_description
+            > div.benchmark
+    .versioning
+        .main-text
+            > h1#versioning_header
+            > p#versioning_description
+            > script src=https://gist.github.com/timothycrosley/0bc7d313e7a84b708374.js
+    .documentation
+        .main-text
+            > h1#documentation_header
+            > p#documentation_description
+            > script src=https://gist.github.com/timothycrosley/fdf44bd9c2a8d8052916.js
+    .annotation
+        .main-text
+            > h1#annotation_header
+            > p#annotation_description
+            > script src=https://gist.github.com/timothycrosley/8ef2ce8352c7fc0672fa.js
+    .reuse
+        .main-text
+            > h1#reuse_header
+            > p#reuse_description
+            > script src=https://gist.github.com/timothycrosley/1669b902f00662e92216.js
+    .get-started
+        .main-text
+            > h1#get_started_header
+            > p#get_started_description
+            a href=/website/get_started | Get started now >

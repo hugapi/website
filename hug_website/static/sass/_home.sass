@@ -1,0 +1,74 @@
+.main-text
+    width: 850px
+    margin-left: auto
+    margin-right: auto
+    padding-top: 30px
+    p
+        line-height: 35px
+        font-size: 23px
+        padding-top: 20px
+.intro
+    position: relative
+    height: 290px
+    background: #7895A0
+
+    .koala
+        margin-left: 10px
+        float: left
+        +icons-sprite(koala)
+        height: 200px
+        width: 410px
+        height: 290px
+.simple
+    background: #7EBC89
+    padding-bottom: 30px
+    .example
+        margin-top: 40px
+        +background(image-url("example.gif"))
+        width: 722px
+        height: 450px
+
+.performance
+    background: #DC7C7C
+    padding-bottom: 30px
+    .benchmark
+        margin-top: 40px
+        +icons-sprite(benchmark)
+        width: 736px
+        height: 358px
+
+.versioning
+    background: #A47EBC
+    p
+        padding-bottom: 30px
+    padding-bottom: 30px
+
+.documentation
+    background: #9BCC82
+    p
+        padding-bottom: 30px
+    padding-bottom: 30px
+
+.annotation
+    background: #EAA676
+    p
+        padding-bottom: 30px
+    padding-bottom: 30px
+
+.reuse
+    background: #E2DF70
+    p
+        padding-bottom: 30px
+    padding-bottom: 30px
+
+.get-started
+    background: white
+    color: black
+    p
+        padding-bottom: 30px
+    padding-bottom: 30px
+    a
+        @include sassy-button("simple", 10px, 19px, #D23C1A)
+        font-size: 25px
+        line-height: 30px
+
