@@ -1,0 +1,38 @@
+$roboto: 'Roboto', sans
+$roboto_slab: 'Roboto Slab', serif
+
+html
+    font-family: $roboto
+
+    strong
+        font-weight: bold
+
+    h1,h2,h3,h4,h5,h6
+        font-family: $roboto_slab
+    h1
+        font-size: 50px
+        opacity: 0.9
+        font-weight: bold
+        text-shadow: 0px 1px 1px #4d4d4d
+    h2
+        font-size: 40px
+    h3
+        font-size: 30px
+    h4
+        font-size: 25px
+    h5
+        font-size: 20px
+    h6
+        font-size: 20px
+        font-weight: bold
+
+    a
+        text-decoration: none
+        color: white
+        cursor: pointer
+        &.selected
+            cursor: text
+        &:hover
+            text-shadow: 0px 0px 3px white
+            &.selected
+                text-shadow: none

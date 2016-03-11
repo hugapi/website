@@ -69,3 +69,7 @@ venv/
 
 # Cython
 *.c
+
+# Static compiled
+hug_website/static/scripts/main.js
+hug_website/static/.sass-cache/

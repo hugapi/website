@@ -1,4 +1,19 @@
-document
+html
     head
-        > div.nav
-    > div.main_content@main_content
+        > link rel=sytlesheet type=text/css href=http://fonts.googleapis.com/css?family=Roboto:100|Roboto+Slab
+        > link rel=stylesheet href=https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css
+        > link rel=stylesheet type=text/css href=/static/stylesheets/screen.css
+        > script src=/static/scripts/jquery.js
+        > script src=/static/scripts/jquery.nav.js
+    body
+        header
+            a.logo alt="hug: embrace the APIs of the future" href=/
+                hug
+            nav
+                a#quickstart | Quick Start
+                a#documentation | Documentation
+                a#contributing | Contributing
+                a#discuss | Discuss
+
+        > section#main_content
+        > footer
