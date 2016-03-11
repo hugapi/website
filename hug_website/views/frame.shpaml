@@ -1,0 +1,4 @@
+document
+    head
+        > div.nav
+    > div.main_content@main_content
