@@ -6,6 +6,8 @@ def frame(data, template=filename('hug_website/views/frame.shpaml')):
     ui = template()
     ui.version.text = data['version']
     ui.main_content(globals()[data['page']](data['content']))
+    if hasattr(ui, data['page']):
+        getattr(ui, data['page']).classes.add('selected')
     return ui
 
 
@@ -26,4 +28,9 @@ def home(data, template=filename('hug_website/views/home.shpaml')):
     ui.reuse_description.text = data['reuse_description']
     ui.get_started_header.text = data['get_started_header']
     ui.get_started_description.text = data['get_started_description']
+    return ui
+
+
+def contribute(data, template=filename('hug_website/views/contribute.html')):
+    ui = template()
     return ui

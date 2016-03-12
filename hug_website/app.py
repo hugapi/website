@@ -15,9 +15,14 @@ def static_files():
 
 
 @app.transform(html(controllers.frame), urls=('/', '/website/{page_name}'), on_invalid=False)
-def root(page_name:hug.types.one_of(('home', ))='home'):
+def root(page_name:hug.types.one_of(('home', 'contribute'))='home'):
     return {'label': 'hug', 'version': hug.__version__,
             'content': globals()[page_name](), 'page': page_name}
+
+
+@app.transform(html(controllers.contribute))
+def contribute():
+    return {}
 
 
 @app.transform(html(controllers.home))
