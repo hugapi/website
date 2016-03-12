@@ -170,7 +170,11 @@ html body header .logo {
   margin-top: 4px;
   display: block;
 }
-/* line 31, ../sass/_frame.sass */
+/* line 30, ../sass/_frame.sass */
+html body header .logo:hover {
+  text-shadow: 1px 1px 1px black;
+}
+/* line 33, ../sass/_frame.sass */
 html body header nav {
   margin-left: auto;
   margin-right: auto;
@@ -178,12 +182,12 @@ html body header nav {
   height: 50px;
   padding-top: 25px;
 }
-/* line 37, ../sass/_frame.sass */
+/* line 39, ../sass/_frame.sass */
 html body header nav a {
   padding-left: 15px;
   padding-right: 15px;
 }
-/* line 40, ../sass/_frame.sass */
+/* line 42, ../sass/_frame.sass */
 html body header nav a.selected {
   padding: 15px;
   padding-bottom: 14px;
@@ -192,7 +196,7 @@ html body header nav a.selected {
   background: #45525D;
   color: white;
 }
-/* line 48, ../sass/_frame.sass */
+/* line 50, ../sass/_frame.sass */
 html body header #version {
   position: absolute;
   right: 0px;
@@ -201,7 +205,7 @@ html body header #version {
   padding-right: 10px;
   font-weight: bold;
 }
-/* line 56, ../sass/_frame.sass */
+/* line 58, ../sass/_frame.sass */
 html body #main_content {
   height: 100%;
 }
