@@ -221,11 +221,13 @@ body #main_content .main-text p {
 }
 /* line 10, ../sass/_home.sass */
 body #main_content .intro {
+  overflow: hidden;
+  *zoom: 1;
   position: relative;
-  height: 290px;
+  min-height: 290px;
   background: #7895A0;
 }
-/* line 15, ../sass/_home.sass */
+/* line 16, ../sass/_home.sass */
 body #main_content .intro .koala {
   margin-left: 10px;
   float: left;
@@ -234,77 +236,77 @@ body #main_content .intro .koala {
   width: 410px;
   height: 290px;
 }
-/* line 22, ../sass/_home.sass */
+/* line 23, ../sass/_home.sass */
 body #main_content .simple {
   background: #7EBC89;
   padding-bottom: 30px;
 }
-/* line 25, ../sass/_home.sass */
+/* line 26, ../sass/_home.sass */
 body #main_content .simple .example {
   margin-top: 40px;
-  background: url('/static/images/example.gif?1457427182');
+  background: url('/static/images/example.gif?1457714871');
   width: 722px;
   height: 450px;
 }
-/* line 31, ../sass/_home.sass */
+/* line 32, ../sass/_home.sass */
 body #main_content .performance {
   background: #DC7C7C;
   padding-bottom: 30px;
 }
-/* line 34, ../sass/_home.sass */
+/* line 35, ../sass/_home.sass */
 body #main_content .performance .benchmark {
   margin-top: 40px;
   background-position: 0 0;
   width: 736px;
   height: 358px;
 }
-/* line 40, ../sass/_home.sass */
+/* line 41, ../sass/_home.sass */
 body #main_content .versioning {
   background: #A47EBC;
   padding-bottom: 30px;
 }
-/* line 42, ../sass/_home.sass */
+/* line 43, ../sass/_home.sass */
 body #main_content .versioning p {
   padding-bottom: 30px;
 }
-/* line 46, ../sass/_home.sass */
+/* line 47, ../sass/_home.sass */
 body #main_content .documentation {
   background: #9BCC82;
   padding-bottom: 30px;
 }
-/* line 48, ../sass/_home.sass */
+/* line 49, ../sass/_home.sass */
 body #main_content .documentation p {
   padding-bottom: 30px;
 }
-/* line 52, ../sass/_home.sass */
+/* line 53, ../sass/_home.sass */
 body #main_content .annotation {
   background: #EAA676;
   padding-bottom: 30px;
 }
-/* line 54, ../sass/_home.sass */
+/* line 55, ../sass/_home.sass */
 body #main_content .annotation p {
   padding-bottom: 30px;
 }
-/* line 58, ../sass/_home.sass */
+/* line 59, ../sass/_home.sass */
 body #main_content .reuse {
   background: #E2DF70;
   padding-bottom: 30px;
 }
-/* line 60, ../sass/_home.sass */
+/* line 61, ../sass/_home.sass */
 body #main_content .reuse p {
   padding-bottom: 30px;
 }
-/* line 64, ../sass/_home.sass */
+/* line 65, ../sass/_home.sass */
 body #main_content .get-started {
   background: white;
   color: black;
   padding-bottom: 30px;
 }
-/* line 67, ../sass/_home.sass */
+/* line 68, ../sass/_home.sass */
 body #main_content .get-started p {
   padding-bottom: 30px;
 }
-/* line 70, ../sass/_home.sass */
+/* line 71, ../sass/_home.sass */
 body #main_content .get-started a {
   font-size: 19px;
   padding: 0.5em 1.5em;
