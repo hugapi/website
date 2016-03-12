@@ -227,11 +227,12 @@ body #main_content .main-text p {
 body #main_content .intro {
   overflow: hidden;
   *zoom: 1;
+  padding-top: 30px;
   position: relative;
   min-height: 290px;
   background: #7895A0;
 }
-/* line 16, ../sass/_home.sass */
+/* line 17, ../sass/_home.sass */
 body #main_content .intro .koala {
   margin-left: 10px;
   float: left;
@@ -240,77 +241,77 @@ body #main_content .intro .koala {
   width: 410px;
   height: 290px;
 }
-/* line 23, ../sass/_home.sass */
+/* line 24, ../sass/_home.sass */
 body #main_content .simple {
   background: #7EBC89;
   padding-bottom: 30px;
 }
-/* line 26, ../sass/_home.sass */
+/* line 27, ../sass/_home.sass */
 body #main_content .simple .example {
   margin-top: 40px;
   background: url('/static/images/example.gif?1457714871');
   width: 722px;
   height: 450px;
 }
-/* line 32, ../sass/_home.sass */
+/* line 33, ../sass/_home.sass */
 body #main_content .performance {
   background: #DC7C7C;
   padding-bottom: 30px;
 }
-/* line 35, ../sass/_home.sass */
+/* line 36, ../sass/_home.sass */
 body #main_content .performance .benchmark {
   margin-top: 40px;
   background-position: 0 0;
   width: 736px;
   height: 358px;
 }
-/* line 41, ../sass/_home.sass */
+/* line 42, ../sass/_home.sass */
 body #main_content .versioning {
   background: #A47EBC;
   padding-bottom: 30px;
 }
-/* line 43, ../sass/_home.sass */
+/* line 44, ../sass/_home.sass */
 body #main_content .versioning p {
   padding-bottom: 30px;
 }
-/* line 47, ../sass/_home.sass */
+/* line 48, ../sass/_home.sass */
 body #main_content .documentation {
   background: #9BCC82;
   padding-bottom: 30px;
 }
-/* line 49, ../sass/_home.sass */
+/* line 50, ../sass/_home.sass */
 body #main_content .documentation p {
   padding-bottom: 30px;
 }
-/* line 53, ../sass/_home.sass */
+/* line 54, ../sass/_home.sass */
 body #main_content .annotation {
   background: #EAA676;
   padding-bottom: 30px;
 }
-/* line 55, ../sass/_home.sass */
+/* line 56, ../sass/_home.sass */
 body #main_content .annotation p {
   padding-bottom: 30px;
 }
-/* line 59, ../sass/_home.sass */
+/* line 60, ../sass/_home.sass */
 body #main_content .reuse {
   background: #525252;
   padding-bottom: 30px;
 }
-/* line 61, ../sass/_home.sass */
+/* line 62, ../sass/_home.sass */
 body #main_content .reuse p {
   padding-bottom: 30px;
 }
-/* line 65, ../sass/_home.sass */
+/* line 66, ../sass/_home.sass */
 body #main_content .get-started {
   background: white;
   color: black;
   padding-bottom: 30px;
 }
-/* line 68, ../sass/_home.sass */
+/* line 69, ../sass/_home.sass */
 body #main_content .get-started p {
   padding-bottom: 30px;
 }
-/* line 71, ../sass/_home.sass */
+/* line 72, ../sass/_home.sass */
 body #main_content .get-started a {
   font-size: 19px;
   padding: 0.5em 1.5em;

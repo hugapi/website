@@ -10,10 +10,10 @@ html
             a.logo alt="hug: embrace the APIs of the future" href=/
                 hug
             nav
-                a#quickstart | Quickstart
-                a#learn | Learn
-                a#contribute | Contribute
-                a#discuss | Discuss
+                a#quickstart href=/website/quickstart | Quickstart
+                a#learn href=/website/learn | Learn
+                a#contribute href=/website/contribute | Contribute
+                a#discuss href=/website/discuss | Discuss
             > a#version
 
         > section#main_content
