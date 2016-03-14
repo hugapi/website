@@ -379,11 +379,11 @@ body #main_content .quickstart {
   min-height: 100%;
 }
 /* line 4, ../sass/_quickstart.sass */
-body #main_content .quickstart .install, body #main_content .quickstart .first {
+body #main_content .quickstart .install, body #main_content .quickstart .first, body #main_content .quickstart .http {
   padding-bottom: 30px;
 }
 /* line 5, ../sass/_quickstart.sass */
-body #main_content .quickstart .install p, body #main_content .quickstart .first p {
+body #main_content .quickstart .install p, body #main_content .quickstart .first p, body #main_content .quickstart .http p {
   padding-bottom: 30px;
 }
 /* line 9, ../sass/_quickstart.sass */
@@ -392,4 +392,11 @@ body #main_content .quickstart .first .example {
   background: url('/static/images/quickstart/first_api_1.gif?1457933117');
   width: 850px;
   height: 250px;
+}
+/* line 15, ../sass/_quickstart.sass */
+body #main_content .quickstart .http .example {
+  margin-top: 40px;
+  background: url('/static/images/quickstart/first_api_2.gif?1457934690');
+  width: 850px;
+  height: 490px;
 }

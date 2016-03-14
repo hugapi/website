@@ -43,4 +43,6 @@ def quickstart(data, template=filename('hug_website/views/quickstart.shpaml')):
     ui.first_header.text = data['first_header']
     ui.first_description.text = data['first_description']
     ui.first_explaination.text = data['first_explaination']
+    ui.http_header.text = data['http_header']
+    ui.http_description.text = data['http_description']
     return ui

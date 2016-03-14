@@ -45,7 +45,13 @@ def quickstart():
                                   'take a value as input, cast that value as something (raising on errors) and then '
                                   'return it. As a result of this, most built-in Python cast functions (int, str, etc) '
                                   'are valid annotations in hug out of the box. You can also use Marshmallow schemas '
-                                  'and types as hug type annotations without modification.'}
+                                  'and types as hug type annotations without modification.',
+            'http_header': 'Exposing our API as an HTTP micro-service',
+            'http_description': 'To expose our API over HTTP all we need to do is apply a hug HTTP route decorator to '
+                                'the function in addition to the local decorator. hug includes convience decorators '
+                                'for all common HTTP methods (GET, POST, PUT, etc), in this case we will simply apply '
+                                'a get decorator to specify it should return on an HTTP GET request. We will also '
+                                'supply an example set of parameters to lead our users in the correct direction:'}
 
 
 @app.transform(html(controllers.home))
