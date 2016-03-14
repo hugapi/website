@@ -1,0 +1,4 @@
+.quickstart
+    .install
+        > h1#install_header
+        > p#install_text
