@@ -379,11 +379,11 @@ body #main_content .quickstart {
   min-height: 100%;
 }
 /* line 4, ../sass/_quickstart.sass */
-body #main_content .quickstart .install, body #main_content .quickstart .first, body #main_content .quickstart .http {
+body #main_content .quickstart .install, body #main_content .quickstart .first, body #main_content .quickstart .http, body #main_content .quickstart .cli, body #main_content .quickstart .wsgi {
   padding-bottom: 30px;
 }
 /* line 5, ../sass/_quickstart.sass */
-body #main_content .quickstart .install p, body #main_content .quickstart .first p, body #main_content .quickstart .http p {
+body #main_content .quickstart .install p, body #main_content .quickstart .first p, body #main_content .quickstart .http p, body #main_content .quickstart .cli p, body #main_content .quickstart .wsgi p {
   padding-bottom: 30px;
 }
 /* line 9, ../sass/_quickstart.sass */
@@ -399,4 +399,11 @@ body #main_content .quickstart .http .example {
   background: url('/static/images/quickstart/first_api_2.gif?1457934690');
   width: 850px;
   height: 490px;
+}
+/* line 21, ../sass/_quickstart.sass */
+body #main_content .quickstart .cli .example {
+  margin-top: 40px;
+  background: url('/static/images/quickstart/first_api_3.gif?1457937495');
+  width: 850px;
+  height: 440px;
 }

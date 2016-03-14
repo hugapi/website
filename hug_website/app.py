@@ -27,7 +27,7 @@ def contribute():
 
 @app.transform(html(controllers.quickstart))
 def quickstart():
-    return {'install_header': 'Install hug',
+    return {'install_header': 'Installing hug',
             'install_description': 'The first step to get started is to install hug. hug has very minimal base system '
                                    'requirements - which is essentially a local installation of Python3.3+ optionally '
                                    'inside a virtualenv. Additionally, pip is required, but this should be included '
@@ -51,7 +51,17 @@ def quickstart():
                                 'the function in addition to the local decorator. hug includes convience decorators '
                                 'for all common HTTP methods (GET, POST, PUT, etc), in this case we will simply apply '
                                 'a get decorator to specify it should return on an HTTP GET request. We will also '
-                                'supply an example set of parameters to lead our users in the correct direction:'}
+                                'supply an example set of parameters to lead our users in the correct direction:',
+            'cli_header': 'Enabling command line interaction',
+            'cli_description': 'What if we want to allow users to interact with our API from the command line as well? '
+                               "No problem! All that's necessary is adding a hug.cli route decorator to our API "
+                               'function:',
+            'wsgi_header': 'Final step: Production HTTP use',
+            'wsgi_description': "Finally, it's important to note that it's generally never a good idea to use a "
+                                "development server (like hug's, Flask's, etc.) directly in production. Instead, "
+                                'a WSGI compatible server such as uwsgi or Gunicorn is recommended. Every hug API that '
+                                'contains an http endpoint, exposes a `__hug_wsgi__` WSGI compatible API automatically '
+                                '- making integration of our above example a breeze:'}
 
 
 @app.transform(html(controllers.home))

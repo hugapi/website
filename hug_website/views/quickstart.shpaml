@@ -17,3 +17,14 @@
             > p#http_description
             > script src=https://gist.github.com/timothycrosley/10e379958445e1f58d2d.js
             > div.example
+    .cli
+        .main-text
+            > h1#cli_header
+            > p#cli_description
+            > script src=https://gist.github.com/timothycrosley/2383721288b0ca26bdb2.js
+            > div.example
+    .wsgi
+        .main-text
+            > h1#wsgi_header
+            > p#wsgi_description
+            > script src=https://gist.github.com/timothycrosley/eae0f1e251454ba32777.js
