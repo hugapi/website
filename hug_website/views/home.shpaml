@@ -37,4 +37,4 @@
         .main-text
             > h1#get_started_header
             > p#get_started_description
-            a href=/website/get_started | Get started now >
+            a href=/website/quickstart | Get started now >

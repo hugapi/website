@@ -170,7 +170,11 @@ html body header .logo {
   margin-top: 4px;
   display: block;
 }
-/* line 31, ../sass/_frame.sass */
+/* line 30, ../sass/_frame.sass */
+html body header .logo:hover {
+  text-shadow: 1px 1px 1px black;
+}
+/* line 33, ../sass/_frame.sass */
 html body header nav {
   margin-left: auto;
   margin-right: auto;
@@ -178,21 +182,34 @@ html body header nav {
   height: 50px;
   padding-top: 25px;
 }
-/* line 37, ../sass/_frame.sass */
+/* line 39, ../sass/_frame.sass */
 html body header nav a {
   padding-left: 15px;
   padding-right: 15px;
 }
-/* line 40, ../sass/_frame.sass */
+/* line 42, ../sass/_frame.sass */
 html body header nav a.selected {
   padding: 15px;
   padding-bottom: 14px;
-  border-top: 5px #6183a0 solid;
   color: #474747;
-  background: #45525D;
   color: white;
 }
-/* line 48, ../sass/_frame.sass */
+/* line 47, ../sass/_frame.sass */
+html body header nav a.selected#quickstart {
+  border-top: 5px #319643 solid;
+  background: #7EBC89;
+}
+/* line 50, ../sass/_frame.sass */
+html body header nav a.selected#contribute {
+  border-top: 5px #765A87 solid;
+  background: #A47EBC;
+}
+/* line 53, ../sass/_frame.sass */
+html body header nav a.selected#discuss {
+  border-top: 5px #956A4B solid;
+  background: #EAA676;
+}
+/* line 58, ../sass/_frame.sass */
 html body header #version {
   position: absolute;
   right: 0px;
@@ -201,31 +218,54 @@ html body header #version {
   padding-right: 10px;
   font-weight: bold;
 }
-/* line 56, ../sass/_frame.sass */
+/* line 66, ../sass/_frame.sass */
 html body #main_content {
   height: 100%;
 }
 
-/* line 1, ../sass/_home.sass */
+/* line 1, ../sass/_common.sass */
 body #main_content .main-text {
   width: 850px;
   margin-left: auto;
   margin-right: auto;
   padding-top: 30px;
 }
-/* line 6, ../sass/_home.sass */
-body #main_content .main-text p {
+/* line 6, ../sass/_common.sass */
+body #main_content .main-text a {
+  font-weight: bold;
+}
+/* line 8, ../sass/_common.sass */
+body #main_content .main-text p, body #main_content .main-text ul, body #main_content .main-text ol {
   line-height: 35px;
   font-size: 23px;
   padding-top: 20px;
 }
-/* line 10, ../sass/_home.sass */
+/* line 12, ../sass/_common.sass */
+body #main_content .main-text ol, body #main_content .main-text ul {
+  list-style: disc;
+}
+/* line 15, ../sass/_common.sass */
+body #main_content .markdown {
+  padding-bottom: 40px;
+}
+/* line 17, ../sass/_common.sass */
+body #main_content .markdown img {
+  max-width: 100%;
+}
+/* line 19, ../sass/_common.sass */
+body #main_content .markdown h1 {
+  margin-top: 30px;
+}
+/* line 1, ../sass/_home.sass */
 body #main_content .intro {
+  overflow: hidden;
+  *zoom: 1;
+  padding-top: 30px;
   position: relative;
-  height: 290px;
+  min-height: 290px;
   background: #7895A0;
 }
-/* line 15, ../sass/_home.sass */
+/* line 8, ../sass/_home.sass */
 body #main_content .intro .koala {
   margin-left: 10px;
   float: left;
@@ -234,77 +274,77 @@ body #main_content .intro .koala {
   width: 410px;
   height: 290px;
 }
-/* line 22, ../sass/_home.sass */
+/* line 15, ../sass/_home.sass */
 body #main_content .simple {
   background: #7EBC89;
   padding-bottom: 30px;
 }
-/* line 25, ../sass/_home.sass */
+/* line 18, ../sass/_home.sass */
 body #main_content .simple .example {
   margin-top: 40px;
-  background: url('/static/images/example.gif?1457427182');
+  background: url('/static/images/example.gif?1457714871');
   width: 722px;
   height: 450px;
 }
-/* line 31, ../sass/_home.sass */
+/* line 24, ../sass/_home.sass */
 body #main_content .performance {
   background: #DC7C7C;
   padding-bottom: 30px;
 }
-/* line 34, ../sass/_home.sass */
+/* line 27, ../sass/_home.sass */
 body #main_content .performance .benchmark {
   margin-top: 40px;
   background-position: 0 0;
   width: 736px;
   height: 358px;
 }
-/* line 40, ../sass/_home.sass */
+/* line 33, ../sass/_home.sass */
 body #main_content .versioning {
   background: #A47EBC;
   padding-bottom: 30px;
 }
-/* line 42, ../sass/_home.sass */
+/* line 35, ../sass/_home.sass */
 body #main_content .versioning p {
   padding-bottom: 30px;
 }
-/* line 46, ../sass/_home.sass */
+/* line 39, ../sass/_home.sass */
 body #main_content .documentation {
   background: #9BCC82;
   padding-bottom: 30px;
 }
-/* line 48, ../sass/_home.sass */
+/* line 41, ../sass/_home.sass */
 body #main_content .documentation p {
   padding-bottom: 30px;
 }
-/* line 52, ../sass/_home.sass */
+/* line 45, ../sass/_home.sass */
 body #main_content .annotation {
   background: #EAA676;
   padding-bottom: 30px;
 }
-/* line 54, ../sass/_home.sass */
+/* line 47, ../sass/_home.sass */
 body #main_content .annotation p {
   padding-bottom: 30px;
 }
-/* line 58, ../sass/_home.sass */
+/* line 51, ../sass/_home.sass */
 body #main_content .reuse {
-  background: #E2DF70;
+  background: #525252;
   padding-bottom: 30px;
 }
-/* line 60, ../sass/_home.sass */
+/* line 53, ../sass/_home.sass */
 body #main_content .reuse p {
   padding-bottom: 30px;
 }
-/* line 64, ../sass/_home.sass */
+/* line 57, ../sass/_home.sass */
 body #main_content .get-started {
   background: white;
   color: black;
   padding-bottom: 30px;
 }
-/* line 67, ../sass/_home.sass */
+/* line 60, ../sass/_home.sass */
 body #main_content .get-started p {
   padding-bottom: 30px;
 }
-/* line 70, ../sass/_home.sass */
+/* line 63, ../sass/_home.sass */
 body #main_content .get-started a {
   font-size: 19px;
   padding: 0.5em 1.5em;
@@ -362,4 +402,49 @@ body #main_content .get-started a.disabled, body #main_content .get-started a[di
 body #main_content .get-started a::-moz-focus-inner {
   padding: 0 !important;
   margin: -1px !important;
+}
+/* line 1, ../sass/_quickstart.sass */
+body #main_content .quickstart {
+  background: #7EBC89;
+  min-height: 100%;
+}
+/* line 4, ../sass/_quickstart.sass */
+body #main_content .quickstart .install, body #main_content .quickstart .first, body #main_content .quickstart .http, body #main_content .quickstart .cli, body #main_content .quickstart .wsgi {
+  padding-bottom: 30px;
+}
+/* line 5, ../sass/_quickstart.sass */
+body #main_content .quickstart .install p, body #main_content .quickstart .first p, body #main_content .quickstart .http p, body #main_content .quickstart .cli p, body #main_content .quickstart .wsgi p {
+  padding-bottom: 30px;
+}
+/* line 9, ../sass/_quickstart.sass */
+body #main_content .quickstart .first .example {
+  margin-top: 40px;
+  background: url('/static/images/quickstart/first_api_1.gif?1457933117');
+  width: 850px;
+  height: 250px;
+}
+/* line 15, ../sass/_quickstart.sass */
+body #main_content .quickstart .http .example {
+  margin-top: 40px;
+  background: url('/static/images/quickstart/first_api_2.gif?1457934690');
+  width: 850px;
+  height: 490px;
+}
+/* line 21, ../sass/_quickstart.sass */
+body #main_content .quickstart .cli .example {
+  margin-top: 40px;
+  background: url('/static/images/quickstart/first_api_3.gif?1457937495');
+  width: 850px;
+  height: 440px;
+}
+/* line 1, ../sass/_contribute.sass */
+body #main_content .contribute {
+  background: #A47EBC;
+  min-height: 100%;
+  margin-top: -30px;
+}
+/* line 1, ../sass/_discuss.sass */
+body #main_content .discuss {
+  background: #EAA676;
+  min-height: 100%;
 }

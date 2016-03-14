@@ -27,6 +27,8 @@ html
                 margin-left: 10px
                 margin-top: 4px
                 display: block
+                &:hover
+                    text-shadow: 1px 1px 1px black
 
             nav
                 margin-left: auto
@@ -40,9 +42,17 @@ html
                     &.selected
                         padding: 15px
                         padding-bottom: 14px
-                        border-top: 5px #6183a0 solid
+
                         color: #474747
-                        background: #45525D
+                        &#quickstart
+                            border-top: 5px #319643 solid
+                            background: #7EBC89
+                        &#contribute
+                            border-top: 5px #765A87 solid
+                            background: #A47EBC
+                        &#discuss
+                            border-top: 5px #956A4B solid
+                            background: #EAA676
                         color: white
 
             #version

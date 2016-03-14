@@ -1,11 +1,16 @@
+"""Defines the controllers responsible for modifying hug's website UI based on the underlying API"""
 from blox.compile import filename
 from blox.text import Text
+
+CONTRIBUTE_MD = Text(filename('hug_website/views/contribute.html')())
 
 
 def frame(data, template=filename('hug_website/views/frame.shpaml')):
     ui = template()
     ui.version.text = data['version']
     ui.main_content(globals()[data['page']](data['content']))
+    if hasattr(ui, data['page']):
+        getattr(ui, data['page']).classes.add('selected')
     return ui
 
 
@@ -26,4 +31,32 @@ def home(data, template=filename('hug_website/views/home.shpaml')):
     ui.reuse_description.text = data['reuse_description']
     ui.get_started_header.text = data['get_started_header']
     ui.get_started_description.text = data['get_started_description']
+    return ui
+
+
+
+def contribute(data, template=filename('hug_website/views/contribute.shpaml')):
+    ui = template()
+    ui.markdown_content(CONTRIBUTE_MD)
+    return ui
+
+
+def discuss(data, template=filename('hug_website/views/discuss.shpaml')):
+    ui = template()
+    return ui
+
+
+def quickstart(data, template=filename('hug_website/views/quickstart.shpaml')):
+    ui = template()
+    ui.install_header.text = data['install_header']
+    ui.install_description.text = data['install_description']
+    ui.first_header.text = data['first_header']
+    ui.first_description.text = data['first_description']
+    ui.first_explaination.text = data['first_explaination']
+    ui.http_header.text = data['http_header']
+    ui.http_description.text = data['http_description']
+    ui.cli_header.text = data['cli_header']
+    ui.cli_description.text = data['cli_description']
+    ui.wsgi_header.text = data['wsgi_header']
+    ui.wsgi_description.text = data['wsgi_description']
     return ui
