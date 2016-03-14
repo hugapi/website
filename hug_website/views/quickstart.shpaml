@@ -1,4 +1,14 @@
 .quickstart
     .install
-        > h1#install_header
-        > p#install_text
+        .main-text
+            > h1#install_header
+            > p#install_description
+            > script src=https://gist.github.com/timothycrosley/049cd9f60f18efce9f67.js
+    .first
+        .main-text
+            > h1#first_header
+            > p#first_description
+            > script src=https://gist.github.com/timothycrosley/1750cad72971e9ba809a.js
+            > div.example
+            > p#first_explaination
+

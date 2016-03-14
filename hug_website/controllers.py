@@ -38,5 +38,9 @@ def contribute(data, template=filename('hug_website/views/contribute.html')):
 
 def quickstart(data, template=filename('hug_website/views/quickstart.shpaml')):
     ui = template()
+    ui.install_header.text = data['install_header']
+    ui.install_description.text = data['install_description']
+    ui.first_header.text = data['first_header']
+    ui.first_description.text = data['first_description']
+    ui.first_explaination.text = data['first_explaination']
     return ui
-

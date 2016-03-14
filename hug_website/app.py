@@ -27,7 +27,25 @@ def contribute():
 
 @app.transform(html(controllers.quickstart))
 def quickstart():
-    return {}
+    return {'install_header': 'Install hug',
+            'install_description': 'The first step to get started is to install hug. hug has very minimal base system '
+                                   'requirements - which is essentially a local installation of Python3.3+ optionally '
+                                   'inside a virtualenv. Additionally, pip is required, but this should be included '
+                                   'with most Python3 installations by default. Once the base system is in good shape, '
+                                   'run the following command to install the latest version of hug:',
+            'first_header': 'First hug API',
+            'first_description': 'To start off we are going to make a simple API that has local access only, but '
+                                 'demonstrates a couple of basic hug features: annotation based validation and '
+                                 'directives. Our first API will simply return a happy birthday message to the '
+                                 'user of the API along with the time it took to generate the message:',
+            'first_explaination': "In this example: hug's built-in type annotation automatically validates and "
+                                  "converts incoming inputs while hug's directives automatically replace the hug_timer "
+                                  'argument with a HugTimer object that keeps track of how long the function has been '
+                                  'running. hug type annotations are at their core simply functions or objects which '
+                                  'take a value as input, cast that value as something (raising on errors) and then '
+                                  'return it. As a result of this, most built-in Python cast functions (int, str, etc) '
+                                  'are valid annotations in hug out of the box. You can also use Marshmallow schemas '
+                                  'and types as hug type annotations without modification.'}
 
 
 @app.transform(html(controllers.home))

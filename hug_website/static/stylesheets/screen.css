@@ -191,12 +191,15 @@ html body header nav a {
 html body header nav a.selected {
   padding: 15px;
   padding-bottom: 14px;
-  border-top: 5px #6183a0 solid;
   color: #474747;
-  background: #45525D;
   color: white;
 }
-/* line 50, ../sass/_frame.sass */
+/* line 47, ../sass/_frame.sass */
+html body header nav a.selected#quickstart {
+  border-top: 5px #319643 solid;
+  background: #7EBC89;
+}
+/* line 52, ../sass/_frame.sass */
 html body header #version {
   position: absolute;
   right: 0px;
@@ -205,7 +208,7 @@ html body header #version {
   padding-right: 10px;
   font-weight: bold;
 }
-/* line 58, ../sass/_frame.sass */
+/* line 60, ../sass/_frame.sass */
 html body #main_content {
   height: 100%;
 }
@@ -371,6 +374,22 @@ body #main_content .get-started a::-moz-focus-inner {
   margin: -1px !important;
 }
 /* line 1, ../sass/_quickstart.sass */
-body #main_content .quick-start {
-  background: #DC7C7C;
+body #main_content .quickstart {
+  background: #7EBC89;
+  min-height: 100%;
+}
+/* line 4, ../sass/_quickstart.sass */
+body #main_content .quickstart .install, body #main_content .quickstart .first {
+  padding-bottom: 30px;
+}
+/* line 5, ../sass/_quickstart.sass */
+body #main_content .quickstart .install p, body #main_content .quickstart .first p {
+  padding-bottom: 30px;
+}
+/* line 9, ../sass/_quickstart.sass */
+body #main_content .quickstart .first .example {
+  margin-top: 40px;
+  background: url('/static/images/quickstart/first_api_1.gif?1457933117');
+  width: 850px;
+  height: 250px;
 }
