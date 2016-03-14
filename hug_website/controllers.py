@@ -41,6 +41,11 @@ def contribute(data, template=filename('hug_website/views/contribute.shpaml')):
     return ui
 
 
+def discuss(data, template=filename('hug_website/views/discuss.shpaml')):
+    ui = template()
+    return ui
+
+
 def quickstart(data, template=filename('hug_website/views/quickstart.shpaml')):
     ui = template()
     ui.install_header.text = data['install_header']
