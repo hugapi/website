@@ -199,7 +199,12 @@ html body header nav a.selected#quickstart {
   border-top: 5px #319643 solid;
   background: #7EBC89;
 }
-/* line 52, ../sass/_frame.sass */
+/* line 50, ../sass/_frame.sass */
+html body header nav a.selected#contribute {
+  border-top: 5px #765A87 solid;
+  background: #A47EBC;
+}
+/* line 55, ../sass/_frame.sass */
 html body header #version {
   position: absolute;
   right: 0px;
@@ -208,7 +213,7 @@ html body header #version {
   padding-right: 10px;
   font-weight: bold;
 }
-/* line 60, ../sass/_frame.sass */
+/* line 63, ../sass/_frame.sass */
 html body #main_content {
   height: 100%;
 }
@@ -221,10 +226,26 @@ body #main_content .main-text {
   padding-top: 30px;
 }
 /* line 6, ../sass/_common.sass */
-body #main_content .main-text p {
+body #main_content .main-text p, body #main_content .main-text ul, body #main_content .main-text ol {
   line-height: 35px;
   font-size: 23px;
   padding-top: 20px;
+}
+/* line 10, ../sass/_common.sass */
+body #main_content .main-text ol {
+  list-style: disc;
+}
+/* line 13, ../sass/_common.sass */
+body #main_content .markdown {
+  padding-bottom: 40px;
+}
+/* line 15, ../sass/_common.sass */
+body #main_content .markdown img {
+  max-width: 100%;
+}
+/* line 17, ../sass/_common.sass */
+body #main_content .markdown h1 {
+  margin-top: 30px;
 }
 /* line 1, ../sass/_home.sass */
 body #main_content .intro {
@@ -406,4 +427,9 @@ body #main_content .quickstart .cli .example {
   background: url('/static/images/quickstart/first_api_3.gif?1457937495');
   width: 850px;
   height: 440px;
+}
+/* line 1, ../sass/_contribute.sass */
+body #main_content .contribute {
+  background: #A47EBC;
+  min-height: 100%;
 }

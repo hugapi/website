@@ -1,5 +1,8 @@
+"""Defines the controllers responsible for modifying hug's website UI based on the underlying API"""
 from blox.compile import filename
 from blox.text import Text
+
+CONTRIBUTE_MD = Text(filename('hug_website/views/contribute.html')())
 
 
 def frame(data, template=filename('hug_website/views/frame.shpaml')):
@@ -31,8 +34,10 @@ def home(data, template=filename('hug_website/views/home.shpaml')):
     return ui
 
 
-def contribute(data, template=filename('hug_website/views/contribute.html')):
+
+def contribute(data, template=filename('hug_website/views/contribute.shpaml')):
     ui = template()
+    ui.markdown_content(CONTRIBUTE_MD)
     return ui
 
 
