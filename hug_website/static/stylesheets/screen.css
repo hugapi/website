@@ -210,20 +210,20 @@ html body #main_content {
   height: 100%;
 }
 
-/* line 1, ../sass/_home.sass */
+/* line 1, ../sass/_common.sass */
 body #main_content .main-text {
   width: 850px;
   margin-left: auto;
   margin-right: auto;
   padding-top: 30px;
 }
-/* line 6, ../sass/_home.sass */
+/* line 6, ../sass/_common.sass */
 body #main_content .main-text p {
   line-height: 35px;
   font-size: 23px;
   padding-top: 20px;
 }
-/* line 10, ../sass/_home.sass */
+/* line 1, ../sass/_home.sass */
 body #main_content .intro {
   overflow: hidden;
   *zoom: 1;
@@ -232,7 +232,7 @@ body #main_content .intro {
   min-height: 290px;
   background: #7895A0;
 }
-/* line 17, ../sass/_home.sass */
+/* line 8, ../sass/_home.sass */
 body #main_content .intro .koala {
   margin-left: 10px;
   float: left;
@@ -241,77 +241,77 @@ body #main_content .intro .koala {
   width: 410px;
   height: 290px;
 }
-/* line 24, ../sass/_home.sass */
+/* line 15, ../sass/_home.sass */
 body #main_content .simple {
   background: #7EBC89;
   padding-bottom: 30px;
 }
-/* line 27, ../sass/_home.sass */
+/* line 18, ../sass/_home.sass */
 body #main_content .simple .example {
   margin-top: 40px;
   background: url('/static/images/example.gif?1457714871');
   width: 722px;
   height: 450px;
 }
-/* line 33, ../sass/_home.sass */
+/* line 24, ../sass/_home.sass */
 body #main_content .performance {
   background: #DC7C7C;
   padding-bottom: 30px;
 }
-/* line 36, ../sass/_home.sass */
+/* line 27, ../sass/_home.sass */
 body #main_content .performance .benchmark {
   margin-top: 40px;
   background-position: 0 0;
   width: 736px;
   height: 358px;
 }
-/* line 42, ../sass/_home.sass */
+/* line 33, ../sass/_home.sass */
 body #main_content .versioning {
   background: #A47EBC;
   padding-bottom: 30px;
 }
-/* line 44, ../sass/_home.sass */
+/* line 35, ../sass/_home.sass */
 body #main_content .versioning p {
   padding-bottom: 30px;
 }
-/* line 48, ../sass/_home.sass */
+/* line 39, ../sass/_home.sass */
 body #main_content .documentation {
   background: #9BCC82;
   padding-bottom: 30px;
 }
-/* line 50, ../sass/_home.sass */
+/* line 41, ../sass/_home.sass */
 body #main_content .documentation p {
   padding-bottom: 30px;
 }
-/* line 54, ../sass/_home.sass */
+/* line 45, ../sass/_home.sass */
 body #main_content .annotation {
   background: #EAA676;
   padding-bottom: 30px;
 }
-/* line 56, ../sass/_home.sass */
+/* line 47, ../sass/_home.sass */
 body #main_content .annotation p {
   padding-bottom: 30px;
 }
-/* line 60, ../sass/_home.sass */
+/* line 51, ../sass/_home.sass */
 body #main_content .reuse {
   background: #525252;
   padding-bottom: 30px;
 }
-/* line 62, ../sass/_home.sass */
+/* line 53, ../sass/_home.sass */
 body #main_content .reuse p {
   padding-bottom: 30px;
 }
-/* line 66, ../sass/_home.sass */
+/* line 57, ../sass/_home.sass */
 body #main_content .get-started {
   background: white;
   color: black;
   padding-bottom: 30px;
 }
-/* line 69, ../sass/_home.sass */
+/* line 60, ../sass/_home.sass */
 body #main_content .get-started p {
   padding-bottom: 30px;
 }
-/* line 72, ../sass/_home.sass */
+/* line 63, ../sass/_home.sass */
 body #main_content .get-started a {
   font-size: 19px;
   padding: 0.5em 1.5em;
@@ -369,4 +369,8 @@ body #main_content .get-started a.disabled, body #main_content .get-started a[di
 body #main_content .get-started a::-moz-focus-inner {
   padding: 0 !important;
   margin: -1px !important;
+}
+/* line 1, ../sass/_quickstart.sass */
+body #main_content .quick-start {
+  background: #DC7C7C;
 }

@@ -34,3 +34,9 @@ def home(data, template=filename('hug_website/views/home.shpaml')):
 def contribute(data, template=filename('hug_website/views/contribute.html')):
     ui = template()
     return ui
+
+
+def quickstart(data, template=filename('hug_website/views/quickstart.shpaml')):
+    ui = template()
+    return ui
+
