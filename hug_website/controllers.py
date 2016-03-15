@@ -60,3 +60,11 @@ def quickstart(data, template=filename('hug_website/views/quickstart.shpaml')):
     ui.wsgi_header.text = data['wsgi_header']
     ui.wsgi_description.text = data['wsgi_description']
     return ui
+
+
+def not_found(data, template=filename('hug_website/views/not_found.shpaml')):
+    ui = template()
+    ui.not_found_header.text = data['not_found_header']
+    ui.not_found_description.text = data['not_found_description']
+    ui.home_link_description.text = data['home_link_description']
+    return ui

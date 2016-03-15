@@ -1,0 +1,7 @@
+.not-found
+    .main-text
+        > h1@not_found_header
+        > div.drop_bear
+        > p@not_found_description
+        h3
+            > a@home_link_description href=/

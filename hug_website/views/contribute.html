@@ -7,16 +7,20 @@ Welcome! You have found the right place.</p>
 From reporting issues, writing documentation, implementing new features, fixing bugs, creating logos, to providing additional usage examples - any contribution you can provide will be greatly appreciated and acknowledged.</p>
 <h1>Getting hug setup for local development</h1>
 <p>The first step when contributing to any project is getting it setup on your local machine, hug aims to make this as simple as possible.</p>
-<p>Account Requirements:
-- A valid GitHub account (https://github.com/join)</p>
-<p>Base System Requirements:
-- Python3.3+
-- Python3-venv (included w/ most Python3 installations but some Ubuntu systems require that it be installed separately)
-- bash or a bash compatible shell (should be auto-installed on Linux / Mac)
-- autoenv - https://github.com/kennethreitz/autoenv (optional)</p>
+<p>Account Requirements:</p>
+<ul>
+<li><a href="https://github.com/join">A valid GitHub account</a></li>
+</ul>
+<p>Base System Requirements:</p>
+<ul>
+<li>Python3.3+</li>
+<li>Python3-venv (included w/ most Python3 installations but some Ubuntu systems require that it be installed separately)</li>
+<li>bash or a bash compatible shell (should be auto-installed on Linux / Mac)</li>
+<li><a href="https://github.com/kennethreitz/autoenv">autoenv</a> (optional)</li>
+</ul>
 <p>Once you have verified that you system matches the base requirements you can start get the project working by following these steps:</p>
 <ol>
-<li>Fork the project on GitHub (https://github.com/timothycrosley/hug/fork).</li>
+<li><a href="https://github.com/timothycrosley/hug/fork">Fork the project on GitHub</a>.</li>
 <li>Clone your fork to your local file system:
     <code>git clone https://github.com/$GITHUB_ACCOUNT/hug.git</code></li>
 <li><code>cd hug</code><ul>
@@ -24,15 +28,15 @@ From reporting issues, writing documentation, implementing new features, fixing 
 <li>If you don't have autoenv set-up run <code>source .env</code> to setup the local environment. You will need to run this script everytime you want to work on the project - though it will not cause the entire setup process to re-occur.</li>
 </ul>
 </li>
-<li>run <code>test</code> to verify your everything is setup correctly, if the tests all pass you have succesfully setup hug for local development! If not you can ask for help diagnosing the error here: https://gitter.im/timothycrosley/hug.</li>
+<li>run <code>test</code> to verify your everything is setup correctly, if the tests all pass you have succesfully setup hug for local development! If not you can ask for help diagnosing the error <a href="https://gitter.im/timothycrosley/hug">here</a>.</li>
 </ol>
 <h1>Making a contribution</h1>
 <p>Congrats! Your now ready to make a contribution! Use the following as a guide to help you reach a successful pull-request:</p>
 <ol>
-<li>Check the issues page on github to see if the task you want to complete is listed there https://github.com/timothycrosley/hug/issues.<ul>
+<li>Check the <a href="https://github.com/timothycrosley/hug/issues">issues page</a> on github to see if the task you want to complete is listed there.<ul>
 <li>If it's listed there write a comment letting others know you are working on it.</li>
 <li>If it's not listed in github issues go ahead and log a new issue and then add a comment letting everyone know you have it under control.<ul>
-<li>If you're not sure if it's something that is good for main hug project and want immediate feedback you can discuss it here: https://gitter.im/timothycrosley/hug.</li>
+<li>If you're not sure if it's something that is good for main hug project and want immediate feedback you can discuss it <a href="https://gitter.im/timothycrosley/hug">here</a>.</li>
 </ul>
 </li>
 </ul>
@@ -40,7 +44,7 @@ From reporting issues, writing documentation, implementing new features, fixing 
 <li>Create an issue branch for your local work <code>git checkout -b issue/$ISSUE-NUMBER</code>.</li>
 <li>Do your magic here.</li>
 <li>Run <code>clean</code> to automatically sort your imports according to pep-8 guidlines.</li>
-<li>Ensure your code matches hug's latest coding standards defined here: https://github.com/timothycrosley/hug/blob/develop/CODING_STANDARD.md. It's important to focus to focus on making your code efficient as hug is used as a base framework for several performance critical APIs.</li>
+<li>Ensure your code matches hug's latest coding standards defined <a href="https://github.com/timothycrosley/hug/blob/develop/CODING_STANDARD.md">here</a>. It's important to focus to focus on making your code efficient as hug is used as a base framework for several performance critical APIs.</li>
 <li>Submit a pull request to the main project repository via GitHub.</li>
 </ol>
 <p>Thanks for the contribution! It will quickly get reviewed, and once accepted will result in your name being added to the ACKNOWLEDGEMENTS.md list :).</p>

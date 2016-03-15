@@ -63,9 +63,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
-/* line 56, icons/*.png */
-.icons-sprite, body #main_content .intro .koala, body #main_content .performance .benchmark {
-  background-image: url('/static/images/icons-se73547a06f.png');
+/* line 64, icons/*.png */
+.icons-sprite, body #main_content .intro .koala, body #main_content .performance .benchmark, body #main_content .not-found .main-text .drop_bear {
+  background-image: url('/static/images/icons-s37c8c99578.png');
   background-repeat: no-repeat;
 }
 
@@ -269,7 +269,7 @@ body #main_content .intro {
 body #main_content .intro .koala {
   margin-left: 10px;
   float: left;
-  background-position: 0 -358px;
+  background-position: 0 -871px;
   height: 200px;
   width: 410px;
   height: 290px;
@@ -419,21 +419,21 @@ body #main_content .quickstart .install p, body #main_content .quickstart .first
 /* line 9, ../sass/_quickstart.sass */
 body #main_content .quickstart .first .example {
   margin-top: 40px;
-  background: url('/static/images/quickstart/first_api_1.gif?1457933117');
+  background: url('/static/images/quickstart/first_api_1.gif?1457952219');
   width: 850px;
   height: 250px;
 }
 /* line 15, ../sass/_quickstart.sass */
 body #main_content .quickstart .http .example {
   margin-top: 40px;
-  background: url('/static/images/quickstart/first_api_2.gif?1457934690');
+  background: url('/static/images/quickstart/first_api_2.gif?1457952219');
   width: 850px;
   height: 490px;
 }
 /* line 21, ../sass/_quickstart.sass */
 body #main_content .quickstart .cli .example {
   margin-top: 40px;
-  background: url('/static/images/quickstart/first_api_3.gif?1457937495');
+  background: url('/static/images/quickstart/first_api_3.gif?1457952219');
   width: 850px;
   height: 440px;
 }
@@ -447,4 +447,21 @@ body #main_content .contribute {
 body #main_content .discuss {
   background: #EAA676;
   min-height: 100%;
+}
+/* line 1, ../sass/_not_found.sass */
+body #main_content .not-found {
+  background: #DC7C7C;
+  min-height: 100%;
+}
+/* line 4, ../sass/_not_found.sass */
+body #main_content .not-found .main-text {
+  width: 750px;
+}
+/* line 6, ../sass/_not_found.sass */
+body #main_content .not-found .main-text .drop_bear {
+  margin-top: 40px;
+  background-position: 0 -358px;
+  margin-left: 100px;
+  width: 500px;
+  height: 513px;
 }

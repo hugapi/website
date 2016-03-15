@@ -5,7 +5,8 @@ import hug
 
 from hug_website import controllers
 
-app = hug.get(output=hug.output_format.suffix({'/js': hug.output_format.json}, hug.output_format.html)).suffixes('/js')
+dual_output = hug.output_format.suffix({'/js': hug.output_format.json}, hug.output_format.html)
+app = hug.get(output=dual_output).suffixes('/js')
 html = partial(hug.transform.suffix, {'/js': None})
 
 
@@ -14,8 +15,13 @@ def static_files():
     return ('hug_website/static', )
 
 
-@app.transform(html(controllers.frame), urls=('/', '/website/{page_name}'), on_invalid=False)
-def root(page_name:hug.types.one_of(('home', 'contribute', 'quickstart', 'discuss'))='home'):
+@hug.not_found(transform=html(controllers.frame), output=dual_output)
+def drop_bear():
+    return root('not_found')
+
+
+@app.transform(html(controllers.frame), urls=('/', '/website/{page_name}'), on_invalid=hug.redirect.not_found)
+def root(page_name:hug.types.one_of(('home', 'contribute', 'quickstart', 'discuss', 'not_found'))='home'):
     return {'label': 'hug', 'version': hug.__version__,
             'content': globals()[page_name](), 'page': page_name}
 
@@ -28,6 +34,13 @@ def contribute():
 @app.transform(html(controllers.discuss))
 def discuss():
     return {}
+
+
+
+def not_found():
+    return {'not_found_header': '404 - BEWARE OF DROP BEARS',
+            'not_found_description': "You don't belong around these parts. Do yourself a favor: ",
+            'home_link_description': 'GO HOME.'}
 
 
 @app.transform(html(controllers.quickstart))
