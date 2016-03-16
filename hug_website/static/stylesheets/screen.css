@@ -269,6 +269,10 @@ body #main_content .markdown .codehilite {
   font-size: 18px;
   font-family: monospace;
 }
+/* line 27, ../sass/_common.sass */
+body #main_content .markdown ul {
+  margin-left: 50px;
+}
 /* line 1, ../sass/_home.sass */
 body #main_content .intro {
   overflow: hidden;
