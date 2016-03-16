@@ -163,8 +163,8 @@ html body header .logo {
   color: #7ebc89;
   font-size: 40px;
   font-weight: bold;
-  width: 292px;
-  height: 72px;
+  width: 70px;
+  height: 50px;
   float: left;
   margin-left: 10px;
   margin-top: 4px;
@@ -209,7 +209,12 @@ html body header nav a.selected#discuss {
   border-top: 5px #956A4B solid;
   background: #EAA676;
 }
-/* line 58, ../sass/_frame.sass */
+/* line 56, ../sass/_frame.sass */
+html body header nav a.selected#learn {
+  border-top: 5px #313131 solid;
+  background: #525252;
+}
+/* line 61, ../sass/_frame.sass */
 html body header #version {
   position: absolute;
   right: 0px;
@@ -218,7 +223,7 @@ html body header #version {
   padding-right: 10px;
   font-weight: bold;
 }
-/* line 66, ../sass/_frame.sass */
+/* line 69, ../sass/_frame.sass */
 html body #main_content {
   height: 100%;
 }
@@ -255,6 +260,14 @@ body #main_content .markdown img {
 /* line 19, ../sass/_common.sass */
 body #main_content .markdown h1 {
   margin-top: 30px;
+}
+/* line 21, ../sass/_common.sass */
+body #main_content .markdown .codehilite {
+  background: #272822;
+  padding: 20px;
+  margin-top: 10px;
+  font-size: 18px;
+  font-family: monospace;
 }
 /* line 1, ../sass/_home.sass */
 body #main_content .intro {
@@ -464,4 +477,39 @@ body #main_content .not-found .main-text .drop_bear {
   margin-left: 100px;
   width: 500px;
   height: 513px;
+}
+/* line 3, ../sass/_learn.sass */
+body #main_content .learn {
+  background: #525252;
+  min-height: 100%;
+  border-left: 300px #7895A0 solid;
+}
+/* line 7, ../sass/_learn.sass */
+body #main_content .learn #sections {
+  position: absolute;
+  background: #7895A0;
+  width: 300px;
+  left: 0px;
+  top: 50px;
+  padding-top: 10px;
+}
+/* line 15, ../sass/_learn.sass */
+body #main_content .learn #sections li a {
+  width: 275px;
+  display: block;
+  font-size: 18px;
+  padding: 10px;
+  margin-left: 25px;
+}
+/* line 21, ../sass/_learn.sass */
+body #main_content .learn #sections li a.selected {
+  margin-left: 20px;
+  width: 280px;
+  background: #525252;
+  border-left: 5px #313131 solid;
+}
+/* line 26, ../sass/_learn.sass */
+body #main_content .learn .content {
+  padding-left: 10px;
+  padding-top: 10px;
 }

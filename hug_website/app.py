@@ -6,7 +6,7 @@ import hug
 from hug_website import controllers
 
 dual_output = hug.output_format.suffix({'/js': hug.output_format.json}, hug.output_format.html)
-app = hug.get(output=dual_output).suffixes('/js')
+app = hug.get(output=dual_output, on_invalid=hug.redirect.not_found).suffixes('/js')
 html = partial(hug.transform.suffix, {'/js': None})
 
 
@@ -20,10 +20,15 @@ def drop_bear():
     return root('not_found')
 
 
-@app.transform(html(controllers.frame), urls=('/', '/website/{page_name}'), on_invalid=hug.redirect.not_found)
-def root(page_name:hug.types.one_of(('home', 'contribute', 'quickstart', 'discuss', 'not_found'))='home'):
+@app.transform(html(controllers.frame), urls=('/', '/website/{page_name}/{section}', '/website/{page_name}'))
+def root(page_name: hug.types.one_of(('home', 'contribute', 'quickstart', 'discuss', 'not_found', 'learn'))='home',
+         section: hug.types.one_of(controllers.DOCUMENTATION_TEMPLATES.keys())=controllers.DOCUMENTATION[0][0]):
+    if page_name == 'learn' and section:
+        content = globals()[page_name](section)
+    else:
+        content = globals()[page_name]()
     return {'label': 'hug', 'version': hug.__version__,
-            'content': globals()[page_name](), 'page': page_name}
+            'content': content, 'page': page_name}
 
 
 @app.transform(html(controllers.contribute))
@@ -35,6 +40,10 @@ def contribute():
 def discuss():
     return {}
 
+
+@app.transform(html(controllers.learn))
+def learn(section: hug.types.one_of(controllers.DOCUMENTATION_TEMPLATES.keys())=controllers.DOCUMENTATION[0][0]):
+    return {'sections': controllers.DOCUMENTATION, 'section': section}
 
 
 def not_found():

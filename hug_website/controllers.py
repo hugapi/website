@@ -1,8 +1,15 @@
 """Defines the controllers responsible for modifying hug's website UI based on the underlying API"""
 from blox.compile import filename
 from blox.text import Text
+from blox.dom import A, LI
 
 CONTRIBUTE_MD = Text(filename('hug_website/views/contribute.html')())
+DOCUMENTATION = (('architecture', 'Architecture Overview'),
+                 ('routing', 'Routing'),
+                 ('extending', 'Extending / New Plugins'))
+DOCUMENTATION_TEMPLATES = {'architecture': Text(open('hug_website/views/architecture.html').read()),
+                           'extending': Text(open('hug_website/views/extending.html').read()),
+                           'routing': Text(open('hug_website/views/routing.html').read())}
 
 
 def frame(data, template=filename('hug_website/views/frame.shpaml')):
@@ -32,7 +39,6 @@ def home(data, template=filename('hug_website/views/home.shpaml')):
     ui.get_started_header.text = data['get_started_header']
     ui.get_started_description.text = data['get_started_description']
     return ui
-
 
 
 def contribute(data, template=filename('hug_website/views/contribute.shpaml')):
@@ -68,3 +74,13 @@ def not_found(data, template=filename('hug_website/views/not_found.shpaml')):
     ui.not_found_description.text = data['not_found_description']
     ui.home_link_description.text = data['home_link_description']
     return ui
+
+
+def learn(data, template=filename('hug_website/views/learn.shpaml')):
+    ui = template()
+    for link, label in data['sections']:
+        ui.sections(LI(A(text=label, href='/website/learn/{0}'.format(link),
+                         classes=('selected', ) if link == data['section'] else ())))
+    ui.content(DOCUMENTATION_TEMPLATES[data['section']])
+    return ui
+

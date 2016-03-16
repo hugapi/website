@@ -10,3 +10,4 @@ python-coveralls==2.7.0
 frosted==1.4.1
 jiphy==1.2.1
 Markdown==2.6.5
+Pygments==2.1.3
