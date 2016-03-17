@@ -1,2 +1,0 @@
-git+git://github.com/timothycrosley/hug.git@develop
-git+git://github.com/timothycrosley/blox.git@develop
