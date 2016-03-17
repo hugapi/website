@@ -1,0 +1,91 @@
+<h1>hug output formats</h1>
+<p>Every endpoint that is exposed via an external facing interface will need to output the data returned in a standard format that users of the interface will be able to understand.</p>
+<p>The default output format for all hug APIs is JSON unless you explicitly specify a different default output_format:</p>
+<div class="codehilite"><pre><span></span>hug.API(__name__).output_format = hug.output_format.html
+</pre></div>
+
+
+<p>or:</p>
+<div class="codehilite"><pre><span></span>@hug.default_output_format()
+def my_output_formatter(data, request, response):
+    # Custom output formatting code
+</pre></div>
+
+
+<p>Or to specify an output_format for a specific endpoint, simply specify the output format within it's router:</p>
+<div class="codehilite"><pre><span></span>@hug.get(output=hug.output_format.html)
+def my_endpoint():
+    return # HTML generating code goes here
+</pre></div>
+
+
+<p>Remember that you can also always use route chaining to specify an output format for a group of endpoints within an API:</p>
+<div class="codehilite"><pre><span></span>html = hug.get(output=hug.output_format.html)
+
+@html
+def my_endpoint_1():
+    return # HTML generating code goes here
+
+@html.urls(&#39;/&#39;)
+def root():
+    return # HTML generating code goes here
+</pre></div>
+
+
+<p>Finally, it's perfectly valid for an output format to in essence be a collection of other output format's that get conditionally used. For example using the built in suffix output format:</p>
+<div class="codehilite"><pre><span></span>suffix_output = hug.output_format.suffix({&#39;.js&#39;: hug.output_format.json, &#39;.html&#39;:hug.output_format.html})
+
+@hug.get((&#39;my_endpoint.js&#39;, &#39;my_endoint.html&#39;), output=suffix_output)
+def my_endpoint():
+    return &#39;&#39;
+</pre></div>
+
+
+<p>In this case if the endpoint is accesed via my_endpoint.js the output type will be JSON, however if it's accesed via .html the output type will be HTML.</p>
+<h1>Built in hug output formats</h1>
+<p>hug provides a large catolog of built in output formats that can be used to build useful APIs right away:</p>
+<ul>
+<li><code>hug.output_format.json</code>: The default hug output formatter for all endpoints, outputs in Javascript Serialized Object Notation (JSON)</li>
+<li><code>hug.output_format.text</code>: Outputs in a plain text format</li>
+<li><code>hug.output_format.html</code>: Outputs Hyper Text Markup Language (HTML)</li>
+<li><code>hug.output_format.json_camelcase</code>: Outputs in the JSON format but first converts all keys to camelCase to better conform to Javascript coding standards.</li>
+<li><code>hug.output_format.pretty_json</code>: Outputs in the JSON format, with extra white-space to improve human readability</li>
+<li>
+<p><code>hug.output_format.image(format)</code>: Outputs an image (of the specified format)</p>
+<ul>
+<li>There are convience calls in the form `hug.output_format.{FORMAT}_image for the following image types: 'png', 'jpg', 'bmp', 'eps', 'gif', 'im', 'jpeg', 'msp', 'pcx', 'ppm', 'spider', 'tiff', 'webp', 'xbm',
+           'cur', 'dcx', 'fli', 'flc', 'gbr', 'gd', 'ico', 'icns', 'imt', 'iptc', 'naa', 'mcidas', 'mpo', 'pcd',
+           'psd', 'sgi', 'tga', 'wal', 'xpm', and 'svg'</li>
+</ul>
+<p>Automatically works on returned file names, streams, or objects that produce an image on read, save, or render</p>
+</li>
+<li>
+<p><code>hug.output_format.video(video_type, video_mime, doc)</code>: Streams a video back to the user in the specified format</p>
+<ul>
+<li>There are convience calls in the form `hug.output_format.{FORMAT}_video for the following video types: 'flv', 'mp4', 'm3u8', 'ts', '3gp', 'mov', 'avi', and 'wmv'
+Automatically works on returned file names, streams, or objects that produce a video on read, save, or render</li>
+</ul>
+</li>
+<li>
+<p><code>hug.output_format.file</code>: Will dynamically determine and stream a file based on its content
+    Automatically works on returned file names and streams</p>
+</li>
+<li>
+<p><code>hug.output_format.on_content_type(handlers={content_type: output_format}, default=None)</code>: Dynamically changes the output format based on the request content type</p>
+</li>
+<li><code>hug.output_format.suffix(handlers={suffix: output_format}, default=None)</code>: Dynamically changes the output format based on a suffix at the end of the requested path</li>
+<li><code>hug.output_format.prefix(handlers={suffix: output_format}, defualt=None)</code>: Dynamically changes the output format based on a prefix at the begining of the requested path</li>
+</ul>
+<h1>Creating a custom output format</h1>
+<p>An output format is simply a function with a content type attached that takes a data argument, and optionally a request and response, and returns properly encoded and formatted data:</p>
+<div class="codehilite"><pre><span></span>@hug.format.content_type(&#39;file/text&#39;)
+def format_as_text(data, request=None, response=None):
+    return str(content).encode(&#39;utf8&#39;)
+</pre></div>
+
+
+<p>A common pattern is to only apply the output format validation errors aren't passed in since it's hard to deal with this for several formats (such as images) and it may make more sense to simply return the error as JSON. hug makes this pattern simple as well with the <code>hug.output_format.on_valid</code> decorator:</p>
+<div class="codehilite"><pre><span></span>@hug.output_format.on_valid(&#39;file/text&#39;)
+def format_as_text_when_valid(data, request=None, response=None):
+    return str(content).encode(&#39;utf8&#39;)
+</pre></div>

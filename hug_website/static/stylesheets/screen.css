@@ -248,30 +248,27 @@ body #main_content .main-text p, body #main_content .main-text ul, body #main_co
 /* line 12, ../sass/_common.sass */
 body #main_content .main-text ol, body #main_content .main-text ul {
   list-style: disc;
+  margin-left: 50px;
 }
-/* line 15, ../sass/_common.sass */
+/* line 16, ../sass/_common.sass */
 body #main_content .markdown {
   padding-bottom: 40px;
 }
-/* line 17, ../sass/_common.sass */
+/* line 18, ../sass/_common.sass */
 body #main_content .markdown img {
   max-width: 100%;
 }
-/* line 19, ../sass/_common.sass */
+/* line 20, ../sass/_common.sass */
 body #main_content .markdown h1 {
   margin-top: 30px;
 }
-/* line 21, ../sass/_common.sass */
+/* line 22, ../sass/_common.sass */
 body #main_content .markdown .codehilite {
   background: #272822;
   padding: 20px;
   margin-top: 10px;
   font-size: 18px;
   font-family: monospace;
-}
-/* line 27, ../sass/_common.sass */
-body #main_content .markdown ul {
-  margin-left: 50px;
 }
 /* line 1, ../sass/_home.sass */
 body #main_content .intro {

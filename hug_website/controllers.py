@@ -7,11 +7,15 @@ CONTRIBUTE_MD = Text(filename('hug_website/views/contribute.html')())
 DOCUMENTATION = (('architecture', 'Architecture Overview'),
                  ('routing', 'Routing'),
                  ('type_annotation', 'Type Annotation'),
-                 ('extending', 'Extending / New Plugins'))
+                 ('directives', 'Directives'),
+                 ('output_formats', 'Output Formats'),
+                 ('extending', 'Extending / New Plugins'),)
 DOCUMENTATION_TEMPLATES = {'architecture': Text(open('hug_website/views/architecture.html').read()),
                            'extending': Text(open('hug_website/views/extending.html').read()),
                            'routing': Text(open('hug_website/views/routing.html').read()),
-                           'type_annotation': Text(open('hug_website/views/type_annotation.html').read())}
+                           'type_annotation': Text(open('hug_website/views/type_annotation.html').read()),
+                           'directives': Text(open('hug_website/views/directives.html').read()),
+                           'output_formats': Text(open('hug_website/views/output_formats.html').read())}
 
 
 def frame(data, template=filename('hug_website/views/frame.shpaml')):
