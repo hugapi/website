@@ -1,0 +1,27 @@
+<!DOCTYPE html><html><head><link type="text/css" rel="sytlesheet" href="http://fonts.googleapis.com/css?family=Roboto:100|Roboto+Slab" /><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" /><link type="text/css" rel="stylesheet" href="/static/stylesheets/screen.css" /><link type="text/css" rel="stylesheet" href="/static/stylesheets/codehilite.css" /></head><body><header><a class="logo" href="/" alt="hug: embrace the APIs of the future">hug</a><nav><a id="quickstart" href="/website/quickstart">Quickstart</a><a class="selected" id="learn" href="/website/learn">Learn</a><a id="contribute" href="/website/contribute">Contribute</a><a id="discuss" href="/website/discuss">Discuss</a></nav><a id="version" href="https://github.com/timothycrosley/hug/blob/develop/CHANGELOG.md#install-the-latest" target="_blank">2.0.0</a></header><section id="main_content"><div class="learn"><ul id="sections"><li><a class="" href="/website/learn/architecture">Architecture Overview</a></li><li><a class="" href="/website/learn/routing">Routing</a></li><li><a class="" href="/website/learn/type_annotation">Type Annotation</a></li><li><a class="" href="/website/learn/directives">Directives</a></li><li><a class="" href="/website/learn/output_formats">Output Formats</a></li><li><a class="selected" href="/website/learn/extending">Extending / New Plugins</a></li></ul><div class="content"><div class="main-text markdown"><h1>Building hug extensions</h1>
+<p>Want to extend hug to tackle new problems? Integrate a new form of authentication? Add new useful types?
+Awesome! Here are some guidlines to help you get going and make a world class hug extension
+that you will be proud to have showcased to all hug users.</p>
+<h1>How are extensions built?</h1>
+<p>hug extensions should be built like any other python project and uploaded to PYPI. What makes a hug extension a <em>hug</em> extension is simply it's name and the fact it contains within its Python code utilities and classes that extend hugs capabilties.</p>
+<h1>Naming your extension</h1>
+<p>All hug extensions should be prefixed with <code>hug_</code> for easy disscovery on PYPI. Additionally, there are a few more exact prefixes that can be optionally be added to help steer users to what your extensions accomplishes:</p>
+<ul>
+<li><code>hug_types_</code> should be used if your extensions is used primarily to add new types to hug (for example: hug_types_numpy).</li>
+<li><code>hug_authentication_</code> if your extension is used primarily to add a new authentication type to hug (for example: hug_authentication_oath2)</li>
+<li><code>hug_output_format_</code> if your extension is used primarily to add a new output format to hug (for example: hug_output_format_svg)</li>
+<li><code>hug_input_format_</code> if your extension is used primarily to add a new input format to hug (for example: hug_input_format_html)</li>
+<li><code>hug_validate_</code> if your extension is used primarily to add a new overall validator to hug (for example: hug_validate_no_null).</li>
+<li><code>hug_transform_</code> if your extension is used primarily to add a new hug transformer (for example: hug_transform_add_time)</li>
+<li><code>hug_middleware_</code> if your extension is used primarily to add a middleware to hug (for example: hug_middleware_redis_session)</li>
+</ul>
+<p>For any more complex or general use case that doesn't fit into these predefined categories or combines many of them, it
+is perfectly suitable to simply prefix your extension with <code>hug_</code>. For example: hug_geo could combine hug types, hug input formats, and hug output formats making it a good use case for a simply prefixed extension.</p>
+<h1>Building Recommendations</h1>
+<p>Ideally, hug extensions should be built in the same manner as hug itself. This means 100% test coverage using pytest, decent performance, pep8 compliance, and built in optional compiling with Cython. None of this is strictly required, but will help give users of your extension faith that it wont slow things down or break their setup unexpectedly.</p>
+<h1>Registering your extension</h1>
+<p>Once you have finished developing and testing your extension, you can help increase others ability to discover it by registering it. The first place an extension should be registered is on PYPI, just like any other Python Package. In addition to that you can add your extension to the list of extensions on hug's <a href="https://github.com/timothycrosley/hug/wiki/Hug-Extensions">github wiki</a>.</p>
+<h1>Thank you</h1>
+<p>A sincere thanks to anyone that takes the time to develop and register an extension for hug. You are helping to make hug a more complete eco-system for everyuser out there, and paving the way for a solid foundation into the future.</p>
+<p>Thanks!</p>
+<p>~Timothy Crosley</p></div></div></div></section><footer></footer></body></html>

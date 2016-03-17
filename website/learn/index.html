@@ -1,0 +1,172 @@
+<!DOCTYPE html><html><head><link type="text/css" rel="sytlesheet" href="http://fonts.googleapis.com/css?family=Roboto:100|Roboto+Slab" /><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" /><link type="text/css" rel="stylesheet" href="/static/stylesheets/screen.css" /><link type="text/css" rel="stylesheet" href="/static/stylesheets/codehilite.css" /></head><body><header><a class="logo" href="/" alt="hug: embrace the APIs of the future">hug</a><nav><a id="quickstart" href="/website/quickstart">Quickstart</a><a class="selected" id="learn" href="/website/learn">Learn</a><a id="contribute" href="/website/contribute">Contribute</a><a id="discuss" href="/website/discuss">Discuss</a></nav><a id="version" href="https://github.com/timothycrosley/hug/blob/develop/CHANGELOG.md#install-the-latest" target="_blank">2.0.0</a></header><section id="main_content"><div class="learn"><ul id="sections"><li><a class="selected" href="/website/learn/architecture">Architecture Overview</a></li><li><a class="" href="/website/learn/routing">Routing</a></li><li><a class="" href="/website/learn/type_annotation">Type Annotation</a></li><li><a class="" href="/website/learn/directives">Directives</a></li><li><a class="" href="/website/learn/output_formats">Output Formats</a></li><li><a class="" href="/website/learn/extending">Extending / New Plugins</a></li></ul><div class="content"><div class="main-text markdown"><h1>The guiding thought behind the architecture</h1>
+<p>hug is the cleanest way to create HTTP REST APIs on Python3.
+It consistently benchmarks among the top 3 performing web frameworks for Python, handily beating out Flask and Django.
+For almost every common Web API task the code written to accomplish it in hug is a small fraction of what is required in other Frameworks.</p>
+<p>However, it's important to note, hug is not a Web API Framework. OK -- that certainly is a function it performs. And exceptionally well at that.
+But at its core, hug is a framework for exposing idiomatically correct and standard internal Python APIs externally.
+A framework to allow developers and architects to define logic and structure once, and then cleanly expose it over other means.</p>
+<p>Currently, this means that you can expose existing Python functions / APIs over HTTP and CLI in addition to standard Python.
+However, as time goes on more interfaces will be supported. The architecture and implementation decisions that have going
+into hug have and will continue to support this goal.</p>
+<p>This central concept also frees hug to rely on the fastest and best of breed components for every interface it supports:</p>
+<ul>
+<li>Falcon is leveraged when exposing to HTTP for it's impressive performance at this task</li>
+<li>Argparse is leveraged when exposing to CLI for the clean consistent interaction it enables from the command line</li>
+</ul>
+<h1>What this looks like in practice - an illustrative example</h1>
+<p>Let's say I have a very simple python API I've built to add 2 numbers together. I call my invention <code>addition</code>.
+Trust me, this is legit. It's trademarked and everything:</p>
+<div class="codehilite"><pre><span></span>&quot;&quot;&quot;A simple API to enable adding two numbers together&quot;&quot;&quot;
+
+
+def add(number_1, number_2):
+    &quot;&quot;&quot;Returns the result of adding number_1 to number_2&quot;&quot;&quot;
+    return number_1 + number_2
+</pre></div>
+
+
+<p>It works, it's well documented, and it's clean.
+Several people are already importing and using my Python module for their math needs.
+However, there's a great injustice! I'm lazy, and I don't want to have to have open a Python interpreter etc to access my function.
+Here's how I modify it to expose it via the command line:</p>
+<div class="codehilite"><pre><span></span><span class="sd">&quot;&quot;&quot;A simple API to enable adding two numbers together&quot;&quot;&quot;</span>
+<span class="kn">import</span> <span class="nn">hug</span>
+
+
+<span class="nd">@hug.cli</span><span class="p">()</span>
+<span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">number_1</span><span class="p">,</span> <span class="n">number_2</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Returns the result of adding number_1 to number_2&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">number_1</span> <span class="o">+</span> <span class="n">number_2</span>
+
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">add</span><span class="o">.</span><span class="n">interface</span><span class="o">.</span><span class="n">cli</span><span class="p">()</span>
+</pre></div>
+
+
+<p>Yay! Now I can just do my math from the command line using <code>add.py $NUMBER_1 $NUMBER_2</code>.
+And even better, if I miss an argument it let's me know what it is and how to fix my error.
+The thing I immediately notice, is that my new command line interface works, it's well documented, and it's clean.
+Just like the original.</p>
+<p>However, users are not satisfied. I keep updating my API and they don't want to have to install a new copy every time.
+They demand a Web API so they can always be pointing to my latest and greatest without restarting their apps and APIs.
+No problem. I'll just expose it over HTTP as well:</p>
+<div class="codehilite"><pre><span></span><span class="sd">&quot;&quot;&quot;A simple API to enable adding two numbers together&quot;&quot;&quot;</span>
+<span class="kn">import</span> <span class="nn">hug</span>
+
+
+<span class="nd">@hug.get</span><span class="p">()</span> <span class="c1"># &lt;-- This is the only additional line</span>
+<span class="nd">@hug.cli</span><span class="p">()</span>
+<span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">number_1</span><span class="p">,</span> <span class="n">number_2</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Returns the result of adding number_1 to number_2&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">number_1</span> <span class="o">+</span> <span class="n">number_2</span>
+
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">add</span><span class="o">.</span><span class="n">interface</span><span class="o">.</span><span class="n">cli</span><span class="p">()</span>
+</pre></div>
+
+
+<p>That's it. I then run my new service via <code>hug -f add.py</code> and can see it running on <code>http://localhost:8000/</code>.
+The default page shows me documentation that points me toward <code>http://localhost:8000/add?number_1=1&amp;number_2=2</code> to perform my first addition.
+The thing I immediately notice, is that my new web interface works, it's well documented, and it's clean.
+Just like the original. Even better, after all of this, people hitting the API via Python didn't have to change anything.
+All my original unit tests continue to pass and my code coverage remains at 100%.</p>
+<p>It turns out, the problems and thoughts that go into defining a clean well documented API for internal use greatly mirror those that are required to expose an API for external use. hug recognizes this and enables cleanly reusing the documentation, requirements, and structure of internal APIs for external use. This also encourages easier to use and well documented internal APIs: a major win/win.</p>
+<h1>What happened internally as I exposed my API to new interfaces?</h1>
+<p>A few things hapen when you wrapped that first function for external use, with hug.cli():</p>
+<ul>
+<li>hug created a singleton hug.API object on your module to keep track of all interfaces that exist within the module<ul>
+<li>This is referable by <code>__hug__</code> or <code>hug.API(__name__)</code></li>
+</ul>
+</li>
+<li>a new hug.interface.CLI() object was created and attached to <code>add.interface.cli</code><ul>
+<li>This interface fully encapsulates the logic needed to expose <code>add</code> as a command line tool</li>
+<li>NOTE: all supported ways to expose a function via hug can be found in <code>hug/interface.py</code></li>
+</ul>
+</li>
+<li>the original Python <code>add</code> function is returned unmodified (with exception to the <code>.interface.cli</code> property addition)</li>
+</ul>
+<p>Then when I extended my API to run as HTTP service the same basic pattern was followed:</p>
+<ul>
+<li>hug saw that the singleton already existed</li>
+<li>a new hug.interface.HTTP() object was created and attached to <code>add.interface.http</code><ul>
+<li>This interface encapsulates the logic needed to expose the <code>add</code> command as an HTTP service</li>
+<li>The new HTTP interface handler is registered to the API singleton</li>
+</ul>
+</li>
+<li>the original Python <code>add</code> function is returned unmodified (with exception to the <code>.interface.http</code> property addition)</li>
+</ul>
+<p>At the end of this, I have 2 interface objects attached to my original function: <code>add.cli</code> and <code>add.http</code>.
+Which is consistent with what I want to accomplish, one Python API with 2 additional external interfaces.</p>
+<p>When I start the service via the command line, I call the <code>add.cli</code> interface directly which executes the code
+producing a command line tool to interact with the add function.</p>
+<p>When I run <code>hug -f add.py</code> the hug runner looks for the
+<code>__hug__</code> singleton object and then looks for all registered HTTP interfaces, creating a Falcon WSGI API from them.
+It then uses this new Falcon API to directly handle incoming HTTP requests.</p>
+<h1>Where does the code live for these core pieces?</h1>
+<p>While hug has a lot of modules that enable it to provide a great depth of functionality, everything accomplished above,
+and that is core to hug, lives in only a few:</p>
+<ul>
+<li><code>hug/api.py</code>: Defines the hug per-module singleton object that keeps track of all registered interfaces, alongside the associated per interface APIs (HTTPInterfaceAPI, CLIInterfaceAPI)</li>
+<li><code>hug/routing.py</code>: holds all the data and settings that should be passed to newly created interfaces, and creates the interfaces from that data.<ul>
+<li>This directly is what powers <code>hug.get</code>, `hug.cli, and all other function to interface routers</li>
+<li>Can be seen as a Factory for creating new interfaces</li>
+</ul>
+</li>
+<li><code>hug/interface.py</code>: Defines the actual interfaces that manage external interaction with your function (CLI and HTTP).</li>
+</ul>
+<p>These 3 modules define the core functionality of hug, and any API that uses hug will inevitably utilize these modules.
+Develop a good handling on just these and you'll be in great shape to contribute to hug, and think of new ways to improve the Framework.</p>
+<p>Beyond these there is one additional internal utility library that enables hug to do it's magic: <code>hug/introspect.py</code>.
+This module provides utility functions that enable hugs routers to determine what arguments a function takes and in what form.</p>
+<h1>Enabling interfaces to improve upon internal functions</h1>
+<p>hug provides several mechanisms to enable your exposed interfaces to have additional capabilities not defined by
+the base Python function.</p>
+<ul>
+<li>Enforced type annotations: hug interfaces automatically enforce type annotations you set on functions
+    <code>def add(number_1:hug.types.number, number_2:hug.types.number):</code><ul>
+<li>These types are simply called with the data passed into that field, if an exception is thrown it's seen as invalid</li>
+<li>all of hugs custom types to be used for annotation are defined in <code>hug/types.py</code></li>
+</ul>
+</li>
+<li>Directives: hug interfaces allow replacing Python function parameters with dynamically pulled data via directives.
+    <code>def add(number_1:hug.types.number, number_2:hug.types.number, hug_timer=2):</code><ul>
+<li>In this example <code>hug_timer</code> is directive, when calling via a hug interface hug_timer is replaced with a timer that contains the starting time.</li>
+<li>All of hug's built-in directives are defined in hug/directives.py</li>
+</ul>
+</li>
+<li>Requires: hug requirements allow you to specify requirements that must be met only for specified interfaces.
+    <code>@hug.get(requires=hug.authentication.basic(hug.authentication.verify('User1', 'mypassword')))</code><ul>
+<li>Causes the HTTP method to only succesfully call the Python function if User1 is logged in</li>
+<li>requirements are currently highly focused on authentication, and all existing require functions are defined in hug/authentication.py</li>
+</ul>
+</li>
+<li>Transformations: hug transformations enable changing the result of a function but only for the specified interface
+    <code>@hug.get(transform=str)</code><ul>
+<li>The above would cause the method to return a stringed result, while the original Python function would still return an int.</li>
+<li>All of hug's built in transformations are defined in <code>hug/transform.py</code></li>
+</ul>
+</li>
+<li>Input / Output formats: hug provides an extensive number of built-in input and output formats.
+    <code>@hug.get(output_format=hug.output_format.json)</code><ul>
+<li>These formats define how data should be sent to your API function and how it will be returned</li>
+<li>All of hugs built-in output formats are found in <code>hug/output_format.py</code></li>
+<li>All of hugs built-in input formats are found in <code>hug/input_format.py</code></li>
+<li>The default assumption for output_formatting is JSON</li>
+</ul>
+</li>
+</ul>
+<h1>Switching from using a hug API over one interface to another</h1>
+<p>hug does it's best to also solve the other side of the coin: that is how APIs are used.
+Naturally, native Python will always be the fastest, however HTTP can provide attractive auto updating
+and clear responsibility separation benefits. You can interact with hug APIs via hug.use.[interface] if the ability
+to switch between these is a high priority for you. The code that enables this is found in <code>hug/use.py</code> and should be
+kept in mind if working on adding an additional interface for hug, or changing how hug calls functions.</p>
+<h1>Feel free to update or request more info :)</h1>
+<p>I tried my best to highlight where important functionality in the hug project lives via this Architecture document, as well as
+explain the reasoning behind it. However, this document is certainly not complete! If you encounter anything you would like to be
+expanded upon or explained in detail here, please either let me know or modify the document so everyone can get a good walk through of hugs architecture.</p>
+<p>Thanks!</p>
+<p>I hope you have found this guide useful :)</p>
+<p>~Timothy</p></div></div></div></section><footer></footer></body></html>
