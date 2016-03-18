@@ -57,7 +57,7 @@
     .exceptions
         .main-text
             h1
-                Intuitive Exception Handling
+                Intuitive exception handling
             p
                 Want to customize the behaviour when a list of custom exceptions happen? Or when any exception occurs?
                 hug 2.0.0 makes handling the edge cases easy and intuitive.
