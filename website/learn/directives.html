@@ -1,7 +1,7 @@
-<!DOCTYPE html><html><head><link href="http://fonts.googleapis.com/css?family=Roboto:100|Roboto+Slab" rel="sytlesheet" type="text/css" /><link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" /><link href="/static/stylesheets/screen.css" rel="stylesheet" type="text/css" /><link href="/static/stylesheets/codehilite.css" rel="stylesheet" type="text/css" /><link sizes="32x32" href="favicon-32x32.png" rel="icon" type="image/png" /><link sizes="16x16" href="favicon-16x16.png" rel="icon" type="image/png" /><title>hug: Embrace the APIs of the future</title></head><body><header><a class="logo" alt="hug: embrace the APIs of the future" href="/">hug</a><nav><a id="quickstart" href="/website/quickstart">Quickstart</a><a class="selected" id="learn" href="/website/learn">Learn</a><a id="contribute" href="/website/contribute">Contribute</a><a id="acknowledge" href="/website/acknowledge">Acknowledge</a><a id="discuss" href="/website/discuss">Discuss</a></nav><a id="latest" href="/website/latest">2.0.0</a></header><section id="main_content"><div class="learn"><ul id="sections"><li><a class="" href="/website/learn/architecture">Architecture Overview</a></li><li><a class="" href="/website/learn/routing">Routing</a></li><li><a class="" href="/website/learn/type_annotation">Type Annotation</a></li><li><a class="selected" href="/website/learn/directives">Directives</a></li><li><a class="" href="/website/learn/output_formats">Output Formats</a></li><li><a class="" href="/website/learn/extending">Extending / New Plugins</a></li></ul><div class="content"><div class="main-text markdown"><h1>hug directives (automatic argument injection)</h1>
-<p>Often times you'll find yourself needing something particular to an interface (say a header, a session, or content_type) but don't want to tie your function
-to a single interface. To support this: hug introduces the concept of <code>directives</code>. In hug directives are simply arguments that have been registered to automatically provide a parameter value based on knowledge known to the interface.</p>
-<p>For example - this is the built in session directive:</p>
+<!DOCTYPE html><html><head><link href="http://fonts.googleapis.com/css?family=Roboto:100|Roboto+Slab" type="text/css" rel="sytlesheet" /><link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" /><link href="/static/stylesheets/screen.css" type="text/css" rel="stylesheet" /><link href="/static/stylesheets/codehilite.css" type="text/css" rel="stylesheet" /><link sizes="32x32" href="favicon-32x32.png" type="image/png" rel="icon" /><link sizes="16x16" href="favicon-16x16.png" type="image/png" rel="icon" /><title>hug: Embrace the APIs of the future</title></head><body><header><a class="logo" href="/" alt="hug: embrace the APIs of the future">hug</a><nav><a id="quickstart" href="/website/quickstart">Quickstart</a><a class="selected" id="learn" href="/website/learn">Learn</a><a id="contribute" href="/website/contribute">Contribute</a><a id="acknowledge" href="/website/acknowledge">Acknowledge</a><a id="discuss" href="/website/discuss">Discuss</a></nav><a id="latest" href="/website/latest">2.0.1</a></header><section id="main_content"><div class="learn"><ul id="sections"><li><a class="" href="/website/learn/architecture">Architecture Overview</a></li><li><a class="" href="/website/learn/routing">Routing</a></li><li><a class="" href="/website/learn/type_annotation">Type Annotation</a></li><li><a class="selected" href="/website/learn/directives">Directives</a></li><li><a class="" href="/website/learn/output_formats">Output Formats</a></li><li><a class="" href="/website/learn/extending">Extending / New Plugins</a></li></ul><div class="content"><div class="main-text markdown"><h1>hug directives (automatic argument injection)</h1>
+<p>Oftentimes you'll find yourself needing something particular to an interface (say a header, a session, or content_type), but don't want to tie your function
+to a single interface. To support this, hug introduces the concept of <code>directives</code>. In hug, directives are simply arguments that have been registered to automatically provide a parameter value based on knowledge known to the interface.</p>
+<p>For example, this is the built-in session directive:</p>
 <div class="codehilite"><pre><span></span>@hug.directive()
 def session(context_name=&#39;session&#39;, request=None, **kwargs):
     &quot;&quot;&quot;Returns the session associated with the current request&quot;&quot;&quot;
@@ -9,14 +9,14 @@ def session(context_name=&#39;session&#39;, request=None, **kwargs):
 </pre></div>
 
 
-<p>Then when using this directive in your code, you can either specify the directive via type annotation:</p>
+<p>Then, when using this directive in your code, you can either specify the directive via type annotation:</p>
 <div class="codehilite"><pre><span></span>@hug.get()
 def my_endpoint(session: hug.directives.session):
     session # is here automatically, without needing to be passed in
 </pre></div>
 
 
-<p>Or, prefixing the argument with <code>hug_</code>:</p>
+<p>Or by prefixing the argument with <code>hug_</code>:</p>
 <div class="codehilite"><pre><span></span>@hug.get()
 def my_endpoint(hug_session):
     session # is here automatically, without needing to be passed in
@@ -33,19 +33,19 @@ def my_endpoint(hug_session=&#39;alternative_session_key&#39;):
 <h1>Built-in directives</h1>
 <p>hug provides a handful of directives for commonly needed attributes:</p>
 <ul>
-<li>hug.directives.Timer (hug_timer=precision): Stores the time the interface was initially called, returns how much time has passed since the function was called if casted as a float. Automatically converts to a the time taken when returned as part of a JSON structure. The default value is used to specify the float precision desired when keeping track of the time passed</li>
-<li>hug.directives.module (hug_module): Passes along the module that contains the API associated with this endpoint</li>
-<li>hug.directives.api (hug_api): Passes along the hug API singleton associated with this endpoint</li>
-<li>hug.directives.api_version (hug_api_version): Passes along the version of the API being called</li>
-<li>hug.directives.documentation (hug_documentation): Generates and passes along the entire set of documentation for the API the endpoint is contained within</li>
-<li>hug.directives.session (hug_session=context_name): Passes along the session associated with the current request. The default value is used to provide a different key where the value is stored on the request.context object.</li>
-<li>hug.directives.user (hug_user): Passes along the user object associated with the request</li>
-<li>hug.directives.CurrentAPI (hug_current_api): Passes along a smart version aware API caller, to enable calling other functions within your API with reissurence the correct function is being called for the version of the API being requested</li>
+<li>hug.directives.Timer (hug_timer=precision): Stores the time the interface was initially called, returns how much time has passed since the function was called, if casted as a float. Automatically converts to the time taken when returned as part of a JSON structure. The default value specifies the float precision desired when keeping track of the time passed.</li>
+<li>hug.directives.module (hug_module): Passes along the module that contains the API associated with this endpoint.</li>
+<li>hug.directives.api (hug_api): Passes along the hug API singleton associated with this endpoint.</li>
+<li>hug.directives.api_version (hug_api_version): Passes along the version of the API being called.</li>
+<li>hug.directives.documentation (hug_documentation): Generates and passes along the entire set of documentation for the API that contains the endpoint.</li>
+<li>hug.directives.session (hug_session=context_name): Passes along the session associated with the current request. The default value provides a different key whose value is stored on the request.context object.</li>
+<li>hug.directives.user (hug_user): Passes along the user object associated with the request.</li>
+<li>hug.directives.CurrentAPI (hug_current_api): Passes along a smart, version-aware API caller, to enable calling other functions within your API, with reassurance that the correct function is being called for the version of the API being requested.</li>
 </ul>
 <h1>Building custom directives</h1>
-<p>hug provides the <code>@hug.directive()</code> to enable creation of new directives. It takes one argument: apply_globally which defaults to False.
-If you set this parameter to True the hug directive will be automatically made available as a magic <code>hug_</code> argument on all endpoints outside of just your defined API. This is not a concern if your applying directives via type annotation.</p>
-<p>The most basic directive will simply take an optional default value, and **kwargs:</p>
+<p>hug provides the <code>@hug.directive()</code> to enable creation of new directives. It takes one argument: apply_globally, which defaults to False.
+If you set this parameter to True, the hug directive will be automatically made available as a magic <code>hug_</code> argument on all endpoints outside of your defined API. This is not a concern if you're applying directives via type annotation.</p>
+<p>The most basic directive will take an optional default value, as well as **kwargs:</p>
 <div class="codehilite"><pre><span></span>@hug.directive()
 def basic(default=False, **kwargs):
     return str(default) + &#39; there!&#39;
@@ -61,13 +61,13 @@ def basic(default=False, **kwargs):
 </pre></div>
 
 
-<p>It's important to always accept **kwargs for directive functions as each interface get's to decide it's own set of
-key word arguments to send to the directive, which can then be used to pull-in information for the directive.</p>
+<p>It's important to always accept **kwargs for directive functions, as each interface gets to decide its own set of
+keyword arguments to send to the directive, which can then be used to pull in information for the directive.</p>
 <h1>Common directive key word parameters</h1>
-<p>Independ of what interface a directive is being ran through, the following key word arguments will be passed to it:</p>
+<p>Independent of interface, the following key word arguments will be passed to the directive:</p>
 <ul>
-<li><code>interface</code> - the interface that the directive is being ran through. Useful for conditionally injecting different data via the decorator depending on the interface it is being called through, as demonstrated at the bottom of this section</li>
-<li><code>api</code> - the API singleton associated with this endpoint</li>
+<li><code>interface</code> - The interface that the directive is being run through. Useful for conditionally injecting data (via the decorator) depending on the interface it is being called through, as demonstrated at the bottom of this section.</li>
+<li><code>api</code> - The API singleton associated with this endpoint.</li>
 </ul>
 <p>Interface Example:</p>
 <div class="codehilite"><pre><span></span>@directive()
@@ -84,14 +84,14 @@ def my_directive(default=None, interface=None, **kwargs):
 
 
 <h1>HTTP directive key word parameters</h1>
-<p>Directives are passed the following additional keyword parameters when they are being ran through an HTTP interface:</p>
+<p>Directives are passed the following additional keyword parameters when they are being run through an HTTP interface:</p>
 <ul>
-<li><code>response</code>: The HTTP response object that will be returned for this request</li>
-<li><code>request</code>: The HTTP request object that caused this interface to be called</li>
-<li><code>api_version</code>: The version of the endpoint being hit</li>
+<li><code>response</code>: The HTTP response object that will be returned for this request.</li>
+<li><code>request</code>: The HTTP request object that caused this interface to be called.</li>
+<li><code>api_version</code>: The version of the endpoint being hit.</li>
 </ul>
 <h1>CLI directive key word parameters</h1>
-<p>Directives get one additional argument when they are being ran through a command line interface:</p>
+<p>Directives get one additional argument when they are run through a command line interface:</p>
 <ul>
-<li><code>argparse</code>: The argparse instance created to parse command line arguments</li>
+<li><code>argparse</code>: The argparse instance created to parse command line arguments.</li>
 </ul></div></div></div></section><footer></footer></body></html>
