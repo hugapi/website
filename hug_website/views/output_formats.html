@@ -33,7 +33,8 @@ def root():
 
 
 <p>Finally, it's perfectly valid for an output format to in essence be a collection of other output format's that get conditionally used. For example using the built in suffix output format:</p>
-<div class="codehilite"><pre><span></span>suffix_output = hug.output_format.suffix({&#39;.js&#39;: hug.output_format.json, &#39;.html&#39;:hug.output_format.html})
+<div class="codehilite"><pre><span></span>suffix_output = hug.output_format.suffix({&#39;.js&#39;: hug.output_format.json,
+                                          &#39;.html&#39;:hug.output_format.html})
 
 @hug.get((&#39;my_endpoint.js&#39;, &#39;my_endoint.html&#39;), output=suffix_output)
 def my_endpoint():
