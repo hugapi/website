@@ -21,6 +21,7 @@ DOCUMENTATION_TEMPLATES = {'architecture': Text(open('hug_website/views/architec
 
 def frame(data, template=filename('hug_website/views/frame.shpaml')):
     ui = template()
+    ui[0].head.title.text = "hug: Embrace the APIs of the future"
     ui.latest.text = data['version']
     ui.main_content(globals()[data['page']](data['content']))
     if hasattr(ui, data['page']):
