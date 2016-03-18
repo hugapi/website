@@ -19,6 +19,9 @@ wget "$SERVER"website/learn -O website/learn/index.html
 wget "$SERVER"website/contribute -O website/contribute.html
 wget "$SERVER"website/discuss -O website/discuss.html
 wget "$SERVER"website/home -O website/home.html
+wget "$SERVER"website/acknowledge -O website/acknowledge.html
+wget "$SERVER"website/latest -O website/latest.html
+
 
 wget "$SERVER"website/learn/architecture -O website/learn/architecture.html
 wget "$SERVER"website/learn/routing -O website/learn/routing.html
