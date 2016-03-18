@@ -4,6 +4,9 @@ html
         > link rel=stylesheet href=https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css
         > link rel=stylesheet type=text/css href=/static/stylesheets/screen.css
         > link rel=stylesheet type=text/css href=/static/stylesheets/codehilite.css
+        > link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32"
+        > link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16"
+
     body
         header
             a.logo alt="hug: embrace the APIs of the future" href=/
