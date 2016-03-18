@@ -4,6 +4,7 @@ from blox.text import Text
 from blox.dom import A, LI
 
 CONTRIBUTE_MD = Text(filename('hug_website/views/contribute.html')())
+ACKNOWLEDGE_MD = Text(filename('hug_website/views/acknowledge.html')())
 DOCUMENTATION = (('architecture', 'Architecture Overview'),
                  ('routing', 'Routing'),
                  ('type_annotation', 'Type Annotation'),
@@ -50,6 +51,12 @@ def home(data, template=filename('hug_website/views/home.shpaml')):
 def contribute(data, template=filename('hug_website/views/contribute.shpaml')):
     ui = template()
     ui.markdown_content(CONTRIBUTE_MD)
+    return ui
+
+
+def  acknowledge(data, template=filename('hug_website/views/acknowledge.shpaml')):
+    ui = template()
+    ui.markdown_content(ACKNOWLEDGE_MD)
     return ui
 
 

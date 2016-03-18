@@ -21,7 +21,8 @@ def drop_bear():
 
 
 @app.transform(html(controllers.frame), urls=('/', '/website/{page_name}/{section}', '/website/{page_name}'))
-def root(page_name: hug.types.one_of(('home', 'contribute', 'quickstart', 'discuss', 'not_found', 'learn'))='home',
+def root(page_name: hug.types.one_of(('home', 'contribute', 'quickstart', 'discuss', 'not_found', 'learn',
+                                      'acknowledge'))='home',
          section: hug.types.one_of(controllers.DOCUMENTATION_TEMPLATES.keys())=controllers.DOCUMENTATION[0][0]):
     if page_name == 'learn' and section:
         content = globals()[page_name](section)
@@ -33,6 +34,11 @@ def root(page_name: hug.types.one_of(('home', 'contribute', 'quickstart', 'discu
 
 @app.transform(html(controllers.contribute))
 def contribute():
+    return {}
+
+
+@app.transform(html(controllers.acknowledge))
+def acknowledge():
     return {}
 
 

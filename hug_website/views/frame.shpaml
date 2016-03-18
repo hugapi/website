@@ -4,8 +4,6 @@ html
         > link rel=stylesheet href=https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css
         > link rel=stylesheet type=text/css href=/static/stylesheets/screen.css
         > link rel=stylesheet type=text/css href=/static/stylesheets/codehilite.css
-        > script src=/static/scripts/jquery.js
-        > script src=/static/scripts/jquery.nav.js
     body
         header
             a.logo alt="hug: embrace the APIs of the future" href=/
@@ -14,6 +12,7 @@ html
                 a#quickstart href=/website/quickstart | Quickstart
                 a#learn href=/website/learn | Learn
                 a#contribute href=/website/contribute | Contribute
+                a#acknowledge href=/website/acknowledge | Acknowledge
                 a#discuss href=/website/discuss | Discuss
             > a#version target=_blank href=https://github.com/timothycrosley/hug/blob/develop/CHANGELOG.md#install-the-latest
 

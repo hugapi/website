@@ -178,7 +178,7 @@ html body header .logo:hover {
 html body header nav {
   margin-left: auto;
   margin-right: auto;
-  width: 400px;
+  width: 500px;
   height: 50px;
   padding-top: 25px;
 }
@@ -214,7 +214,12 @@ html body header nav a.selected#learn {
   border-top: 5px #313131 solid;
   background: #525252;
 }
-/* line 61, ../sass/_frame.sass */
+/* line 59, ../sass/_frame.sass */
+html body header nav a.selected#acknowledge {
+  border-top: 5px #546870 solid;
+  background: #7895A0;
+}
+/* line 64, ../sass/_frame.sass */
 html body header #version {
   position: absolute;
   right: 0px;
@@ -223,7 +228,7 @@ html body header #version {
   padding-right: 10px;
   font-weight: bold;
 }
-/* line 69, ../sass/_frame.sass */
+/* line 72, ../sass/_frame.sass */
 html body #main_content {
   height: 100%;
 }
@@ -296,7 +301,7 @@ body #main_content .simple {
 /* line 18, ../sass/_home.sass */
 body #main_content .simple .example {
   margin-top: 40px;
-  background: url('/static/images/example.gif?1457714871');
+  background: url('/static/images/example.gif?1458203860');
   width: 722px;
   height: 450px;
 }
@@ -433,21 +438,21 @@ body #main_content .quickstart .install p, body #main_content .quickstart .first
 /* line 9, ../sass/_quickstart.sass */
 body #main_content .quickstart .first .example {
   margin-top: 40px;
-  background: url('/static/images/quickstart/first_api_1.gif?1457952219');
+  background: url('/static/images/quickstart/first_api_1.gif?1458203860');
   width: 850px;
   height: 250px;
 }
 /* line 15, ../sass/_quickstart.sass */
 body #main_content .quickstart .http .example {
   margin-top: 40px;
-  background: url('/static/images/quickstart/first_api_2.gif?1457952219');
+  background: url('/static/images/quickstart/first_api_2.gif?1458203860');
   width: 850px;
   height: 490px;
 }
 /* line 21, ../sass/_quickstart.sass */
 body #main_content .quickstart .cli .example {
   margin-top: 40px;
-  background: url('/static/images/quickstart/first_api_3.gif?1457952219');
+  background: url('/static/images/quickstart/first_api_3.gif?1458203860');
   width: 850px;
   height: 440px;
 }
@@ -483,16 +488,16 @@ body #main_content .not-found .main-text .drop_bear {
 body #main_content .learn {
   background: #525252;
   min-height: 100%;
-  border-left: 300px #7895A0 solid;
+  border-left: 250px #7895A0 solid;
 }
 /* line 7, ../sass/_learn.sass */
 body #main_content .learn #sections {
   position: absolute;
   background: #7895A0;
-  width: 300px;
+  width: 250px;
   left: 0px;
   top: 50px;
-  padding-top: 10px;
+  padding-top: 40px;
 }
 /* line 15, ../sass/_learn.sass */
 body #main_content .learn #sections li a {
@@ -513,4 +518,11 @@ body #main_content .learn #sections li a.selected {
 body #main_content .learn .content {
   padding-left: 10px;
   padding-top: 10px;
+  margin-top: -40px;
+}
+/* line 1, ../sass/_acknowledge.sass */
+body #main_content .acknowledge {
+  background: #7895A0;
+  min-height: 100%;
+  margin-top: -30px;
 }
