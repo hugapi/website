@@ -1,26 +1,50 @@
-.home
+.latest
     .intro
         +clearfix
         padding-top: 30px
         position: relative
         min-height: 290px
-        background: #7895A0
+        background: black
 
-        .koala
+        .extended
             margin-left: 10px
             float: left
-            +icons-sprite(koala)
+            +icons-sprite(extended)
             height: 200px
             width: 410px
             height: 290px
-    .simple
-        background: #7EBC89
+
+    .reuse
+        background: #525252
+        p
+            padding-bottom: 30px
         padding-bottom: 30px
-        .example
-            margin-top: 40px
-            +background(image-url("example.gif"))
-            width: 722px
-            height: 450px
+
+    .seamless
+        background: #7895A0
+        p
+            padding-bottom: 30px
+        padding-bottom: 30px
+
+    .chainable
+        background: #A47EBC
+        p
+            padding-bottom: 30px
+        padding-bottom: 30px
+
+    .marshmallow
+        +clearfix
+        padding-top: 30px
+        position: relative
+        min-height: 350px
+        background: #DC7C7C
+
+        .marshmallow_logo
+            margin-left: 10px
+            float: left
+            +icons-sprite(marshmallow)
+            width: 410px
+            height: 254px
 
     .performance
         background: #DC7C7C
@@ -36,27 +60,14 @@
             a
                 margin-left: .3em
                 color: #F8DEDE
-
-    .versioning
-        background: #A47EBC
+    .class_based
+        background: #7EBC89
         p
             padding-bottom: 30px
         padding-bottom: 30px
 
-    .documentation
-        background: #9BCC82
-        p
-            padding-bottom: 30px
-        padding-bottom: 30px
-
-    .annotation
+    .exceptions
         background: #EAA676
-        p
-            padding-bottom: 30px
-        padding-bottom: 30px
-
-    .reuse
-        background: #525252
         p
             padding-bottom: 30px
         padding-bottom: 30px
@@ -67,8 +78,15 @@
         p
             padding-bottom: 30px
         padding-bottom: 30px
-        a
+        a#full_changelog
+            @include sassy-button("simple", 10px, 19px, #549D40)
+            font-size: 25px
+            line-height: 30px
+            margin: 10px
+            margin-left: 0px
+        a#get_started
             @include sassy-button("simple", 10px, 19px, #D23C1A)
             font-size: 25px
             line-height: 30px
+            margin: 10px
 

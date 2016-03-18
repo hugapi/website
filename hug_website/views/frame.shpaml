@@ -14,7 +14,7 @@ html
                 a#contribute href=/website/contribute | Contribute
                 a#acknowledge href=/website/acknowledge | Acknowledge
                 a#discuss href=/website/discuss | Discuss
-            > a#version target=_blank href=https://github.com/timothycrosley/hug/blob/develop/CHANGELOG.md#install-the-latest
+            > a#latest href=/website/latest
 
         > section#main_content
         > footer

@@ -21,10 +21,15 @@ DOCUMENTATION_TEMPLATES = {'architecture': Text(open('hug_website/views/architec
 
 def frame(data, template=filename('hug_website/views/frame.shpaml')):
     ui = template()
-    ui.version.text = data['version']
+    ui.latest.text = data['version']
     ui.main_content(globals()[data['page']](data['content']))
     if hasattr(ui, data['page']):
         getattr(ui, data['page']).classes.add('selected')
+    return ui
+
+
+def latest(data, template=filename('hug_website/views/latest.shpaml')):
+    ui = template()
     return ui
 
 

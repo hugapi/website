@@ -63,9 +63,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
-/* line 64, icons/*.png */
-.icons-sprite, body #main_content .intro .koala, body #main_content .performance .benchmark, body #main_content .not-found .main-text .drop_bear {
-  background-image: url('/static/images/icons-s37c8c99578.png');
+/* line 80, icons/*.png */
+.icons-sprite, body #main_content .home .intro .koala, body #main_content .home .performance .benchmark, body #main_content .not-found .main-text .drop_bear, body #main_content .latest .intro .extended, body #main_content .latest .marshmallow .marshmallow_logo, body #main_content .latest .performance .benchmark {
+  background-image: url('/static/images/icons-sa00a2b19ef.png');
   background-repeat: no-repeat;
 }
 
@@ -190,45 +190,52 @@ html body header nav a {
 /* line 42, ../sass/_frame.sass */
 html body header nav a.selected {
   padding: 15px;
+  padding-top: 10px;
   padding-bottom: 14px;
   color: #474747;
   color: white;
 }
-/* line 47, ../sass/_frame.sass */
+/* line 48, ../sass/_frame.sass */
 html body header nav a.selected#quickstart {
   border-top: 5px #319643 solid;
   background: #7EBC89;
 }
-/* line 50, ../sass/_frame.sass */
+/* line 51, ../sass/_frame.sass */
 html body header nav a.selected#contribute {
   border-top: 5px #765A87 solid;
   background: #A47EBC;
 }
-/* line 53, ../sass/_frame.sass */
+/* line 54, ../sass/_frame.sass */
 html body header nav a.selected#discuss {
   border-top: 5px #956A4B solid;
   background: #EAA676;
 }
-/* line 56, ../sass/_frame.sass */
+/* line 57, ../sass/_frame.sass */
 html body header nav a.selected#learn {
   border-top: 5px #313131 solid;
   background: #525252;
 }
-/* line 59, ../sass/_frame.sass */
+/* line 60, ../sass/_frame.sass */
 html body header nav a.selected#acknowledge {
   border-top: 5px #546870 solid;
   background: #7895A0;
 }
-/* line 64, ../sass/_frame.sass */
-html body header #version {
+/* line 65, ../sass/_frame.sass */
+html body header #latest {
   position: absolute;
   right: 0px;
   top: 0px;
   padding-top: 18px;
   padding-right: 10px;
+  padding-left: 10px;
   font-weight: bold;
 }
-/* line 72, ../sass/_frame.sass */
+/* line 73, ../sass/_frame.sass */
+html body header #latest.selected {
+  background: black;
+  height: 50px;
+}
+/* line 77, ../sass/_frame.sass */
 html body #main_content {
   height: 100%;
 }
@@ -275,8 +282,8 @@ body #main_content .markdown .codehilite {
   font-size: 18px;
   font-family: monospace;
 }
-/* line 1, ../sass/_home.sass */
-body #main_content .intro {
+/* line 2, ../sass/_home.sass */
+body #main_content .home .intro {
   overflow: hidden;
   *zoom: 1;
   padding-top: 30px;
@@ -284,97 +291,97 @@ body #main_content .intro {
   min-height: 290px;
   background: #7895A0;
 }
-/* line 8, ../sass/_home.sass */
-body #main_content .intro .koala {
+/* line 9, ../sass/_home.sass */
+body #main_content .home .intro .koala {
   margin-left: 10px;
   float: left;
-  background-position: 0 -871px;
+  background-position: 0 -1161px;
   height: 200px;
   width: 410px;
   height: 290px;
 }
-/* line 15, ../sass/_home.sass */
-body #main_content .simple {
+/* line 16, ../sass/_home.sass */
+body #main_content .home .simple {
   background: #7EBC89;
   padding-bottom: 30px;
 }
-/* line 18, ../sass/_home.sass */
-body #main_content .simple .example {
+/* line 19, ../sass/_home.sass */
+body #main_content .home .simple .example {
   margin-top: 40px;
   background: url('/static/images/example.gif?1458203860');
   width: 722px;
   height: 450px;
 }
-/* line 24, ../sass/_home.sass */
-body #main_content .performance {
+/* line 25, ../sass/_home.sass */
+body #main_content .home .performance {
   background: #DC7C7C;
   padding-bottom: 30px;
 }
-/* line 27, ../sass/_home.sass */
-body #main_content .performance .benchmark {
+/* line 28, ../sass/_home.sass */
+body #main_content .home .performance .benchmark {
   margin-top: 40px;
   background-position: 0 0;
   width: 736px;
   height: 358px;
 }
-/* line 32, ../sass/_home.sass */
-body #main_content .performance sub {
+/* line 33, ../sass/_home.sass */
+body #main_content .home .performance sub {
   color: #F8DEDE;
   line-height: 30px;
 }
-/* line 35, ../sass/_home.sass */
-body #main_content .performance sub a {
+/* line 36, ../sass/_home.sass */
+body #main_content .home .performance sub a {
   margin-left: 0.3em;
   color: #F8DEDE;
 }
-/* line 39, ../sass/_home.sass */
-body #main_content .versioning {
+/* line 40, ../sass/_home.sass */
+body #main_content .home .versioning {
   background: #A47EBC;
   padding-bottom: 30px;
 }
-/* line 41, ../sass/_home.sass */
-body #main_content .versioning p {
+/* line 42, ../sass/_home.sass */
+body #main_content .home .versioning p {
   padding-bottom: 30px;
 }
-/* line 45, ../sass/_home.sass */
-body #main_content .documentation {
+/* line 46, ../sass/_home.sass */
+body #main_content .home .documentation {
   background: #9BCC82;
   padding-bottom: 30px;
 }
-/* line 47, ../sass/_home.sass */
-body #main_content .documentation p {
+/* line 48, ../sass/_home.sass */
+body #main_content .home .documentation p {
   padding-bottom: 30px;
 }
-/* line 51, ../sass/_home.sass */
-body #main_content .annotation {
+/* line 52, ../sass/_home.sass */
+body #main_content .home .annotation {
   background: #EAA676;
   padding-bottom: 30px;
 }
-/* line 53, ../sass/_home.sass */
-body #main_content .annotation p {
+/* line 54, ../sass/_home.sass */
+body #main_content .home .annotation p {
   padding-bottom: 30px;
 }
-/* line 57, ../sass/_home.sass */
-body #main_content .reuse {
+/* line 58, ../sass/_home.sass */
+body #main_content .home .reuse {
   background: #525252;
   padding-bottom: 30px;
 }
-/* line 59, ../sass/_home.sass */
-body #main_content .reuse p {
+/* line 60, ../sass/_home.sass */
+body #main_content .home .reuse p {
   padding-bottom: 30px;
 }
-/* line 63, ../sass/_home.sass */
-body #main_content .get-started {
+/* line 64, ../sass/_home.sass */
+body #main_content .home .get-started {
   background: white;
   color: black;
   padding-bottom: 30px;
 }
-/* line 66, ../sass/_home.sass */
-body #main_content .get-started p {
+/* line 67, ../sass/_home.sass */
+body #main_content .home .get-started p {
   padding-bottom: 30px;
 }
-/* line 69, ../sass/_home.sass */
-body #main_content .get-started a {
+/* line 70, ../sass/_home.sass */
+body #main_content .home .get-started a {
   font-size: 19px;
   padding: 0.5em 1.5em;
   display: inline-block;
@@ -399,11 +406,11 @@ body #main_content .get-started a {
   line-height: 30px;
 }
 /* line 15, ../../../../../../../usr/lib64/ruby/gems/2.2.0/gems/sassy-buttons-0.2.6/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
-body #main_content .get-started a:hover {
+body #main_content .home .get-started a:hover {
   text-decoration: none;
 }
 /* line 36, ../../../../../../../usr/lib64/ruby/gems/2.2.0/gems/sassy-buttons-0.2.6/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
-body #main_content .get-started a:hover {
+body #main_content .home .get-started a:hover {
   background-color: #8e2912;
   background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2JiMzYxNyIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzhlMjkxMiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
   background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #bb3617), color-stop(100%, #8e2912));
@@ -412,13 +419,13 @@ body #main_content .get-started a:hover {
   background: linear-gradient(#bb3617, #8e2912);
 }
 /* line 39, ../../../../../../../usr/lib64/ruby/gems/2.2.0/gems/sassy-buttons-0.2.6/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
-body #main_content .get-started a:active {
+body #main_content .home .get-started a:active {
   -moz-box-shadow: #802510 0 1px 2px inset;
   -webkit-box-shadow: #802510 0 1px 2px inset;
   box-shadow: #802510 0 1px 2px inset;
 }
 /* line 6, ../../../../../../../usr/lib64/ruby/gems/2.2.0/gems/sassy-buttons-0.2.6/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
-body #main_content .get-started a.disabled, body #main_content .get-started a[disabled] {
+body #main_content .home .get-started a.disabled, body #main_content .home .get-started a[disabled] {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
   opacity: 0.6;
   background: #a52f14;
@@ -428,7 +435,7 @@ body #main_content .get-started a.disabled, body #main_content .get-started a[di
   box-shadow: none;
 }
 /* line 74, ../../../../../../../usr/lib64/ruby/gems/2.2.0/gems/sassy-buttons-0.2.6/stylesheets/_sassy-buttons.sass */
-body #main_content .get-started a::-moz-focus-inner {
+body #main_content .home .get-started a::-moz-focus-inner {
   padding: 0 !important;
   margin: -1px !important;
 }
@@ -535,4 +542,237 @@ body #main_content .acknowledge {
   background: #7895A0;
   min-height: 100%;
   margin-top: -30px;
+}
+/* line 2, ../sass/_latest.sass */
+body #main_content .latest .intro {
+  overflow: hidden;
+  *zoom: 1;
+  padding-top: 30px;
+  position: relative;
+  min-height: 290px;
+  background: black;
+}
+/* line 9, ../sass/_latest.sass */
+body #main_content .latest .intro .extended {
+  margin-left: 10px;
+  float: left;
+  background-position: 0 -871px;
+  height: 200px;
+  width: 410px;
+  height: 290px;
+}
+/* line 17, ../sass/_latest.sass */
+body #main_content .latest .reuse {
+  background: #525252;
+  padding-bottom: 30px;
+}
+/* line 19, ../sass/_latest.sass */
+body #main_content .latest .reuse p {
+  padding-bottom: 30px;
+}
+/* line 23, ../sass/_latest.sass */
+body #main_content .latest .seamless {
+  background: #7895A0;
+  padding-bottom: 30px;
+}
+/* line 25, ../sass/_latest.sass */
+body #main_content .latest .seamless p {
+  padding-bottom: 30px;
+}
+/* line 29, ../sass/_latest.sass */
+body #main_content .latest .chainable {
+  background: #A47EBC;
+  padding-bottom: 30px;
+}
+/* line 31, ../sass/_latest.sass */
+body #main_content .latest .chainable p {
+  padding-bottom: 30px;
+}
+/* line 35, ../sass/_latest.sass */
+body #main_content .latest .marshmallow {
+  overflow: hidden;
+  *zoom: 1;
+  padding-top: 30px;
+  position: relative;
+  min-height: 350px;
+  background: #DC7C7C;
+}
+/* line 42, ../sass/_latest.sass */
+body #main_content .latest .marshmallow .marshmallow_logo {
+  margin-left: 10px;
+  float: left;
+  background-position: 0 -1455px;
+  width: 410px;
+  height: 254px;
+}
+/* line 49, ../sass/_latest.sass */
+body #main_content .latest .performance {
+  background: #DC7C7C;
+  padding-bottom: 30px;
+}
+/* line 52, ../sass/_latest.sass */
+body #main_content .latest .performance .benchmark {
+  margin-top: 40px;
+  background-position: 0 0;
+  width: 736px;
+  height: 358px;
+}
+/* line 57, ../sass/_latest.sass */
+body #main_content .latest .performance sub {
+  color: #F8DEDE;
+  line-height: 30px;
+}
+/* line 60, ../sass/_latest.sass */
+body #main_content .latest .performance sub a {
+  margin-left: 0.3em;
+  color: #F8DEDE;
+}
+/* line 63, ../sass/_latest.sass */
+body #main_content .latest .class_based {
+  background: #7EBC89;
+  padding-bottom: 30px;
+}
+/* line 65, ../sass/_latest.sass */
+body #main_content .latest .class_based p {
+  padding-bottom: 30px;
+}
+/* line 69, ../sass/_latest.sass */
+body #main_content .latest .exceptions {
+  background: #EAA676;
+  padding-bottom: 30px;
+}
+/* line 71, ../sass/_latest.sass */
+body #main_content .latest .exceptions p {
+  padding-bottom: 30px;
+}
+/* line 75, ../sass/_latest.sass */
+body #main_content .latest .get-started {
+  background: white;
+  color: black;
+  padding-bottom: 30px;
+}
+/* line 78, ../sass/_latest.sass */
+body #main_content .latest .get-started p {
+  padding-bottom: 30px;
+}
+/* line 81, ../sass/_latest.sass */
+body #main_content .latest .get-started a#full_changelog {
+  font-size: 19px;
+  padding: 0.5em 1.5em;
+  display: inline-block;
+  cursor: pointer;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  *zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF549D40', endColorstr='#FF2D5522');
+  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzU0OWQ0MCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzQxNzkzMSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #549d40), color-stop(100%, #417931));
+  background: -moz-linear-gradient(#549d40, #417931);
+  background: -webkit-linear-gradient(#549d40, #417931);
+  background: linear-gradient(#549d40, #417931);
+  -moz-box-shadow: #7bc168 0 1px 0 inset;
+  -webkit-box-shadow: #7bc168 0 1px 0 inset;
+  box-shadow: #7bc168 0 1px 0 inset;
+  border: 1px solid #37672a;
+  color: white;
+  text-shadow: #223f1a 0 -1px 0;
+  font-size: 25px;
+  line-height: 30px;
+  margin: 10px;
+  margin-left: 0px;
+}
+/* line 15, ../../../../../../../usr/lib64/ruby/gems/2.2.0/gems/sassy-buttons-0.2.6/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+body #main_content .latest .get-started a#full_changelog:hover {
+  text-decoration: none;
+}
+/* line 36, ../../../../../../../usr/lib64/ruby/gems/2.2.0/gems/sassy-buttons-0.2.6/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+body #main_content .latest .get-started a#full_changelog:hover {
+  background-color: #37672a;
+  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzRhOGIzOSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzM3NjcyYSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #4a8b39), color-stop(100%, #37672a));
+  background: -moz-linear-gradient(#4a8b39, #37672a);
+  background: -webkit-linear-gradient(#4a8b39, #37672a);
+  background: linear-gradient(#4a8b39, #37672a);
+}
+/* line 39, ../../../../../../../usr/lib64/ruby/gems/2.2.0/gems/sassy-buttons-0.2.6/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+body #main_content .latest .get-started a#full_changelog:active {
+  -moz-box-shadow: #315c25 0 1px 2px inset;
+  -webkit-box-shadow: #315c25 0 1px 2px inset;
+  box-shadow: #315c25 0 1px 2px inset;
+}
+/* line 6, ../../../../../../../usr/lib64/ruby/gems/2.2.0/gems/sassy-buttons-0.2.6/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+body #main_content .latest .get-started a#full_changelog.disabled, body #main_content .latest .get-started a#full_changelog[disabled] {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
+  opacity: 0.6;
+  background: #417931;
+  cursor: default;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+/* line 74, ../../../../../../../usr/lib64/ruby/gems/2.2.0/gems/sassy-buttons-0.2.6/stylesheets/_sassy-buttons.sass */
+body #main_content .latest .get-started a#full_changelog::-moz-focus-inner {
+  padding: 0 !important;
+  margin: -1px !important;
+}
+/* line 87, ../sass/_latest.sass */
+body #main_content .latest .get-started a#get_started {
+  font-size: 19px;
+  padding: 0.5em 1.5em;
+  display: inline-block;
+  cursor: pointer;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  *zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFD23C1A', endColorstr='#FF77220F');
+  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2QyM2MxYSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2E1MmYxNCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #d23c1a), color-stop(100%, #a52f14));
+  background: -moz-linear-gradient(#d23c1a, #a52f14);
+  background: -webkit-linear-gradient(#d23c1a, #a52f14);
+  background: linear-gradient(#d23c1a, #a52f14);
+  -moz-box-shadow: #e96c4f 0 1px 0 inset;
+  -webkit-box-shadow: #e96c4f 0 1px 0 inset;
+  box-shadow: #e96c4f 0 1px 0 inset;
+  border: 1px solid #8e2912;
+  color: white;
+  text-shadow: #5c1a0b 0 -1px 0;
+  font-size: 25px;
+  line-height: 30px;
+  margin: 10px;
+}
+/* line 15, ../../../../../../../usr/lib64/ruby/gems/2.2.0/gems/sassy-buttons-0.2.6/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+body #main_content .latest .get-started a#get_started:hover {
+  text-decoration: none;
+}
+/* line 36, ../../../../../../../usr/lib64/ruby/gems/2.2.0/gems/sassy-buttons-0.2.6/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+body #main_content .latest .get-started a#get_started:hover {
+  background-color: #8e2912;
+  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2JiMzYxNyIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzhlMjkxMiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #bb3617), color-stop(100%, #8e2912));
+  background: -moz-linear-gradient(#bb3617, #8e2912);
+  background: -webkit-linear-gradient(#bb3617, #8e2912);
+  background: linear-gradient(#bb3617, #8e2912);
+}
+/* line 39, ../../../../../../../usr/lib64/ruby/gems/2.2.0/gems/sassy-buttons-0.2.6/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+body #main_content .latest .get-started a#get_started:active {
+  -moz-box-shadow: #802510 0 1px 2px inset;
+  -webkit-box-shadow: #802510 0 1px 2px inset;
+  box-shadow: #802510 0 1px 2px inset;
+}
+/* line 6, ../../../../../../../usr/lib64/ruby/gems/2.2.0/gems/sassy-buttons-0.2.6/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+body #main_content .latest .get-started a#get_started.disabled, body #main_content .latest .get-started a#get_started[disabled] {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
+  opacity: 0.6;
+  background: #a52f14;
+  cursor: default;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+/* line 74, ../../../../../../../usr/lib64/ruby/gems/2.2.0/gems/sassy-buttons-0.2.6/stylesheets/_sassy-buttons.sass */
+body #main_content .latest .get-started a#get_started::-moz-focus-inner {
+  padding: 0 !important;
+  margin: -1px !important;
 }
