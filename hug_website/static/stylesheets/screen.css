@@ -317,53 +317,63 @@ body #main_content .performance .benchmark {
   width: 736px;
   height: 358px;
 }
-/* line 33, ../sass/_home.sass */
+/* line 32, ../sass/_home.sass */
+body #main_content .performance sub {
+  color: #F8DEDE;
+  line-height: 30px;
+}
+/* line 35, ../sass/_home.sass */
+body #main_content .performance sub a {
+  margin-left: 0.3em;
+  color: #F8DEDE;
+}
+/* line 39, ../sass/_home.sass */
 body #main_content .versioning {
   background: #A47EBC;
   padding-bottom: 30px;
 }
-/* line 35, ../sass/_home.sass */
+/* line 41, ../sass/_home.sass */
 body #main_content .versioning p {
   padding-bottom: 30px;
 }
-/* line 39, ../sass/_home.sass */
+/* line 45, ../sass/_home.sass */
 body #main_content .documentation {
   background: #9BCC82;
   padding-bottom: 30px;
 }
-/* line 41, ../sass/_home.sass */
+/* line 47, ../sass/_home.sass */
 body #main_content .documentation p {
   padding-bottom: 30px;
 }
-/* line 45, ../sass/_home.sass */
+/* line 51, ../sass/_home.sass */
 body #main_content .annotation {
   background: #EAA676;
   padding-bottom: 30px;
 }
-/* line 47, ../sass/_home.sass */
+/* line 53, ../sass/_home.sass */
 body #main_content .annotation p {
   padding-bottom: 30px;
 }
-/* line 51, ../sass/_home.sass */
+/* line 57, ../sass/_home.sass */
 body #main_content .reuse {
   background: #525252;
   padding-bottom: 30px;
 }
-/* line 53, ../sass/_home.sass */
+/* line 59, ../sass/_home.sass */
 body #main_content .reuse p {
   padding-bottom: 30px;
 }
-/* line 57, ../sass/_home.sass */
+/* line 63, ../sass/_home.sass */
 body #main_content .get-started {
   background: white;
   color: black;
   padding-bottom: 30px;
 }
-/* line 60, ../sass/_home.sass */
+/* line 66, ../sass/_home.sass */
 body #main_content .get-started p {
   padding-bottom: 30px;
 }
-/* line 63, ../sass/_home.sass */
+/* line 69, ../sass/_home.sass */
 body #main_content .get-started a {
   font-size: 19px;
   padding: 0.5em 1.5em;

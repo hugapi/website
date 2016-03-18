@@ -13,6 +13,11 @@
             > h1#performance_header
             > p#performance_description
             > div.benchmark
+            sub
+                (Indepently performed benchmarking done by
+                a href=http://pycnic.nullism.com/
+                    Pycnic
+                )
     .versioning
         .main-text
             > h1#versioning_header
