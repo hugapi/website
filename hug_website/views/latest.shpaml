@@ -7,7 +7,7 @@
             p#introduction
                 hug 1.0.0 introduced an extremely succinct and intuitive way to build HTTP REST APIs on Python3.
                 Version 2 brings further improvements to the way HTTP APIs can be created, while also enabling single
-                API defintions to be exposed over multiple interfaces. To start with hug 2 supports exposing APIs to
+                API definitions to be exposed over multiple interfaces. To start with hug 2 supports exposing APIs to
                 HTTP, the command line, and Python.
     .reuse
         .main-text
@@ -59,7 +59,7 @@
             h1
                 Intuitive exception handling
             p
-                Want to customize the behaviour when a list of custom exceptions happen? Or when any exception occurs?
+                Want to customize the behavior when a list of custom exceptions happen? Or when any exception occurs?
                 hug 2.0.0 makes handling the edge cases easy and intuitive.
             > script src=https://gist.github.com/timothycrosley/e859291db3d160e104ac.js
 
