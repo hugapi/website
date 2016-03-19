@@ -1,6 +1,6 @@
 html
     head
-        > link rel=sytlesheet type=text/css href=http://fonts.googleapis.com/css?family=Roboto:100|Roboto+Slab
+        > link rel=stylesheet type=text/css href=http://fonts.googleapis.com/css?family=Roboto:200|Roboto+Slab
         > link rel=stylesheet href=https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css
         > link rel=stylesheet type=text/css href=/static/stylesheets/screen.css
         > link rel=stylesheet type=text/css href=/static/stylesheets/codehilite.css
