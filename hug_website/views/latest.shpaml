@@ -14,7 +14,7 @@
             h1
                 Write once. Use everywhere.
             p
-                With hug 2.0.0 your API and business logic is cleanly separated from the interface your exposing it on, which means you can safely expose it over HTTP, CLI, and Python in one full swoop.
+                With hug 2.0.0 your API and business logic is cleanly separated from the interface your exposing it on, which means you can safely expose it over HTTP, CLI, and Python in one fell swoop.
             > script src=https://gist.github.com/timothycrosley/1669b902f00662e92216.js
 
     .seamless
