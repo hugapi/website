@@ -1,9 +1,9 @@
-<!DOCTYPE html><html><head><link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:200|Roboto+Slab" type="text/css" /><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" /><link rel="stylesheet" href="/static/stylesheets/screen.css" type="text/css" /><link rel="stylesheet" href="/static/stylesheets/codehilite.css" type="text/css" /><link rel="icon" href="favicon-32x32.png" type="image/png" sizes="32x32" /><link rel="icon" href="favicon-16x16.png" type="image/png" sizes="16x16" /><title>hug: Embrace the APIs of the future</title></head><body><header><a class="logo" alt="hug: embrace the APIs of the future" href="/">hug</a><nav><a id="quickstart" href="/website/quickstart">Quickstart</a><a class="selected" id="learn" href="/website/learn">Learn</a><a id="contribute" href="/website/contribute">Contribute</a><a id="acknowledge" href="/website/acknowledge">Acknowledge</a><a id="discuss" href="/website/discuss">Discuss</a></nav><a id="latest" href="/website/latest">2.0.2</a></header><section id="main_content"><div class="learn"><ul id="sections"><li><a class="" href="/website/learn/architecture">Architecture Overview</a></li><li><a class="" href="/website/learn/routing">Routing</a></li><li><a class="selected" href="/website/learn/type_annotation">Type Annotation</a></li><li><a class="" href="/website/learn/directives">Directives</a></li><li><a class="" href="/website/learn/output_formats">Output Formats</a></li><li><a class="" href="/website/learn/extending">Extending / New Plugins</a></li></ul><div class="content"><div class="main-text markdown"><h1>Type annotations in hug</h1>
+<!DOCTYPE html><html><head><link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:200|Roboto+Slab" /><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" /><link type="text/css" rel="stylesheet" href="/static/stylesheets/screen.css" /><link type="text/css" rel="stylesheet" href="/static/stylesheets/codehilite.css" /><link sizes="32x32" type="image/png" rel="icon" href="favicon-32x32.png" /><link sizes="16x16" type="image/png" rel="icon" href="favicon-16x16.png" /><title>hug: Embrace the APIs of the future</title></head><body><header><a class="logo" alt="hug: embrace the APIs of the future" href="/">hug</a><nav><a id="quickstart" href="/website/quickstart">Quickstart</a><a class="selected" id="learn" href="/website/learn">Learn</a><a id="contribute" href="/website/contribute">Contribute</a><a id="acknowledge" href="/website/acknowledge">Acknowledge</a><a id="discuss" href="/website/discuss">Discuss</a></nav><a id="latest" href="/website/latest">2.0.2</a></header><section id="main_content"><div class="learn"><ul id="sections"><li><a class="" href="/website/learn/architecture">Architecture Overview</a></li><li><a class="" href="/website/learn/routing">Routing</a></li><li><a class="selected" href="/website/learn/type_annotation">Type Annotation</a></li><li><a class="" href="/website/learn/directives">Directives</a></li><li><a class="" href="/website/learn/output_formats">Output Formats</a></li><li><a class="" href="/website/learn/extending">Extending / New Plugins</a></li></ul><div class="content"><div class="main-text markdown"><h1>Type annotations in hug</h1>
 <p>hug leverages Python3 type annotations for validation and API specification. Within the context of hug, annotations should be set to one of 4 things:</p>
 <ul>
 <li>A cast function, built-in, or your own (str, int, etc) that takes a value casts it and then returns it, raising an exception if it is not in a format that can be cast into the desired type</li>
 <li>A hug type (hug.types.text, hug.types.number, etc.). These are essentially built-in cast functions that provide more contextual information, and good default error messages</li>
-<li>A Marshmallow type and/or schema. In hug 2.0.0 Marshmallow is a first class citizen in hug, and all fields and schemas defined in this framework can be used in hug directly as type annotations</li>
+<li>A <a href="https://marshmallow.readthedocs.org/en/latest/">marshmallow</a> type and/or schema. In hug 2.0.0 Marshmallow is a first class citizen in hug, and all fields and schemas defined with it can be used in hug as type annotations</li>
 <li>A string. When a basic Python string is set as the type annotation it is used by hug to generate documentation, but does not get applied during the validation phase</li>
 </ul>
 <p>For example:</p>
@@ -16,10 +16,10 @@
 </pre></div>
 
 
-<p>Is a valid hug endpoint.</p>
-<p>Anytime a type annotation raises an exception during casting of a type it is seen as a failure, otherwise the cast is assumed succesfull with the returned type replacing the passed in parameter. By default all errors are collected in an errors dictionary and returned as the output of the endpoint before the routed function ever gets called. To change how errors are returned you can transform them via the <code>on_invalid</code> route option, and specify a specific output format for errors by specifying the <code>output_invalid</code> route option. Or, if you prefer, you can keep hug from handling the validation errors at all by passing in <code>raise_on_invalid=True</code> to the route.</p>
+<p>is a valid hug endpoint.</p>
+<p>Any time a type annotation raises an exception during casting of a type, it is seen as a failure. Otherwise the cast is assumed successful with the returned type replacing the passed-in parameter. By default, all errors are collected in an errors dictionary and returned as the output of the endpoint before the routed function ever gets called. To change how errors are returned you can transform them via the <code>on_invalid</code> route option, and specify a specific output format for errors by specifying the <code>output_invalid</code> route option. Or, if you prefer, you can keep hug from handling the validation errors at all by passing in <code>raise_on_invalid=True</code> to the route.</p>
 <h1>Built in hug types</h1>
-<p>hug provides several built in types for common API use cases:</p>
+<p>hug provides several built-in types for common API use cases:</p>
 <ul>
 <li><code>number</code>: Validates that a whole number was passed in</li>
 <li><code>float_number</code>: Validates that a valid floating point number was passed in</li>
@@ -39,7 +39,7 @@
 <li><code>length(lower, upper, convert=text)</code>: Accepts a a value that is withing a specific length limit</li>
 <li><code>shorter_than(limit, convert=text)</code>: Accepts a text value shorter than the specified length limit</li>
 <li><code>longer_than(limit, convert=text)</code>: Accepts a value up to the specified limit</li>
-<li><code>cutt_off(limit, convert=text)</code>: Cuts off the provided value at the specified index</li>
+<li><code>cut_off(limit, convert=text)</code>: Cuts off the provided value at the specified index</li>
 </ul>
 <h1>Extending and creating new hug types</h1>
 <p>The most obvious way to extend a hug type is to simply inherit from the base type defined in <code>hug.types</code> and then override <code>__call__</code> to override how the cast function, or override <code>__init__</code> to override what parameters the type takes:</p>
@@ -65,4 +65,24 @@
     <span class="sd">&quot;&quot;&quot;My new documentation&quot;&quot;&quot;</span>
     <span class="k">if</span> <span class="n">value</span> <span class="o">!=</span> <span class="mi">42</span><span class="p">:</span>
         <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Value is not the answer to everything.&#39;</span><span class="p">)</span>
+</pre></div>
+
+
+<h1>Marshmallow integration</h1>
+<p><a href="https://marshmallow.readthedocs.org/en/latest/">Marshmallow</a> is an advanced serialization, deserialization, and validation library. Hug supports using marshmallow fields and schemas as input types.</p>
+<p>Here is a simple example of an API that does datetime addition.</p>
+<div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">datetime</span> <span class="kn">as</span> <span class="nn">dt</span>
+
+<span class="kn">import</span> <span class="nn">hug</span>
+<span class="kn">from</span> <span class="nn">marshmallow</span> <span class="kn">import</span> <span class="n">fields</span>
+<span class="kn">from</span> <span class="nn">marshmallow.validate</span> <span class="kn">import</span> <span class="n">Range</span>
+
+
+<span class="nd">@hug.get</span><span class="p">(</span><span class="s1">&#39;/dateadd&#39;</span><span class="p">,</span> <span class="n">examples</span><span class="o">=</span><span class="s2">&quot;value=1973-04-10&amp;addend=63&quot;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">dateadd</span><span class="p">(</span><span class="n">value</span><span class="p">:</span> <span class="n">fields</span><span class="o">.</span><span class="n">DateTime</span><span class="p">(),</span>
+            <span class="n">addend</span><span class="p">:</span> <span class="n">fields</span><span class="o">.</span><span class="n">Int</span><span class="p">(</span><span class="n">validate</span><span class="o">=</span><span class="n">Range</span><span class="p">(</span><span class="nb">min</span><span class="o">=</span><span class="mi">1</span><span class="p">))):</span>
+    <span class="sd">&quot;&quot;&quot;Add a value to a date.&quot;&quot;&quot;</span>
+    <span class="n">delta</span> <span class="o">=</span> <span class="n">dt</span><span class="o">.</span><span class="n">timedelta</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="n">addend</span><span class="p">)</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">value</span> <span class="o">+</span> <span class="n">delta</span>
+    <span class="k">return</span> <span class="p">{</span><span class="s1">&#39;result&#39;</span><span class="p">:</span> <span class="n">result</span><span class="p">}</span>
 </pre></div></div></div></div></section><footer></footer></body></html>

@@ -1,8 +1,8 @@
-<!DOCTYPE html><html><head><link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:200|Roboto+Slab" type="text/css" /><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" /><link rel="stylesheet" href="/static/stylesheets/screen.css" type="text/css" /><link rel="stylesheet" href="/static/stylesheets/codehilite.css" type="text/css" /><link rel="icon" href="favicon-32x32.png" type="image/png" sizes="32x32" /><link rel="icon" href="favicon-16x16.png" type="image/png" sizes="16x16" /><title>hug: Embrace the APIs of the future</title></head><body><header><a class="logo" alt="hug: embrace the APIs of the future" href="/">hug</a><nav><a id="quickstart" href="/website/quickstart">Quickstart</a><a class="selected" id="learn" href="/website/learn">Learn</a><a id="contribute" href="/website/contribute">Contribute</a><a id="acknowledge" href="/website/acknowledge">Acknowledge</a><a id="discuss" href="/website/discuss">Discuss</a></nav><a id="latest" href="/website/latest">2.0.2</a></header><section id="main_content"><div class="learn"><ul id="sections"><li><a class="selected" href="/website/learn/architecture">Architecture Overview</a></li><li><a class="" href="/website/learn/routing">Routing</a></li><li><a class="" href="/website/learn/type_annotation">Type Annotation</a></li><li><a class="" href="/website/learn/directives">Directives</a></li><li><a class="" href="/website/learn/output_formats">Output Formats</a></li><li><a class="" href="/website/learn/extending">Extending / New Plugins</a></li></ul><div class="content"><div class="main-text markdown"><h1>The guiding thought behind the architecture</h1>
+<!DOCTYPE html><html><head><link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:200|Roboto+Slab" /><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" /><link type="text/css" rel="stylesheet" href="/static/stylesheets/screen.css" /><link type="text/css" rel="stylesheet" href="/static/stylesheets/codehilite.css" /><link sizes="32x32" type="image/png" rel="icon" href="favicon-32x32.png" /><link sizes="16x16" type="image/png" rel="icon" href="favicon-16x16.png" /><title>hug: Embrace the APIs of the future</title></head><body><header><a class="logo" alt="hug: embrace the APIs of the future" href="/">hug</a><nav><a id="quickstart" href="/website/quickstart">Quickstart</a><a class="selected" id="learn" href="/website/learn">Learn</a><a id="contribute" href="/website/contribute">Contribute</a><a id="acknowledge" href="/website/acknowledge">Acknowledge</a><a id="discuss" href="/website/discuss">Discuss</a></nav><a id="latest" href="/website/latest">2.0.2</a></header><section id="main_content"><div class="learn"><ul id="sections"><li><a class="selected" href="/website/learn/architecture">Architecture Overview</a></li><li><a class="" href="/website/learn/routing">Routing</a></li><li><a class="" href="/website/learn/type_annotation">Type Annotation</a></li><li><a class="" href="/website/learn/directives">Directives</a></li><li><a class="" href="/website/learn/output_formats">Output Formats</a></li><li><a class="" href="/website/learn/extending">Extending / New Plugins</a></li></ul><div class="content"><div class="main-text markdown"><h1>The guiding thought behind the architecture</h1>
 <p>hug is the cleanest way to create HTTP REST APIs on Python3.
 It consistently benchmarks among the top 3 performing web frameworks for Python, handily beating out Flask and Django.
 For almost every common Web API task the code written to accomplish it in hug is a small fraction of what is required in other Frameworks.</p>
-<p>However, it's important to note, hug is not a Web API Framework. OK -- that certainly is a function it performs. And exceptionally well at that.
+<p>However, it's important to note, hug is not a Web API Framework. OK--that certainly is a function it performs. And exceptionally well at that.
 But at its core, hug is a framework for exposing idiomatically correct and standard internal Python APIs externally.
 A framework to allow developers and architects to define logic and structure once, and then cleanly expose it over other means.</p>
 <p>Currently, this means that you can expose existing Python functions / APIs over HTTP and CLI in addition to standard Python.
@@ -10,11 +10,11 @@ However, as time goes on more interfaces will be supported. The architecture and
 into hug have and will continue to support this goal.</p>
 <p>This central concept also frees hug to rely on the fastest and best of breed components for every interface it supports:</p>
 <ul>
-<li>Falcon is leveraged when exposing to HTTP for it's impressive performance at this task</li>
-<li>Argparse is leveraged when exposing to CLI for the clean consistent interaction it enables from the command line</li>
+<li><a href="https://github.com/falconry/falcon">Falcon</a> is leveraged when exposing to HTTP for it's impressive performance at this task</li>
+<li><a href="https://docs.python.org/3/library/argparse.html">Argparse</a> is leveraged when exposing to CLI for the clean consistent interaction it enables from the command line</li>
 </ul>
 <h1>What this looks like in practice - an illustrative example</h1>
-<p>Let's say I have a very simple python API I've built to add 2 numbers together. I call my invention <code>addition</code>.
+<p>Let's say I have a very simple Python API I've built to add 2 numbers together. I call my invention <code>addition</code>.
 Trust me, this is legit. It's trademarked and everything:</p>
 <div class="codehilite"><pre><span></span>&quot;&quot;&quot;A simple API to enable adding two numbers together&quot;&quot;&quot;
 
@@ -74,13 +74,13 @@ Just like the original. Even better, after all of this, people hitting the API v
 All my original unit tests continue to pass and my code coverage remains at 100%.</p>
 <p>It turns out, the problems and thoughts that go into defining a clean well documented API for internal use greatly mirror those that are required to expose an API for external use. hug recognizes this and enables cleanly reusing the documentation, requirements, and structure of internal APIs for external use. This also encourages easier to use and well documented internal APIs: a major win/win.</p>
 <h1>What happened internally as I exposed my API to new interfaces?</h1>
-<p>A few things hapen when you wrapped that first function for external use, with hug.cli():</p>
+<p>A few things happen when you wrapped that first function for external use, with hug.cli():</p>
 <ul>
 <li>hug created a singleton hug.API object on your module to keep track of all interfaces that exist within the module<ul>
 <li>This is referable by <code>__hug__</code> or <code>hug.API(__name__)</code></li>
 </ul>
 </li>
-<li>a new hug.interface.CLI() object was created and attached to <code>add.interface.cli</code><ul>
+<li>a new <code>hug.interface.CLI()</code> object was created and attached to <code>add.interface.cli</code><ul>
 <li>This interface fully encapsulates the logic needed to expose <code>add</code> as a command line tool</li>
 <li>NOTE: all supported ways to expose a function via hug can be found in <code>hug/interface.py</code></li>
 </ul>
@@ -90,7 +90,7 @@ All my original unit tests continue to pass and my code coverage remains at 100%
 <p>Then when I extended my API to run as HTTP service the same basic pattern was followed:</p>
 <ul>
 <li>hug saw that the singleton already existed</li>
-<li>a new hug.interface.HTTP() object was created and attached to <code>add.interface.http</code><ul>
+<li>a new <code>hug.interface.HTTP()</code> object was created and attached to <code>add.interface.http</code><ul>
 <li>This interface encapsulates the logic needed to expose the <code>add</code> command as an HTTP service</li>
 <li>The new HTTP interface handler is registered to the API singleton</li>
 </ul>
@@ -138,7 +138,7 @@ the base Python function.</p>
 </li>
 <li>Requires: hug requirements allow you to specify requirements that must be met only for specified interfaces.
     <code>@hug.get(requires=hug.authentication.basic(hug.authentication.verify('User1', 'mypassword')))</code><ul>
-<li>Causes the HTTP method to only succesfully call the Python function if User1 is logged in</li>
+<li>Causes the HTTP method to only successfully call the Python function if User1 is logged in</li>
 <li>requirements are currently highly focused on authentication, and all existing require functions are defined in hug/authentication.py</li>
 </ul>
 </li>
@@ -158,15 +158,15 @@ the base Python function.</p>
 </li>
 </ul>
 <h1>Switching from using a hug API over one interface to another</h1>
-<p>hug does it's best to also solve the other side of the coin: that is how APIs are used.
-Naturally, native Python will always be the fastest, however HTTP can provide attractive auto updating
+<p>hug does its best to also solve the other side of the coin: that is how APIs are used.
+While native Python will always be the fastest, HTTP can provide attractive auto updating
 and clear responsibility separation benefits. You can interact with hug APIs via hug.use.[interface] if the ability
 to switch between these is a high priority for you. The code that enables this is found in <code>hug/use.py</code> and should be
 kept in mind if working on adding an additional interface for hug, or changing how hug calls functions.</p>
 <h1>Feel free to update or request more info :)</h1>
 <p>I tried my best to highlight where important functionality in the hug project lives via this Architecture document, as well as
 explain the reasoning behind it. However, this document is certainly not complete! If you encounter anything you would like to be
-expanded upon or explained in detail here, please either let me know or modify the document so everyone can get a good walk through of hugs architecture.</p>
+expanded upon or explained in detail here, please either let me know or modify the document so everyone can get a good walkthrough of hug's architecture.</p>
 <p>Thanks!</p>
 <p>I hope you have found this guide useful :)</p>
 <p>~Timothy</p></div></div></div></section><footer></footer></body></html>
