@@ -131,7 +131,7 @@ def home():
             'reuse_header': 'Write once. Use everywhere.',
             'reuse_description': 'With hug your API and business logic is cleanly separated from the interface your '
                                  'exposing it on, which means you can safely expose it over HTTP, CLI, and Python in '
-                                 'one full swoop.',
+                                 'one fell swoop.',
             'get_started_header': 'What are you waiting for?',
             'get_started_description': 'Start writing world class APIs on top of Python 3 in no time. Use hug {0} to '
                                        'radically simplify your code base.'.format(hug.__version__)}

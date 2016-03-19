@@ -90,7 +90,7 @@ shown in the math example above.</p>
 <li><code>requires</code>: A list or single function that must all return <code>True</code> for the function to execute when called via this interface (commonly used for authentication)</li>
 </ul>
 <h1>HTTP Routers</h1>
-<p>in addition to <code>hug.http</code> hug includes convience decorators for all common HTTP METHODS (<code>hug.connect</code>, <code>hug.delete</code>, <code>hug.get</code>, <code>hug.head</code>, <code>hug.options</code>, <code>hug.patch</code>, <code>hug.post</code>, <code>hug.put</code>, <code>hug.get_post</code> and <code>hug.trace</code>). These methods are functionally the same as calling `@hug.http(accept=(METHOD, )) and are otherwise identical to the http router.</p>
+<p>in addition to <code>hug.http</code> hug includes convience decorators for all common HTTP METHODS (<code>hug.connect</code>, <code>hug.delete</code>, <code>hug.get</code>, <code>hug.head</code>, <code>hug.options</code>, <code>hug.patch</code>, <code>hug.post</code>, <code>hug.put</code>, <code>hug.get_post</code> and <code>hug.trace</code>). These methods are functionally the same as calling <code>@hug.http(accept=(METHOD, ))</code> and are otherwise identical to the http router.</p>
 <ul>
 <li><code>urls</code>: A list of or a single URL that should be routed to the function. Supports defining variables withing the URL that will automatically be passed to the function when <code>{}</code> notation is found in the URL: <code>/website/{page}</code>. Defaults to the name of the function being routed to.</li>
 <li><code>accept</code>: A list of or a single HTTP METHOD value to accept. Defaults to all common HTTP methods.</li>
@@ -108,18 +108,18 @@ shown in the math example above.</p>
 <h1>CLI Routing</h1>
 <p>Any endpoint can also be exposed to the command line as well, using <code>@hug.cli</code>:</p>
 <ul>
-<li><code>name</code>: The name that should execute the command from the command line. Defaults to the name of the function being routed</li>
-<li><code>version</code>: The optional version associated with this command line application</li>
+<li><code>name</code>: The name that should execute the command from the command line. Defaults to the name of the function being routed.</li>
+<li><code>version</code>: The optional version associated with this command line application.</li>
 <li><code>doc</code>: Documentation to provide to users of this command line tool. Defaults to the functions doc string.</li>
 </ul>
 <h1>Local Routing</h1>
 <p>By default all hug APIs are already valid local APIs. However, sometimes it can be useful to apply type annotations and/or directives to local use as well. For these cases hug provides <code>@hug.local</code>:</p>
 <ul>
-<li><code>validate</code>: Apply type anntations to local use of the function. Defaults to <code>True</code></li>
-<li><code>directives</code>: Apply directives to local use of the function. Defaults to <code>True</code></li>
-<li><code>version</code>: Specify a version of the API for local use. If versions are being used, this generally should be the latest supported</li>
+<li><code>validate</code>: Apply type annotations to local use of the function. Defaults to <code>True</code>.</li>
+<li><code>directives</code>: Apply directives to local use of the function. Defaults to <code>True</code>.</li>
+<li><code>version</code>: Specify a version of the API for local use. If versions are being used, this generally should be the latest supported.</li>
 <li><code>on_invalid</code>: A transformation function to run outputed data through, only if the request fails validation. Defaults to the endpoints specified general transform function, can be set to not run at all by setting to <code>None</code>.</li>
 <li><code>output_invalid</code>: Specifies an output format to attach to the endpoint only on the case that validation fails. Defaults to the endpoints specified output format.</li>
-<li><code>raise_on_invalid</code>: If set to true, instead of collecting validation errors in a dictionry, hug will simply raise them as they occur.</li>
+<li><code>raise_on_invalid</code>: If set to <code>True</code>, instead of collecting validation errors in a dictionry, hug will simply raise them as they occur.</li>
 </ul>
-<p>NOTE: unlike all other routers, this does modify the function in place</p>
+<p>NOTE: unlike all other routers, this modifies the function in-place</p>
