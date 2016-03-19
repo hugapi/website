@@ -5,7 +5,7 @@
             h1#slogan
                 Introducing: hug 2.0.0
             p#introduction
-                hug 1.0.0 introduced an extreamly succinct and intuitive way to build HTTP REST APIs on Python3.
+                hug 1.0.0 introduced an extremely succinct and intuitive way to build HTTP REST APIs on Python3.
                 Version 2 brings further improvements to the way HTTP APIs can be created, while also enabling single
                 API defintions to be exposed over multiple interfaces. To start with hug 2 supports exposing APIs to
                 HTTP, the command line, and Python.
