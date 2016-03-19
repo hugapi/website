@@ -3,12 +3,12 @@
         > div.extended
         .main-text
             h1#slogan
-                Introducing: hug 2.0.0
+                Introducing: hug 2
             p#introduction
-                hug 1.0.0 introduced an extremely succinct and intuitive way to build HTTP REST APIs on Python3.
+                The first release of hug introduced a succinct and intuitive way of building HTTP REST APIs with Python 3.
                 Version 2 brings further improvements to the way HTTP APIs can be created, while also enabling single
-                API definitions to be exposed over multiple interfaces. To start with hug 2 supports exposing APIs to
-                HTTP, the command line, and Python.
+                API definitions to be exposed over multiple interfaces. APIs can now be exposed to
+                HTTP, the command line, and Python from the same codebase.
     .reuse
         .main-text
             h1
