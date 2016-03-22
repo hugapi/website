@@ -321,7 +321,7 @@ body #main_content .home .simple .example {
 }
 /* line 25, ../sass/_home.sass */
 body #main_content .home .performance {
-  background: #DC7C7C;
+  background: #7895A0;
   padding-bottom: 30px;
 }
 /* line 28, ../sass/_home.sass */
@@ -343,7 +343,7 @@ body #main_content .home .performance sub a {
 }
 /* line 40, ../sass/_home.sass */
 body #main_content .home .versioning {
-  background: #A47EBC;
+  background: #7895A0;
   padding-bottom: 30px;
 }
 /* line 42, ../sass/_home.sass */
@@ -352,7 +352,7 @@ body #main_content .home .versioning p {
 }
 /* line 46, ../sass/_home.sass */
 body #main_content .home .documentation {
-  background: #9BCC82;
+  background: #7895A0;
   padding-bottom: 30px;
 }
 /* line 48, ../sass/_home.sass */
@@ -361,7 +361,7 @@ body #main_content .home .documentation p {
 }
 /* line 52, ../sass/_home.sass */
 body #main_content .home .annotation {
-  background: #EAA676;
+  background: #7895A0;
   padding-bottom: 30px;
 }
 /* line 54, ../sass/_home.sass */
@@ -370,7 +370,7 @@ body #main_content .home .annotation p {
 }
 /* line 58, ../sass/_home.sass */
 body #main_content .home .reuse {
-  background: #525252;
+  background: #7895A0;
   padding-bottom: 30px;
 }
 /* line 60, ../sass/_home.sass */
@@ -379,8 +379,8 @@ body #main_content .home .reuse p {
 }
 /* line 64, ../sass/_home.sass */
 body #main_content .home .get-started {
-  background: white;
-  color: black;
+  background: #7EBC89;
+  color: white;
   padding-bottom: 30px;
 }
 /* line 67, ../sass/_home.sass */
