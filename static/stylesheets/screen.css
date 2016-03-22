@@ -239,7 +239,48 @@ html body #main_content {
   height: 100%;
 }
 
-/* line 11, ../sass/screen.sass */
+@media screen and (max-width: 640px) {
+  /* line 4, ../sass/_responsive.sass */
+  html body header {
+    height: 90px;
+  }
+  /* line 6, ../sass/_responsive.sass */
+  html body header nav {
+    margin-left: none;
+    margin-right: none;
+    margin-top: 40px;
+  }
+  /* line 10, ../sass/_responsive.sass */
+  html body section#main_content {
+    padding-top: 30px;
+  }
+  /* line 13, ../sass/_responsive.sass */
+  html body #main_content .learn {
+    border-left: 0px;
+  }
+  /* line 15, ../sass/_responsive.sass */
+  html body #main_content .learn #sections {
+    position: relative;
+    width: 100%;
+  }
+  /* line 20, ../sass/_responsive.sass */
+  html body #main_content .learn #sections li a {
+    width: 100%;
+    display: block;
+    font-size: 18px;
+    padding: 10px;
+    margin: 0px;
+  }
+  /* line 26, ../sass/_responsive.sass */
+  html body #main_content .learn #sections li a.selected {
+    margin: 0px;
+    width: 100%;
+    background: #7895A0;
+    border-left: 5px #546870 solid;
+    border-right: 5px #546870 solid;
+  }
+}
+/* line 12, ../sass/screen.sass */
 body {
   overflow-x: hidden;
 }
