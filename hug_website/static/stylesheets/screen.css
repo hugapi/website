@@ -201,18 +201,18 @@ html body header nav a.selected#quickstart {
 }
 /* line 51, ../sass/_frame.sass */
 html body header nav a.selected#contribute {
-  border-top: 5px #765A87 solid;
-  background: #A47EBC;
+  border-top: 5px #546870 solid;
+  background: #7895A0;
 }
 /* line 54, ../sass/_frame.sass */
 html body header nav a.selected#discuss {
-  border-top: 5px #956A4B solid;
-  background: #EAA676;
+  border-top: 5px #546870 solid;
+  background: #7895A0;
 }
 /* line 57, ../sass/_frame.sass */
 html body header nav a.selected#learn {
-  border-top: 5px #313131 solid;
-  background: #525252;
+  border-top: 5px #546870 solid;
+  background: #7895A0;
 }
 /* line 60, ../sass/_frame.sass */
 html body header nav a.selected#acknowledge {
@@ -231,7 +231,7 @@ html body header #latest {
 }
 /* line 73, ../sass/_frame.sass */
 html body header #latest.selected {
-  background: black;
+  background: #7EBC89;
   height: 50px;
 }
 /* line 77, ../sass/_frame.sass */
@@ -486,13 +486,13 @@ body #main_content .quickstart .cli .example {
 }
 /* line 1, ../sass/_contribute.sass */
 body #main_content .contribute {
-  background: #A47EBC;
+  background: #7895A0;
   min-height: 100%;
   margin-top: -30px;
 }
 /* line 1, ../sass/_discuss.sass */
 body #main_content .discuss {
-  background: #EAA676;
+  background: #7895A0;
   min-height: 100%;
 }
 /* line 1, ../sass/_not_found.sass */
@@ -514,14 +514,14 @@ body #main_content .not-found .main-text .drop_bear {
 }
 /* line 3, ../sass/_learn.sass */
 body #main_content .learn {
-  background: #525252;
+  background: #7895A0;
   min-height: 100%;
-  border-left: 250px #7895A0 solid;
+  border-left: 250px #525252 solid;
 }
 /* line 7, ../sass/_learn.sass */
 body #main_content .learn #sections {
   position: absolute;
-  background: #7895A0;
+  background: #525252;
   width: 250px;
   left: 0px;
   top: 50px;
@@ -540,8 +540,8 @@ body #main_content .learn #sections li a {
 body #main_content .learn #sections li a.selected {
   margin-left: 20px;
   width: 280px;
-  background: #525252;
-  border-left: 5px #313131 solid;
+  background: #7895A0;
+  border-left: 5px #546870 solid;
 }
 /* line 27, ../sass/_learn.sass */
 body #main_content .learn .content {
@@ -563,20 +563,20 @@ body #main_content .latest .intro {
   padding-top: 30px;
   position: relative;
   min-height: 290px;
-  background: black;
+  background: #7EBC89;
 }
 /* line 9, ../sass/_latest.sass */
 body #main_content .latest .intro .extended {
   margin-left: 10px;
   float: left;
-  background-position: 0 -871px;
+  background-position: 0 -1161px;
   height: 200px;
   width: 410px;
   height: 290px;
 }
 /* line 17, ../sass/_latest.sass */
 body #main_content .latest .reuse {
-  background: #525252;
+  background: #7895A0;
   padding-bottom: 30px;
 }
 /* line 19, ../sass/_latest.sass */
@@ -594,7 +594,7 @@ body #main_content .latest .seamless p {
 }
 /* line 29, ../sass/_latest.sass */
 body #main_content .latest .chainable {
-  background: #A47EBC;
+  background: #7895A0;
   padding-bottom: 30px;
 }
 /* line 31, ../sass/_latest.sass */
@@ -608,7 +608,7 @@ body #main_content .latest .marshmallow {
   padding-top: 30px;
   position: relative;
   min-height: 350px;
-  background: #DC7C7C;
+  background: #7895A0;
 }
 /* line 42, ../sass/_latest.sass */
 body #main_content .latest .marshmallow .marshmallow_logo {
@@ -620,7 +620,7 @@ body #main_content .latest .marshmallow .marshmallow_logo {
 }
 /* line 49, ../sass/_latest.sass */
 body #main_content .latest .performance {
-  background: #DC7C7C;
+  background: #7895A0;
   padding-bottom: 30px;
 }
 /* line 52, ../sass/_latest.sass */
@@ -642,7 +642,7 @@ body #main_content .latest .performance sub a {
 }
 /* line 63, ../sass/_latest.sass */
 body #main_content .latest .class_based {
-  background: #7EBC89;
+  background: #7895A0;
   padding-bottom: 30px;
 }
 /* line 65, ../sass/_latest.sass */
@@ -651,7 +651,7 @@ body #main_content .latest .class_based p {
 }
 /* line 69, ../sass/_latest.sass */
 body #main_content .latest .exceptions {
-  background: #EAA676;
+  background: #7895A0;
   padding-bottom: 30px;
 }
 /* line 71, ../sass/_latest.sass */
@@ -660,8 +660,8 @@ body #main_content .latest .exceptions p {
 }
 /* line 75, ../sass/_latest.sass */
 body #main_content .latest .get-started {
-  background: white;
-  color: black;
+  background: #7EBC89;
+  color: white;
   padding-bottom: 30px;
 }
 /* line 78, ../sass/_latest.sass */
