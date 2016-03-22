@@ -374,61 +374,62 @@ body #main_content .home .performance .benchmark {
 }
 /* line 33, ../sass/_home.sass */
 body #main_content .home .performance sub {
-  color: #F8DEDE;
+  color: white;
   line-height: 30px;
+  opacity: 0.7;
 }
-/* line 36, ../sass/_home.sass */
+/* line 37, ../sass/_home.sass */
 body #main_content .home .performance sub a {
   margin-left: 0.3em;
-  color: #F8DEDE;
+  color: white;
 }
-/* line 40, ../sass/_home.sass */
+/* line 41, ../sass/_home.sass */
 body #main_content .home .versioning {
   background: #7895A0;
   padding-bottom: 30px;
 }
-/* line 42, ../sass/_home.sass */
+/* line 43, ../sass/_home.sass */
 body #main_content .home .versioning p {
   padding-bottom: 30px;
 }
-/* line 46, ../sass/_home.sass */
+/* line 47, ../sass/_home.sass */
 body #main_content .home .documentation {
   background: #7895A0;
   padding-bottom: 30px;
 }
-/* line 48, ../sass/_home.sass */
+/* line 49, ../sass/_home.sass */
 body #main_content .home .documentation p {
   padding-bottom: 30px;
 }
-/* line 52, ../sass/_home.sass */
+/* line 53, ../sass/_home.sass */
 body #main_content .home .annotation {
   background: #7895A0;
   padding-bottom: 30px;
 }
-/* line 54, ../sass/_home.sass */
+/* line 55, ../sass/_home.sass */
 body #main_content .home .annotation p {
   padding-bottom: 30px;
 }
-/* line 58, ../sass/_home.sass */
+/* line 59, ../sass/_home.sass */
 body #main_content .home .reuse {
   background: #7895A0;
   padding-bottom: 30px;
 }
-/* line 60, ../sass/_home.sass */
+/* line 61, ../sass/_home.sass */
 body #main_content .home .reuse p {
   padding-bottom: 30px;
 }
-/* line 64, ../sass/_home.sass */
+/* line 65, ../sass/_home.sass */
 body #main_content .home .get-started {
   background: #7EBC89;
   color: white;
   padding-bottom: 30px;
 }
-/* line 67, ../sass/_home.sass */
+/* line 68, ../sass/_home.sass */
 body #main_content .home .get-started p {
   padding-bottom: 30px;
 }
-/* line 70, ../sass/_home.sass */
+/* line 71, ../sass/_home.sass */
 body #main_content .home .get-started a {
   font-size: 19px;
   padding: 0.5em 1.5em;
