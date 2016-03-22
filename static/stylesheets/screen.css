@@ -1,4 +1,4 @@
-/* line 5, ../../../../../../var/lib/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 5, ../../../../../../../usr/lib64/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -20,45 +20,45 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, ../../../../../../var/lib/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 22, ../../../../../../../usr/lib64/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, ../../../../../../var/lib/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 24, ../../../../../../../usr/lib64/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, ../../../../../../var/lib/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 26, ../../../../../../../usr/lib64/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, ../../../../../../var/lib/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 28, ../../../../../../../usr/lib64/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, ../../../../../../var/lib/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 30, ../../../../../../../usr/lib64/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, ../../../../../../var/lib/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 103, ../../../../../../../usr/lib64/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, ../../../../../../var/lib/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 32, ../../../../../../../usr/lib64/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, ../../../../../../var/lib/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 116, ../../../../../../../usr/lib64/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
 }
@@ -86,44 +86,43 @@ html h1 {
   font-size: 50px;
   opacity: 0.9;
   font-weight: bold;
-  text-shadow: 0px 1px 1px #4d4d4d;
 }
-/* line 17, ../sass/_fonts.sass */
+/* line 16, ../sass/_fonts.sass */
 html h2 {
   font-size: 40px;
 }
-/* line 19, ../sass/_fonts.sass */
+/* line 18, ../sass/_fonts.sass */
 html h3 {
   font-size: 30px;
 }
-/* line 21, ../sass/_fonts.sass */
+/* line 20, ../sass/_fonts.sass */
 html h4 {
   font-size: 25px;
 }
-/* line 23, ../sass/_fonts.sass */
+/* line 22, ../sass/_fonts.sass */
 html h5 {
   font-size: 20px;
 }
-/* line 25, ../sass/_fonts.sass */
+/* line 24, ../sass/_fonts.sass */
 html h6 {
   font-size: 20px;
   font-weight: bold;
 }
-/* line 29, ../sass/_fonts.sass */
+/* line 28, ../sass/_fonts.sass */
 html a {
   text-decoration: none;
   color: white;
   cursor: pointer;
 }
-/* line 33, ../sass/_fonts.sass */
+/* line 32, ../sass/_fonts.sass */
 html a.selected {
   cursor: text;
 }
-/* line 35, ../sass/_fonts.sass */
+/* line 34, ../sass/_fonts.sass */
 html a:hover {
   text-shadow: 0px 0px 3px white;
 }
-/* line 37, ../sass/_fonts.sass */
+/* line 36, ../sass/_fonts.sass */
 html a:hover.selected {
   text-shadow: none;
 }
@@ -316,7 +315,7 @@ body #main_content .home .simple {
 /* line 19, ../sass/_home.sass */
 body #main_content .home .simple .example {
   margin-top: 40px;
-  background: url('/static/images/example.gif?1458517125');
+  background: url('/static/images/example.gif?1458203860');
   width: 722px;
   height: 450px;
 }
@@ -413,11 +412,11 @@ body #main_content .home .get-started a {
   font-size: 25px;
   line-height: 30px;
 }
-/* line 15, ../../../../../../var/lib/gems/2.1.0/gems/sassy-buttons-0.2.6/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+/* line 15, ../../../../../../../usr/lib64/ruby/gems/2.2.0/gems/sassy-buttons-0.2.6/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
 body #main_content .home .get-started a:hover {
   text-decoration: none;
 }
-/* line 36, ../../../../../../var/lib/gems/2.1.0/gems/sassy-buttons-0.2.6/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+/* line 36, ../../../../../../../usr/lib64/ruby/gems/2.2.0/gems/sassy-buttons-0.2.6/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
 body #main_content .home .get-started a:hover {
   background-color: #8e2912;
   background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2JiMzYxNyIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzhlMjkxMiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
@@ -426,13 +425,13 @@ body #main_content .home .get-started a:hover {
   background: -webkit-linear-gradient(#bb3617, #8e2912);
   background: linear-gradient(#bb3617, #8e2912);
 }
-/* line 39, ../../../../../../var/lib/gems/2.1.0/gems/sassy-buttons-0.2.6/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+/* line 39, ../../../../../../../usr/lib64/ruby/gems/2.2.0/gems/sassy-buttons-0.2.6/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
 body #main_content .home .get-started a:active {
   -moz-box-shadow: #802510 0 1px 2px inset;
   -webkit-box-shadow: #802510 0 1px 2px inset;
   box-shadow: #802510 0 1px 2px inset;
 }
-/* line 6, ../../../../../../var/lib/gems/2.1.0/gems/sassy-buttons-0.2.6/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+/* line 6, ../../../../../../../usr/lib64/ruby/gems/2.2.0/gems/sassy-buttons-0.2.6/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
 body #main_content .home .get-started a.disabled, body #main_content .home .get-started a[disabled] {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
   opacity: 0.6;
@@ -442,7 +441,7 @@ body #main_content .home .get-started a.disabled, body #main_content .home .get-
   -webkit-box-shadow: none;
   box-shadow: none;
 }
-/* line 74, ../../../../../../var/lib/gems/2.1.0/gems/sassy-buttons-0.2.6/stylesheets/_sassy-buttons.sass */
+/* line 74, ../../../../../../../usr/lib64/ruby/gems/2.2.0/gems/sassy-buttons-0.2.6/stylesheets/_sassy-buttons.sass */
 body #main_content .home .get-started a::-moz-focus-inner {
   padding: 0 !important;
   margin: -1px !important;
@@ -463,21 +462,21 @@ body #main_content .quickstart .install p, body #main_content .quickstart .first
 /* line 9, ../sass/_quickstart.sass */
 body #main_content .quickstart .first .example {
   margin-top: 40px;
-  background: url('/static/images/quickstart/first_api_1.gif?1458517125');
+  background: url('/static/images/quickstart/first_api_1.gif?1458203860');
   width: 850px;
   height: 250px;
 }
 /* line 15, ../sass/_quickstart.sass */
 body #main_content .quickstart .http .example {
   margin-top: 40px;
-  background: url('/static/images/quickstart/first_api_2.gif?1458517125');
+  background: url('/static/images/quickstart/first_api_2.gif?1458203860');
   width: 850px;
   height: 490px;
 }
 /* line 21, ../sass/_quickstart.sass */
 body #main_content .quickstart .cli .example {
   margin-top: 40px;
-  background: url('/static/images/quickstart/first_api_3.gif?1458517125');
+  background: url('/static/images/quickstart/first_api_3.gif?1458203860');
   width: 850px;
   height: 440px;
 }
@@ -692,11 +691,11 @@ body #main_content .latest .get-started a#full_changelog {
   margin: 10px;
   margin-left: 0px;
 }
-/* line 15, ../../../../../../var/lib/gems/2.1.0/gems/sassy-buttons-0.2.6/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+/* line 15, ../../../../../../../usr/lib64/ruby/gems/2.2.0/gems/sassy-buttons-0.2.6/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
 body #main_content .latest .get-started a#full_changelog:hover {
   text-decoration: none;
 }
-/* line 36, ../../../../../../var/lib/gems/2.1.0/gems/sassy-buttons-0.2.6/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+/* line 36, ../../../../../../../usr/lib64/ruby/gems/2.2.0/gems/sassy-buttons-0.2.6/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
 body #main_content .latest .get-started a#full_changelog:hover {
   background-color: #37672a;
   background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzRhOGIzOSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzM3NjcyYSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
@@ -705,13 +704,13 @@ body #main_content .latest .get-started a#full_changelog:hover {
   background: -webkit-linear-gradient(#4a8b39, #37672a);
   background: linear-gradient(#4a8b39, #37672a);
 }
-/* line 39, ../../../../../../var/lib/gems/2.1.0/gems/sassy-buttons-0.2.6/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+/* line 39, ../../../../../../../usr/lib64/ruby/gems/2.2.0/gems/sassy-buttons-0.2.6/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
 body #main_content .latest .get-started a#full_changelog:active {
   -moz-box-shadow: #315c25 0 1px 2px inset;
   -webkit-box-shadow: #315c25 0 1px 2px inset;
   box-shadow: #315c25 0 1px 2px inset;
 }
-/* line 6, ../../../../../../var/lib/gems/2.1.0/gems/sassy-buttons-0.2.6/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+/* line 6, ../../../../../../../usr/lib64/ruby/gems/2.2.0/gems/sassy-buttons-0.2.6/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
 body #main_content .latest .get-started a#full_changelog.disabled, body #main_content .latest .get-started a#full_changelog[disabled] {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
   opacity: 0.6;
@@ -721,7 +720,7 @@ body #main_content .latest .get-started a#full_changelog.disabled, body #main_co
   -webkit-box-shadow: none;
   box-shadow: none;
 }
-/* line 74, ../../../../../../var/lib/gems/2.1.0/gems/sassy-buttons-0.2.6/stylesheets/_sassy-buttons.sass */
+/* line 74, ../../../../../../../usr/lib64/ruby/gems/2.2.0/gems/sassy-buttons-0.2.6/stylesheets/_sassy-buttons.sass */
 body #main_content .latest .get-started a#full_changelog::-moz-focus-inner {
   padding: 0 !important;
   margin: -1px !important;
@@ -752,11 +751,11 @@ body #main_content .latest .get-started a#get_started {
   line-height: 30px;
   margin: 10px;
 }
-/* line 15, ../../../../../../var/lib/gems/2.1.0/gems/sassy-buttons-0.2.6/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+/* line 15, ../../../../../../../usr/lib64/ruby/gems/2.2.0/gems/sassy-buttons-0.2.6/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
 body #main_content .latest .get-started a#get_started:hover {
   text-decoration: none;
 }
-/* line 36, ../../../../../../var/lib/gems/2.1.0/gems/sassy-buttons-0.2.6/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+/* line 36, ../../../../../../../usr/lib64/ruby/gems/2.2.0/gems/sassy-buttons-0.2.6/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
 body #main_content .latest .get-started a#get_started:hover {
   background-color: #8e2912;
   background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2JiMzYxNyIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzhlMjkxMiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
@@ -765,13 +764,13 @@ body #main_content .latest .get-started a#get_started:hover {
   background: -webkit-linear-gradient(#bb3617, #8e2912);
   background: linear-gradient(#bb3617, #8e2912);
 }
-/* line 39, ../../../../../../var/lib/gems/2.1.0/gems/sassy-buttons-0.2.6/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+/* line 39, ../../../../../../../usr/lib64/ruby/gems/2.2.0/gems/sassy-buttons-0.2.6/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
 body #main_content .latest .get-started a#get_started:active {
   -moz-box-shadow: #802510 0 1px 2px inset;
   -webkit-box-shadow: #802510 0 1px 2px inset;
   box-shadow: #802510 0 1px 2px inset;
 }
-/* line 6, ../../../../../../var/lib/gems/2.1.0/gems/sassy-buttons-0.2.6/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+/* line 6, ../../../../../../../usr/lib64/ruby/gems/2.2.0/gems/sassy-buttons-0.2.6/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
 body #main_content .latest .get-started a#get_started.disabled, body #main_content .latest .get-started a#get_started[disabled] {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
   opacity: 0.6;
@@ -781,7 +780,7 @@ body #main_content .latest .get-started a#get_started.disabled, body #main_conte
   -webkit-box-shadow: none;
   box-shadow: none;
 }
-/* line 74, ../../../../../../var/lib/gems/2.1.0/gems/sassy-buttons-0.2.6/stylesheets/_sassy-buttons.sass */
+/* line 74, ../../../../../../../usr/lib64/ruby/gems/2.2.0/gems/sassy-buttons-0.2.6/stylesheets/_sassy-buttons.sass */
 body #main_content .latest .get-started a#get_started::-moz-focus-inner {
   padding: 0 !important;
   margin: -1px !important;
