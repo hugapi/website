@@ -129,7 +129,7 @@ def home():
                                       'validation and transformation. This leads to explicit and easy to follow '
                                       'endpoints.',
             'reuse_header': 'Write once. Use everywhere.',
-            'reuse_description': 'With hug your API and business logic is cleanly separated from the interface your '
+            'reuse_description': 'With hug your API and business logic is cleanly separated from the interface you\'re '
                                  'exposing it on, which means you can safely expose it over HTTP, CLI, and Python in '
                                  'one fell swoop.',
             'get_started_header': 'What are you waiting for?',
