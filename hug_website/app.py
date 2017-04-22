@@ -115,7 +115,7 @@ def home():
                                        'to consume resources only when necessary and is then compiled with Cython '
                                        'to achieve amazing performance. As a result, hug consistently benchmarks as '
                                        'one of the fastest Python frameworks and without question takes the crown '
-                                       'as the fastest high-level framwork for Python 3.',
+                                       'as the fastest high-level framework for Python 3.',
             'versioning_header': 'Built in version management',
             'versioning_description': 'hug makes it easy to expose multiple versions of your API. With hug you can '
                                       'simply specify what version or range of versions an endpoint supports and then '
