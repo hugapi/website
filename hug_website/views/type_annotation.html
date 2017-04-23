@@ -27,16 +27,16 @@
 <li><code>uuid</code>: Validates that the provided value is a valid UUID</li>
 <li><code>text</code>: Validates that the provided value is a single string parameter</li>
 <li><code>multiple</code>: Ensures the parameter is passed in as a list (even if only one value is passed in)</li>
-<li><code>boolean</code>: A basic niave HTTP style boolean where no value passed in is seen as <code>False</code> and any value passed in (even if its <code>false</code>) is seen as <code>True</code></li>
+<li><code>boolean</code>: A basic naive HTTP style boolean where no value passed in is seen as <code>False</code> and any value passed in (even if its <code>false</code>) is seen as <code>True</code></li>
 <li><code>smart_boolean</code>: A smarter, but more computentionally expensive, boolean that checks the content of the value for common true / false formats (true, True, t, 1) or (false, False, f, 0)</li>
-<li><code>delimeted_list(delimiter)</code>: splits up the passed in value based on the provided delimeter and then passes it to the function as a list</li>
+<li><code>delimited_list(delimiter)</code>: splits up the passed in value based on the provided delimiter and then passes it to the function as a list</li>
 <li><code>one_of(values)</code>: Validates that the passed in value is one of those specified</li>
 <li><code>mapping(dict_of_passed_in_to_desired_values)</code>: Like <code>one_of</code>, but with a dictionary of acceptable values, to converted value.</li>
 <li><code>multi(types)</code>: Allows passing in multiple acceptable types for a parameter, short circuiting on the first acceptable one</li>
 <li><code>in_range(lower, upper, convert=number)</code>: Accepts a number within a lower and upper bound of acceptable values</li>
 <li><code>less_than(limit, convert=number)</code>: Accepts a number within a lower and upper bound of acceptable values</li>
 <li><code>greater_than(minimum, convert=number)</code>: Accepts a value above a given minimum</li>
-<li><code>length(lower, upper, convert=text)</code>: Accepts a a value that is withing a specific length limit</li>
+<li><code>length(lower, upper, convert=text)</code>: Accepts a a value that is within a specific length limit</li>
 <li><code>shorter_than(limit, convert=text)</code>: Accepts a text value shorter than the specified length limit</li>
 <li><code>longer_than(limit, convert=text)</code>: Accepts a value up to the specified limit</li>
 <li><code>cut_off(limit, convert=text)</code>: Cuts off the provided value at the specified index</li>

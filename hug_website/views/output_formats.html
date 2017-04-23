@@ -1,7 +1,7 @@
 <h1>hug output formats</h1>
 <p>Every endpoint that is exposed through an externally facing interface will need to return data in a standard, easily understandable format.</p>
 <p>The default output format for all hug APIs is JSON. However, you may explicitly specify a different default output_format:</p>
-<div class="codehilite"><pre><span></span>hug.API(__name__).output_format = hug.output_format.html
+<div class="codehilite"><pre><span></span>hug.API(__name__).http.output_format = hug.output_format.html
 </pre></div>
 
 
@@ -42,7 +42,7 @@ def my_endpoint():
 </pre></div>
 
 
-<p>In this case, if the endpoint is accesed via my_endpoint.js, the output type will be JSON; however if it's accesed via my_endoint.html, the output type will be HTML.</p>
+<p>In this case, if the endpoint is accessed via my_endpoint.js, the output type will be JSON; however if it's accessed via my_endoint.html, the output type will be HTML.</p>
 <h1>Built-in hug output formats</h1>
 <p>hug provides a large catalog of built-in output formats, which can be used to build useful APIs right away:</p>
 <ul>
@@ -74,7 +74,7 @@ Automatically works on returned file names, streams, or objects that produce a v
 <p><code>hug.output_format.on_content_type(handlers={content_type: output_format}, default=None)</code>: Dynamically changes the output format based on the request content type.</p>
 </li>
 <li><code>hug.output_format.suffix(handlers={suffix: output_format}, default=None)</code>: Dynamically changes the output format based on a suffix at the end of the requested path.</li>
-<li><code>hug.output_format.prefix(handlers={suffix: output_format}, defualt=None)</code>: Dynamically changes the output format based on a prefix at the begining of the requested path.</li>
+<li><code>hug.output_format.prefix(handlers={suffix: output_format}, default=None)</code>: Dynamically changes the output format based on a prefix at the beginning of the requested path.</li>
 </ul>
 <h1>Creating a custom output format</h1>
 <p>An output format is simply a function with a content type attached that takes a data argument, and optionally a request and response, and returns properly encoded and formatted data:</p>
