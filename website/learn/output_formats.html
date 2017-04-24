@@ -1,7 +1,7 @@
-<!DOCTYPE html><html><head><link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:200|Roboto+Slab" /><link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" /><link type="text/css" rel="stylesheet" href="/static/stylesheets/screen.css" /><link type="text/css" rel="stylesheet" href="/static/stylesheets/codehilite.css" /><link type="image/png" sizes="32x32" rel="icon" href="favicon-32x32.png" /><link type="image/png" sizes="16x16" rel="icon" href="favicon-16x16.png" /><title>hug: Embrace the APIs of the future</title></head><body><header><a class="logo" alt="hug: embrace the APIs of the future" href="/">hug</a><nav><a id="quickstart" href="/website/quickstart">Quickstart</a><a class="selected" id="learn" href="/website/learn">Learn</a><a id="contribute" href="/website/contribute">Contribute</a><a id="acknowledge" href="/website/acknowledge">Acknowledge</a><a id="discuss" href="/website/discuss">Discuss</a></nav><a id="latest" href="/website/latest">2.0.2</a></header><section id="main_content"><div class="learn"><div class="content"><div class="main-text markdown"><h1>hug output formats</h1>
+<!DOCTYPE html><html><head><link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto:200|Roboto+Slab" /><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" /><link rel="stylesheet" type="text/css" href="/static/stylesheets/screen.css" /><link rel="stylesheet" type="text/css" href="/static/stylesheets/codehilite.css" /><link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" /><link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" /><title>hug: Embrace the APIs of the future</title></head><body><header><a class="logo" alt="hug: embrace the APIs of the future" href="/">hug</a><nav><a id="quickstart" href="/website/quickstart">Quickstart</a><a class="selected" id="learn" href="/website/learn">Learn</a><a id="contribute" href="/website/contribute">Contribute</a><a id="acknowledge" href="/website/acknowledge">Acknowledge</a><a id="discuss" href="/website/discuss">Discuss</a></nav><a id="latest" href="/website/latest">2.2.0</a></header><section id="main_content"><div class="learn"><div class="content"><div class="main-text markdown"><h1>hug output formats</h1>
 <p>Every endpoint that is exposed through an externally facing interface will need to return data in a standard, easily understandable format.</p>
 <p>The default output format for all hug APIs is JSON. However, you may explicitly specify a different default output_format:</p>
-<div class="codehilite"><pre><span></span>hug.API(__name__).output_format = hug.output_format.html
+<div class="codehilite"><pre><span></span>hug.API(__name__).http.output_format = hug.output_format.html
 </pre></div>
 
 
@@ -42,7 +42,7 @@ def my_endpoint():
 </pre></div>
 
 
-<p>In this case, if the endpoint is accesed via my_endpoint.js, the output type will be JSON; however if it's accesed via my_endoint.html, the output type will be HTML.</p>
+<p>In this case, if the endpoint is accessed via my_endpoint.js, the output type will be JSON; however if it's accessed via my_endoint.html, the output type will be HTML.</p>
 <h1>Built-in hug output formats</h1>
 <p>hug provides a large catalog of built-in output formats, which can be used to build useful APIs right away:</p>
 <ul>
@@ -54,7 +54,7 @@ def my_endpoint():
 <li>
 <p><code>hug.output_format.image(format)</code>: Outputs an image (of the specified format).</p>
 <ul>
-<li>There are convience calls in the form `hug.output_format.{FORMAT}_image for the following image types: 'png', 'jpg', 'bmp', 'eps', 'gif', 'im', 'jpeg', 'msp', 'pcx', 'ppm', 'spider', 'tiff', 'webp', 'xbm',
+<li>There are convenience calls in the form `hug.output_format.{FORMAT}_image for the following image types: 'png', 'jpg', 'bmp', 'eps', 'gif', 'im', 'jpeg', 'msp', 'pcx', 'ppm', 'spider', 'tiff', 'webp', 'xbm',
            'cur', 'dcx', 'fli', 'flc', 'gbr', 'gd', 'ico', 'icns', 'imt', 'iptc', 'naa', 'mcidas', 'mpo', 'pcd',
            'psd', 'sgi', 'tga', 'wal', 'xpm', and 'svg'.
 Automatically works on returned file names, streams, or objects that produce an image on read, save, or render.</li>
@@ -63,7 +63,7 @@ Automatically works on returned file names, streams, or objects that produce an 
 <li>
 <p><code>hug.output_format.video(video_type, video_mime, doc)</code>: Streams a video back to the user in the specified format.</p>
 <ul>
-<li>There are convience calls in the form `hug.output_format.{FORMAT}_video for the following video types: 'flv', 'mp4', 'm3u8', 'ts', '3gp', 'mov', 'avi', and 'wmv'.
+<li>There are convenience calls in the form `hug.output_format.{FORMAT}_video for the following video types: 'flv', 'mp4', 'm3u8', 'ts', '3gp', 'mov', 'avi', and 'wmv'.
 Automatically works on returned file names, streams, or objects that produce a video on read, save, or render.</li>
 </ul>
 </li>
@@ -74,7 +74,7 @@ Automatically works on returned file names, streams, or objects that produce a v
 <p><code>hug.output_format.on_content_type(handlers={content_type: output_format}, default=None)</code>: Dynamically changes the output format based on the request content type.</p>
 </li>
 <li><code>hug.output_format.suffix(handlers={suffix: output_format}, default=None)</code>: Dynamically changes the output format based on a suffix at the end of the requested path.</li>
-<li><code>hug.output_format.prefix(handlers={suffix: output_format}, defualt=None)</code>: Dynamically changes the output format based on a prefix at the begining of the requested path.</li>
+<li><code>hug.output_format.prefix(handlers={suffix: output_format}, default=None)</code>: Dynamically changes the output format based on a prefix at the beginning of the requested path.</li>
 </ul>
 <h1>Creating a custom output format</h1>
 <p>An output format is simply a function with a content type attached that takes a data argument, and optionally a request and response, and returns properly encoded and formatted data:</p>
