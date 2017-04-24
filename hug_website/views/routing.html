@@ -90,7 +90,7 @@ shown in the math example above.</p>
 <li><code>requires</code>: A list or single function that must all return <code>True</code> for the function to execute when called via this interface (commonly used for authentication)</li>
 </ul>
 <h1>HTTP Routers</h1>
-<p>in addition to <code>hug.http</code> hug includes convience decorators for all common HTTP METHODS (<code>hug.connect</code>, <code>hug.delete</code>, <code>hug.get</code>, <code>hug.head</code>, <code>hug.options</code>, <code>hug.patch</code>, <code>hug.post</code>, <code>hug.put</code>, <code>hug.get_post</code>, <code>hug.put_post</code>, and <code>hug.trace</code>). These methods are functionally the same as calling <code>@hug.http(accept=(METHOD, ))</code> and are otherwise identical to the http router.</p>
+<p>in addition to <code>hug.http</code> hug includes convenience decorators for all common HTTP METHODS (<code>hug.connect</code>, <code>hug.delete</code>, <code>hug.get</code>, <code>hug.head</code>, <code>hug.options</code>, <code>hug.patch</code>, <code>hug.post</code>, <code>hug.put</code>, <code>hug.get_post</code>, <code>hug.put_post</code>, and <code>hug.trace</code>). These methods are functionally the same as calling <code>@hug.http(accept=(METHOD, ))</code> and are otherwise identical to the http router.</p>
 <ul>
 <li><code>urls</code>: A list of or a single URL that should be routed to the function. Supports defining variables within the URL that will automatically be passed to the function when <code>{}</code> notation is found in the URL: <code>/website/{page}</code>. Defaults to the name of the function being routed to.</li>
 <li><code>accept</code>: A list of or a single HTTP METHOD value to accept. Defaults to all common HTTP methods.</li>
