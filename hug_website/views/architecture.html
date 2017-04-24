@@ -34,7 +34,7 @@ Here's how I modify it to expose it via the command line:</p>
 
 
 <span class="nd">@hug.cli</span><span class="p">()</span>
-<span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">number_1</span><span class="p">,</span> <span class="n">number_2</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">number_1</span><span class="p">:</span> <span class="n">hug</span><span class="o">.</span><span class="n">types</span><span class="o">.</span><span class="n">number</span><span class="p">,</span> <span class="n">number_2</span><span class="p">:</span> <span class="n">hug</span><span class="o">.</span><span class="n">types</span><span class="o">.</span><span class="n">number</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Returns the result of adding number_1 to number_2&quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="n">number_1</span> <span class="o">+</span> <span class="n">number_2</span>
 
@@ -57,7 +57,7 @@ No problem. I'll just expose it over HTTP as well:</p>
 
 <span class="nd">@hug.get</span><span class="p">()</span> <span class="c1"># &lt;-- This is the only additional line</span>
 <span class="nd">@hug.cli</span><span class="p">()</span>
-<span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">number_1</span><span class="p">,</span> <span class="n">number_2</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">number_1</span><span class="p">:</span> <span class="n">hug</span><span class="o">.</span><span class="n">types</span><span class="o">.</span><span class="n">number</span><span class="p">,</span> <span class="n">number_2</span><span class="p">:</span> <span class="n">hug</span><span class="o">.</span><span class="n">types</span><span class="o">.</span><span class="n">number</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Returns the result of adding number_1 to number_2&quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="n">number_1</span> <span class="o">+</span> <span class="n">number_2</span>
 
