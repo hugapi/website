@@ -1,0 +1,27 @@
+Metadata-Version: 1.1
+Name: blox
+Version: 0.3.1
+Summary: Build it with Python
+Home-page: https://github.com/timothycrosley/blox
+Author: Timothy Crosley
+Author-email: timothy.crosley@gmail.com
+License: MIT
+Description: UNKNOWN
+Keywords: Python,Python3
+Platform: UNKNOWN
+Classifier: Development Status :: 6 - Mature
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Environment :: Console
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.2
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Utilities
+Requires: connectable
+Requires: lxml
+Requires: cssselect
