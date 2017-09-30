@@ -6,7 +6,7 @@ For almost every common Web API task the code written to accomplish it in hug is
 But at its core, hug is a framework for exposing idiomatically correct and standard internal Python APIs externally.
 A framework to allow developers and architects to define logic and structure once, and then cleanly expose it over other means.</p>
 <p>Currently, this means that you can expose existing Python functions / APIs over HTTP and CLI in addition to standard Python.
-However, as time goes on more interfaces will be supported. The architecture and implementation decisions that have going
+However, as time goes on more interfaces will be supported. The architecture and implementation decisions that have gone
 into hug have and will continue to support this goal.</p>
 <p>This central concept also frees hug to rely on the fastest and best of breed components for every interface it supports:</p>
 <ul>
@@ -16,20 +16,24 @@ into hug have and will continue to support this goal.</p>
 <h1>What this looks like in practice - an illustrative example</h1>
 <p>Let's say I have a very simple Python API I've built to add 2 numbers together. I call my invention <code>addition</code>.
 Trust me, this is legit. It's trademarked and everything:</p>
-<div class="codehilite"><pre><span></span>&quot;&quot;&quot;A simple API to enable adding two numbers together&quot;&quot;&quot;
+<div class="codehilite"><pre><span></span>```python
+&quot;&quot;&quot;A simple API to enable adding two numbers together&quot;&quot;&quot;
 
 
 def add(number_1, number_2):
     &quot;&quot;&quot;Returns the result of adding number_1 to number_2&quot;&quot;&quot;
     return number_1 + number_2
+
+```
 </pre></div>
 
 
 <p>It works, it's well documented, and it's clean.
 Several people are already importing and using my Python module for their math needs.
-However, there's a great injustice! I'm lazy, and I don't want to have to have open a Python interpreter etc to access my function.
+However, there's a great injustice! I'm lazy, and I don't want to open a Python interpreter etc to access my function.
 Here's how I modify it to expose it via the command line:</p>
-<div class="codehilite"><pre><span></span><span class="sd">&quot;&quot;&quot;A simple API to enable adding two numbers together&quot;&quot;&quot;</span>
+<div class="codehilite"><pre><span></span><span class="sb">``</span><span class="err">`</span><span class="n">python</span>
+<span class="sd">&quot;&quot;&quot;A simple API to enable adding two numbers together&quot;&quot;&quot;</span>
 <span class="kn">import</span> <span class="nn">hug</span>
 
 
@@ -41,10 +45,13 @@ Here's how I modify it to expose it via the command line:</p>
 
 <span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
     <span class="n">add</span><span class="o">.</span><span class="n">interface</span><span class="o">.</span><span class="n">cli</span><span class="p">()</span>
+
+<span class="sb">``</span><span class="err">`</span>
 </pre></div>
 
 
-<p>Yay! Now I can just do my math from the command line using <code>add.py $NUMBER_1 $NUMBER_2</code>.
+<p>Yay! Now I can just do my math from the command line using:
+<code>add.py $NUMBER_1 $NUMBER_2</code>.
 And even better, if I miss an argument it let's me know what it is and how to fix my error.
 The thing I immediately notice, is that my new command line interface works, it's well documented, and it's clean.
 Just like the original.</p>
