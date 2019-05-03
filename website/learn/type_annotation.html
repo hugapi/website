@@ -1,4 +1,4 @@
-<!DOCTYPE html><html><head><link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto:200|Roboto+Slab" /><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" /><link rel="stylesheet" type="text/css" href="/static/stylesheets/screen.css" /><link rel="stylesheet" type="text/css" href="/static/stylesheets/codehilite.css" /><link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" /><link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" /><title>hug: Embrace the APIs of the future</title></head><body><header><a class="logo" alt="hug: embrace the APIs of the future" href="/">hug</a><nav><a id="quickstart" href="/website/quickstart">Quickstart</a><a id="learn" class="selected" href="/website/learn">Learn</a><a id="contribute" href="/website/contribute">Contribute</a><a id="acknowledge" href="/website/acknowledge">Acknowledge</a><a id="discuss" href="/website/discuss">Discuss</a></nav><a id="latest" href="/website/latest">2.3.2</a></header><section id="main_content"><div class="learn"><div class="content"><div class="main-text markdown"><h1>Type annotations in hug</h1>
+<!DOCTYPE html><html><head><link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto:200|Roboto+Slab" /><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" /><link rel="stylesheet" type="text/css" href="/static/stylesheets/screen.css" /><link rel="stylesheet" type="text/css" href="/static/stylesheets/codehilite.css" /><link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" /><link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" /><title>hug: Embrace the APIs of the future</title></head><body><header><a class="logo" alt="hug: embrace the APIs of the future" href="/">hug</a><nav><a id="quickstart" href="/website/quickstart">Quickstart</a><a class="selected" id="learn" href="/website/learn">Learn</a><a id="contribute" href="/website/contribute">Contribute</a><a id="acknowledge" href="/website/acknowledge">Acknowledge</a><a id="discuss" href="/website/discuss">Discuss</a></nav><a id="latest" href="/website/latest">2.4.8</a></header><section id="main_content"><div class="learn"><div class="content"><div class="main-text markdown"><h1>Type annotations in hug</h1>
 <p>hug leverages Python3 type annotations for validation and API specification. Within the context of hug, annotations should be set to one of 4 things:</p>
 <ul>
 <li>A cast function, built-in, or your own (str, int, etc) that takes a value casts it and then returns it, raising an exception if it is not in a format that can be cast into the desired type</li>
@@ -46,13 +46,14 @@
 <div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">hug</span>
 
 
-<span class="k">class</span> <span class="nc">TheAnswer</span><span class="p">(</span><span class="n">hug</span><span class="o">.</span><span class="n">types</span><span class="o">.</span><span class="n">number</span><span class="p">):</span>
+<span class="k">class</span> <span class="nc">TheAnswer</span><span class="p">(</span><span class="n">hug</span><span class="o">.</span><span class="n">types</span><span class="o">.</span><span class="n">Text</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;My new documentation&quot;&quot;&quot;</span>
 
     <span class="k">def</span> <span class="nf">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
         <span class="n">value</span> <span class="o">=</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">__call__</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
-        <span class="k">if</span> <span class="n">value</span> <span class="o">!=</span> <span class="mi">42</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">value</span> <span class="o">!=</span> <span class="s1">&#39;fourty-two&#39;</span><span class="p">:</span>
             <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Value is not the answer to everything.&#39;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">value</span>
 </pre></div>
 
 
@@ -65,6 +66,7 @@
     <span class="sd">&quot;&quot;&quot;My new documentation&quot;&quot;&quot;</span>
     <span class="k">if</span> <span class="n">value</span> <span class="o">!=</span> <span class="mi">42</span><span class="p">:</span>
         <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Value is not the answer to everything.&#39;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">value</span>
 </pre></div>
 
 
