@@ -1,5 +1,5 @@
-.discuss
-    div.main-text
+,discuss
+    div,main-text
         h1
             Discuss hug and related topics
         p

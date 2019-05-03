@@ -1,3 +1,3 @@
-.acknowledge
-    .main-text
-        > div.markdown@markdown_content
+,acknowledge
+    ,main-text
+        > div,markdown*markdown_content

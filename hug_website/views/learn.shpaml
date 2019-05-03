@@ -1,4 +1,4 @@
-.learn
-    div.content
-        > div.main-text.markdown@content
+,learn
+    div,content
+        > div,main-text,markdown*content
     > ul#sections

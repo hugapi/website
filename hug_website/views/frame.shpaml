@@ -9,7 +9,7 @@ html
 
     body
         header
-            a.logo alt="hug: embrace the APIs of the future" href=/
+            a,logo alt="hug: embrace the APIs of the future" href=/
                 hug
             nav
                 a#quickstart href=/website/quickstart | Quickstart

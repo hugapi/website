@@ -1,6 +1,6 @@
 <h1>hug output formats</h1>
 <p>Every endpoint that is exposed through an externally facing interface will need to return data in a standard, easily understandable format.</p>
-<p>The default output format for all hug APIs is JSON. However, you may explicitly specify a different default output_format:</p>
+<p>The default output format for all hug APIs is JSON. However, you may explicitly specify a different default output_format for a particular API:</p>
 <div class="codehilite"><pre><span></span>hug.API(__name__).http.output_format = hug.output_format.html
 </pre></div>
 
@@ -12,7 +12,15 @@ def my_output_formatter(data, request, response):
 </pre></div>
 
 
-<p>Or, to specify an output_format for a specific endpoint, simply specify the output format within its router:</p>
+<p>By default, this only applies to the output format of HTTP responses.
+To change the output format of the command line interface:</p>
+<div class="codehilite"><pre><span></span>@hug.default_output_format(cli=True, http=False)
+def my_output_formatter(data, request, response):
+    # Custom output formatting code
+</pre></div>
+
+
+<p>To specify an output_format for a specific endpoint, simply specify the output format within its router:</p>
 <div class="codehilite"><pre><span></span>@hug.get(output=hug.output_format.html)
 def my_endpoint():
     return # HTML generating code goes here
@@ -34,7 +42,7 @@ def root():
 
 <p>Finally, an output format may be a collection of different output formats that get used conditionally. For example, using the built-in suffix output format:</p>
 <div class="codehilite"><pre><span></span>suffix_output = hug.output_format.suffix({&#39;.js&#39;: hug.output_format.json,
-                                          &#39;.html&#39;:hug.output_format.html})
+                                          &#39;.html&#39;: hug.output_format.html})
 
 @hug.get((&#39;my_endpoint.js&#39;, &#39;my_endoint.html&#39;), output=suffix_output)
 def my_endpoint():
@@ -43,6 +51,30 @@ def my_endpoint():
 
 
 <p>In this case, if the endpoint is accessed via my_endpoint.js, the output type will be JSON; however if it's accessed via my_endoint.html, the output type will be HTML.</p>
+<p>You can also change the default output format globally for all APIs with either:</p>
+<div class="codehilite"><pre><span></span>@hug.default_output_format(apply_globally=True, cli=True, http=True)
+def my_output_formatter(data, request, response):
+    # Custom output formatting code
+</pre></div>
+
+
+<p>or:</p>
+<div class="codehilite"><pre><span></span>hug.defaults.output_format = hug.output_format.html      # for HTTP
+hug.defaults.cli_output_format = hug.output_format.html  # for the CLI
+</pre></div>
+
+
+<p>Note that when extending APIs, changing the default output format globally must be done before importing the modules of any of the sub-APIs:</p>
+<div class="codehilite"><pre><span></span><span class="n">hug</span><span class="o">.</span><span class="n">defaults</span><span class="o">.</span><span class="n">cli_output_format</span> <span class="o">=</span> <span class="n">hug</span><span class="o">.</span><span class="n">output_format</span><span class="o">.</span><span class="n">html</span>
+
+<span class="kn">from</span> <span class="nn">my_app</span> <span class="kn">import</span> <span class="n">my_sub_api</span>
+
+<span class="nd">@hug.extend_api</span><span class="p">()</span>
+<span class="k">def</span> <span class="nf">extended</span><span class="p">():</span>
+    <span class="k">return</span> <span class="p">[</span><span class="n">my_sub_api</span><span class="p">]</span>
+</pre></div>
+
+
 <h1>Built-in hug output formats</h1>
 <p>hug provides a large catalog of built-in output formats, which can be used to build useful APIs right away:</p>
 <ul>
@@ -80,12 +112,12 @@ Automatically works on returned file names, streams, or objects that produce a v
 <p>An output format is simply a function with a content type attached that takes a data argument, and optionally a request and response, and returns properly encoded and formatted data:</p>
 <div class="codehilite"><pre><span></span>@hug.format.content_type(&#39;file/text&#39;)
 def format_as_text(data, request=None, response=None):
-    return str(content).encode(&#39;utf8&#39;)
+    return str(data).encode(&#39;utf8&#39;)
 </pre></div>
 
 
 <p>A common pattern is to only apply the output format. Validation errors aren't passed in, since it's hard to deal with this for several formats (such as images), and it may make more sense to simply return the error as JSON. hug makes this pattern simple, as well, with the <code>hug.output_format.on_valid</code> decorator:</p>
 <div class="codehilite"><pre><span></span>@hug.output_format.on_valid(&#39;file/text&#39;)
 def format_as_text_when_valid(data, request=None, response=None):
-    return str(content).encode(&#39;utf8&#39;)
+    return str(data).encode(&#39;utf8&#39;)
 </pre></div>

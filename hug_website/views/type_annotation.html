@@ -46,13 +46,14 @@
 <div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">hug</span>
 
 
-<span class="k">class</span> <span class="nc">TheAnswer</span><span class="p">(</span><span class="n">hug</span><span class="o">.</span><span class="n">types</span><span class="o">.</span><span class="n">number</span><span class="p">):</span>
+<span class="k">class</span> <span class="nc">TheAnswer</span><span class="p">(</span><span class="n">hug</span><span class="o">.</span><span class="n">types</span><span class="o">.</span><span class="n">Text</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;My new documentation&quot;&quot;&quot;</span>
 
     <span class="k">def</span> <span class="nf">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
         <span class="n">value</span> <span class="o">=</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">__call__</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
-        <span class="k">if</span> <span class="n">value</span> <span class="o">!=</span> <span class="mi">42</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">value</span> <span class="o">!=</span> <span class="s1">&#39;fourty-two&#39;</span><span class="p">:</span>
             <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Value is not the answer to everything.&#39;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">value</span>
 </pre></div>
 
 
@@ -65,6 +66,7 @@
     <span class="sd">&quot;&quot;&quot;My new documentation&quot;&quot;&quot;</span>
     <span class="k">if</span> <span class="n">value</span> <span class="o">!=</span> <span class="mi">42</span><span class="p">:</span>
         <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Value is not the answer to everything.&#39;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">value</span>
 </pre></div>
 
 

@@ -1,7 +1,7 @@
-.latest
-    .intro
-        > div.extended
-        .main-text
+,latest
+    ,intro
+        > div,extended
+        ,main-text
             h1#slogan
                 Introducing: hug 2
             p#introduction
@@ -9,16 +9,16 @@
                 Version 2 brings further improvements to the way HTTP APIs can be created, while also enabling single
                 API definitions to be exposed over multiple interfaces. APIs can now be exposed to
                 HTTP, the command line, and Python from the same codebase.
-    .reuse
-        .main-text
+    ,reuse
+        ,main-text
             h1
                 Write once. Use everywhere.
             p
                 With hug 2.0.0 your API and business logic is cleanly separated from the interface you're exposing it on, which means you can safely expose it over HTTP, CLI, and Python in one fell swoop.
             > script src=https://gist.github.com/timothycrosley/1669b902f00662e92216.js
 
-    .seamless
-        .main-text
+    ,seamless
+        ,main-text
             h1
                 Seamless micro-services
 
@@ -27,8 +27,8 @@
                 to switch out pure Python calls for HTTP communication and vice versa.
             > script src=https://gist.github.com/timothycrosley/7bde155d92922449acf5.js
 
-    .chainable
-        .main-text
+    ,chainable
+        ,main-text
             h1
                 Chainable routing
             p
@@ -36,9 +36,9 @@
                 any actions until it is ran against a function, method, or object.
             > script src=https://gist.github.com/timothycrosley/3bbcd159be2fe00caf1c.js
 
-    .marshmallow
-        > div.marshmallow_logo
-        .main-text
+    ,marshmallow
+        > div,marshmallow_logo
+        ,main-text
             h1
                 Improved type system; integrated Marshmallow support
             p#introduction
@@ -46,16 +46,16 @@
                 support for Marshmallow. With hug you can simply pass a Marshmallow schema or field as a type annotation
                 on any endpoint and hug will take care of the rest.
 
-    .class_based
-        .main-text
+    ,class_based
+        ,main-text
             h1
                 Class based routing
             p
                 With hug 2.0.0 creating a route from a class definition is a breeze.
             > script src=https://gist.github.com/timothycrosley/a26a02569396f658bc9f.js
 
-    .exceptions
-        .main-text
+    ,exceptions
+        ,main-text
             h1
                 Intuitive exception handling
             p
@@ -63,8 +63,8 @@
                 hug 2.0.0 makes handling the edge cases easy and intuitive.
             > script src=https://gist.github.com/timothycrosley/e859291db3d160e104ac.js
 
-    .get-started
-        .main-text
+    ,get-started
+        ,main-text
             h1#get_started_header
                 What are you waiting for?
             p#get_started_description
